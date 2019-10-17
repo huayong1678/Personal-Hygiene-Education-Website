@@ -1,7 +1,28 @@
-body, html{
-    height: 300vh;
+html, body{
+    overflow-x: hidden;
 }
-#picture{
-    height: auto;
-    width: 100vw;
+#navigation{
+    background:transparent;
+    position: fixed;
+    z-index: 1000;
+}
+#optionBars{
+    font-size: 200%;
+    color: rgb(94, 94, 94);
+}
+#buttonBars{
+    background: transparent;
+    border: 0px;
+}
+#bars{
+    background-color: aquamarine;
+    height: 100vh;
+}
+.slide{
+    transform: translateX(-40vw);
+    transition: 300ms ease;
+}
+.unslide{
+    transform: translateX(0px);
+    transition: 300ms ease;
 }

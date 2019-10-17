@@ -5,24 +5,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Home | Personal Hygiene</title>
+
   <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </head>
 
 <body>
-  <img class="thumbnail" src="000040.JPEG" alt="image" id="picture">
+  <div id="app">
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <div class="container-fluid">
+        <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars" id="optionBars"></i></button>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3 slide" id="bars" :class="['bars-slide', {'unslide': handleStatus.optionBars}]"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
 </body>
-<script>
-  var image = document.getElementsByClassName('thumbnail');
-  new simpleParallax(image, {
-    scale: 1.5,
-    overflow: true
-  });
-</script>
 
 </html>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      }
+    }
+  });
+</script>
