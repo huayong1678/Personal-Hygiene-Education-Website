@@ -1,28 +1,46 @@
-html, body{
+html,
+body {
     overflow-x: hidden;
 }
-#navigation{
-    background:transparent;
+
+#navigation {
+    background: transparent;
     position: fixed;
     z-index: 1000;
 }
-#optionBars{
+
+.optionBars-Dark {
     font-size: 200%;
-    color: rgb(94, 94, 94);
+    color: rgb(146, 146, 146);
+    transition: 750ms ease;
 }
-#buttonBars{
+
+.optionBars-Light {
+    font-size: 200%;
+    color: rgb(252, 252, 252);
+    transition: 750ms ease;
+}
+
+#buttonBars {
     background: transparent;
     border: 0px;
 }
-#bars{
-    background-color: aquamarine;
+
+#buttonBars:focus {
+    outline: none;
+}
+
+#bars {
+    background-image: linear-gradient(to right top, #138086, #16738a, #316486, #475579, #534666);
     height: 100vh;
 }
-.slide{
+
+.slide {
     transform: translateX(-40vw);
     transition: 300ms ease;
 }
-.unslide{
+
+.unslide {
     transform: translateX(0px);
     transition: 300ms ease;
 }

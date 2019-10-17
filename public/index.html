@@ -27,12 +27,13 @@
   <div id="app">
     <nav class="navbar navbar-dark bg-transparent" id="navigation">
       <div class="container-fluid">
-        <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars" id="optionBars"></i></button>
+        <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark" :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
       </div>
     </nav>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-3 slide" id="bars" :class="['bars-slide', {'unslide': handleStatus.optionBars}]"></div>
+        <div class="col-3 slide" id="bars" :class="['bars-slide', {'unslide': handleStatus.optionBars}]">
+        </div>
         <div class="col"></div>
       </div>
     </div>
