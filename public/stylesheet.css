@@ -1,0 +1,7 @@
+body, html{
+    height: 300vh;
+}
+#picture{
+    height: auto;
+    width: 100vw;
+}
