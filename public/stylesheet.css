@@ -94,13 +94,49 @@ body {
     box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.4);
 }
 
-.card-hover:hover{
+.card-hover:hover {
     transform: scale(1.025);
-    transition: 300ms;
+    transition: 300ms ease;
+    text-decoration: none;
 }
 
-.flower{
+.flower {
     position: absolute;
     width: 15vw;
     z-index: 0;
+}
+
+.seeMore {
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    height: 7vh;
+    padding-bottom: 1vh;
+    top: 92vh;
+}
+
+.nav-scroll:hover{
+    animation: spinScroll 500ms ease;
+}
+
+@keyframes spinScroll {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.25);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.card-links,
+.card-links:hover,
+.card-links:link,
+.card-links:active,
+.card-links:visited {
+    text-decoration: none;
+    color: #212529;
+    display: inline-block;
 }
