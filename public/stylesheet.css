@@ -1,12 +1,47 @@
 html,
 body {
     overflow-x: hidden;
+    height: 300vh;
+    font-family: 'Lato', sans-serif;
 }
 
 #navigation {
     background: transparent;
     position: fixed;
     z-index: 1000;
+}
+
+.scroll {
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    width: 100vw;
+    /* display: flex;
+    flex-direction: column; */
+    z-index: 800;
+}
+
+#page-title{
+    position: relative;
+    top: calc(50vh - 75px);
+}
+
+#one {
+    /* position: relative;
+    top: 50vh; */
+    font-size: 80px;
+    /* font-weight: bold; */
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+#two{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
 }
 
 .optionBars-Dark {
@@ -31,16 +66,27 @@ body {
 }
 
 #bars {
-    background-image: linear-gradient(to right top, #138086, #16738a, #316486, #475579, #534666);
+    background-color: rgb(179, 71, 71);
     height: 100vh;
 }
 
 .slide {
     transform: translateX(-40vw);
     transition: 300ms ease;
+    width: 25vw;
+    position: fixed;
+    z-index: 900;
 }
 
-.unslide {
+.slided {
     transform: translateX(0px);
     transition: 300ms ease;
+    width: 25vw;
+    position: fixed;
+    z-index: 900;
+}
+
+.flower{
+    height: 120px;
+    width: auto;
 }
