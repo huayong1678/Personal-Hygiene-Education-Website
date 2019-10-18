@@ -98,3 +98,9 @@ body {
     transform: scale(1.025);
     transition: 300ms;
 }
+
+.flower{
+    position: absolute;
+    width: 15vw;
+    z-index: 0;
+}
