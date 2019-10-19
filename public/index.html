@@ -40,16 +40,25 @@
     <!-- Option Bar -->
     <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
 
-    <!-- Flower Decor. -->
-    <!-- <div class="scroll flower" data-rellax-speed="8">
-      <img src="flower.png"/>
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="10">
+      <img id="man1" src="man.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="1">
+      <img id="man2" src="man2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="woman1" src="woman.png" />
+    </div>
+    <!-- <div class="rellax" data-rellax-speed="6">
+      <img id="woman2" src="woman2.png" />
     </div> -->
 
     <!-- Scroll to See More -->
     <div class="container-fluid seeMore scroll">
       <div class="row">
         <div class="col"></div>
-        <div class="col-auto" data-rellax-speed="15"><a href="#cards-section" class="text-muted card-links">
+        <div class="col-auto rellax" data-rellax-speed="5"><a href="#cards-section" class="text-muted card-links">
             <div class="nav-scroll">See More.<br><i class="fas fa-chevron-down"></i></div>
           </a></div>
         <div class="col"></div>
@@ -69,9 +78,22 @@
           <a href="#" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <img src="tooth_card.png" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Keep Our Teeth Clean!</h5>
+                <h6 class="card-subtitle pb-2 text-muted">การดูแลสุขภาพช่องปากเป็นสิ่งสำคัญ</h6>
+                <p class="card-text">ตื่นเช้ามาล้างหน้า"แปรงฟัน" ทำไมต้องแปรงจะแปรงทำไม ไม่แปรงแล้วจะเกิดอะไรขึ้น มาร่วมกันหาคำตอบได้ที่นี่
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4 px-6 py-2">
+          <a href="#" class="card-links">
+            <div class="card card-hover" style="width: 100%;">
+              <div class="card-body">
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's
                   content.</p>
@@ -83,67 +105,9 @@
           <a href="#" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-4 px-6 py-2">
-          <a href="#" class="card-links">
-            <div class="card card-hover" style="width: 100%;">
-              <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4 px-6 py-2">
-          <a href="#" class="card-links">
-            <div class="card card-hover" style="width: 100%;">
-              <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-4 px-6 py-2">
-          <a href="#" class="card-links">
-            <div class="card card-hover" style="width: 100%;">
-              <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-4 px-6 py-2">
-          <a href="#" class="card-links">
-            <div class="card card-hover" style="width: 100%;">
-              <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's
                   content.</p>
@@ -157,9 +121,9 @@
           <a href="#" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's
                   content.</p>
@@ -171,9 +135,9 @@
           <a href="#" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's
                   content.</p>
@@ -185,9 +149,9 @@
           <a href="#" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's
                   content.</p>
@@ -201,9 +165,9 @@
           <a href="#" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's
                   content.</p>
@@ -215,9 +179,9 @@
           <a href="#" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's
                   content.</p>
@@ -229,9 +193,53 @@
           <a href="#" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 px-6 py-2">
+          <a href="#" class="card-links">
+            <div class="card card-hover" style="width: 100%;">
+              <div class="card-body">
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4 px-6 py-2">
+          <a href="#" class="card-links">
+            <div class="card card-hover" style="width: 100%;">
+              <div class="card-body">
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4 px-6 py-2">
+          <a href="#" class="card-links">
+            <div class="card card-hover" style="width: 100%;">
+              <div class="card-body">
+                <img src="cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Card title</h5>
+                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's
                   content.</p>
