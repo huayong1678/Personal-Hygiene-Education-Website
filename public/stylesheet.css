@@ -6,10 +6,12 @@ body {
     scroll-behavior: smooth;
 }
 
+/* VUE */
 #app {
     overflow: hidden;
 }
 
+/* Page Footer */
 #footer {
     position: relative;
     bottom: 0px;
@@ -22,12 +24,15 @@ body {
     display: inline-block;
 }
 
+/* Option Bar */
 #navigation {
     background: transparent;
     position: fixed;
     z-index: 1000;
+    width: 100vw;
 }
 
+/* Page Content */
 .scroll {
     overflow: hidden;
     align-items: center;
@@ -54,6 +59,7 @@ body {
     /* font-weight: bold; */
     text-align: center;
     font-family: 'Fredericka the Great', cursive;
+    display: block;
 }
 
 #two {
@@ -84,12 +90,8 @@ body {
 }
 
 #bars {
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(79, 79, 79, 1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(79, 79, 79, 1)));
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(79, 79, 79, 1) 100%);
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(79, 79, 79, 1) 100%);
-    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(79, 79, 79, 1) 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(79, 79, 79, 1) 100%);
+    background-color: #fff;
+    opacity: 0.8;
     height: 100vh;
 }
 
@@ -237,11 +239,46 @@ body {
     transition: 300ms ease;
 }
 
-#backward{
+#backward {
     background: transparent;
     border: 0px;
 }
 
 #backward:focus {
     outline: none;
+}
+
+.shake:hover{
+    animation: shake 200ms ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: scale(1) rotate(7deg);
+    }
+
+    50% {
+        transform: scale(1.05) rotate(-7deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+#tooth1 {
+    position: absolute;
+    top: 0px;
+    width: 20vw;
+    transform: rotate(25deg);
+    z-index: 900;
+}
+
+#tooth2 {
+    position: absolute;
+    top: calc(60vh + 200px);
+    right: -40px;
+    width: 20vw;
+    transform: rotate(-45deg);
+    z-index: 900;
 }

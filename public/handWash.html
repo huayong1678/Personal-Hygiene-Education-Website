@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Oral Health | Personal Hygiene</title>
+    <title>Washing Hands | Personal Hygiene</title>
 
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="assets/logo.png">
@@ -39,7 +39,7 @@
             <div class="btn-group" role="group">
                 <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
                         :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
-                <button @click="nextPage()" id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
+                <button id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
                         :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
             </div>
         </nav>
@@ -70,12 +70,10 @@
         <!-- Title -->
         <div class="container-fluid scroll">
             <div class="row" id="page-title">
-                <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Oral Health</div>
-                <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">การดูแลสุขภาพช่องปากที่ดี</div>
+                <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Washing Hands</div>
+                <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">รู้หรือไม่! บนมือของเราสามารถมีแบคทีเรียเกาะอยู่ได้ถึง 3,000 ชนิด</div>
             </div>
         </div>
-
-        <!-- content -->
         <div class="container scroll">
         </div>
 </body>
@@ -113,7 +111,7 @@
                 window.history.go(-1)
             },
             nextPage(){
-                window.location.href = 'handWash.html';
+                router.push("yourroutename")
             }
         }
     });
