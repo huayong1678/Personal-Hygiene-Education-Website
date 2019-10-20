@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home | Personal Hygiene</title>
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+        rel="stylesheet">
+
+    <!-- Rellax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+
+    <!-- Icon API -->
+    <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+    <!-- VUE CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-dark bg-transparent" id="navigation">
+            <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+                    :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+            <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+                    :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        </nav>
+
+        <!-- Option Bar -->
+        <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+        <!-- Scroll to See More -->
+        <div class="container-fluid seeMore scroll">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-auto rellax" data-rellax-speed="5"><a href="#cards-section"
+                        class="text-muted card-links">
+                        <div class="nav-scroll">See More.<br><i class="fas fa-chevron-down"></i></div>
+                    </a></div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <div class="container-fluid scroll">
+            <div class="row" id="page-title">
+                <div id="one" class="col-12 rellax" data-rellax-speed="6">Personal Hygiene</div>
+                <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">Practical Perform for Perfect
+                    Health</div>
+            </div>
+        </div>
+</body>
+
+</html>
+<script>
+    // Smooth Scroll
+    $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault()
+
+        $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top + 500,
+            },
+            500,
+            'linear'
+        )
+    })
+
+    // rellax
+    var rellax = new Rellax('.rellax');
+
+    // VUE
+    var app = new Vue({
+        el: '#app',
+        data: {
+            handleStatus: {
+                optionBars: false
+            }
+        },
+        methods: {
+            handleClick() {
+                this.handleStatus.optionBars = !this.handleStatus.optionBars
+            },
+            previousPage() {
+                window.history.go(-1)
+            }
+        }
+    });
+</script>
