@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kid-Teeth | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="styleone.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+    rel="stylesheet">
+
+  <!-- Rellax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Flower Decor. -->
+    <!-- <div class="scroll flower" data-rellax-speed="8">
+      <img src="flower.png"/>
+    </div> -->
+
+    <!-- Container -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="hyone" class="col-md-12 text-center" data-rellax-speed="10">มาแปรงฟันกันเถอะ</div>
+      </div>
+    </div>
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="reallystrong" class="col-12 text-center" data-rellax-speed="10">รู้ไหม?</div>
+        <div id="hytext" class="col-12 text-center" data-rellax-speed="8">
+            ฟันเป็นสิ่งที่ควรดูแลเป็นอันดับต้นๆต้องร่างกาย <br>
+            เพราะนอกจากมีฟันที่สะอาดจะช่วยส่งเสริมบุคลิกภาพของตนทั้งเรื่องสี เรื่องกลื่นแล้ว<br>
+            ยังลดโอกาศที่จะเกิดอาการต่างๆในช่่องปากได้อีกด้วย<br>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid scroll">
+      <div class="container">
+        <div class="row" id="page-title">
+          <div id="medstrong" class="col-md-12 text-center" data-rellax-speed="10" >
+            สุขภาพฟันที่ดือ
+          </div>
+          <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+              <ul class="list-group">
+                <li class="list-group-item">ฟันสะอาดไม่มีเศษอาหาร</li>
+                <li class="list-group-item">เหงือกชมพู ไม่เจ็บ ไม่มีเลือดออก</li>
+                <li class="list-group-item">ไม่มีกลิ่นปาก</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid scroll">
+        <div class="row" id="page-title">
+            <div id="medstrong" class="col-md-12 text-center" data-rellax-speed="10">วิธีดูแลฟัน</div>
+            <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+              เด็กเล็กที่ยังดูแลตัวเองไม่ได้ ผู้ปกครองควรช่วยดูแลเรื่องฟันของเด็กไประยะหนึ่ง<br>
+              แต่เด็กๆบางคนโตช่วยตัวเองได้แล้ว ลองหัดแปรงฟันดูน้า
+            </div>
+          </div>
+    </div>
+    <div class="container-fluid scroll">
+        <div class="row" id="page-title">
+            <div id="reallystrong" class="col-md-12  text-center" data-rellax-speed="10">
+              การแปรงฟัน</div>
+          </div>
+    </div>
+    <div class="container-fluid scroll">
+      <div class="container">
+        <div class="row" id="first-title">
+          <div id="hytext" class="col-lg-6  text-center" data-rellax-speed="10">
+              <img src="simple.png" alt=""></div>
+            <div id="hytext" class="col-lg-6  text-center" data-rellax-speed="10">
+            วางแปรงสีฟันเฉียงๆกับคอฟัน <br> 
+            แล้วไล่แปรงทั้งข้างในและนอก <br> 
+            เรียงกันตั้งแต่ขอบปากจนสุดปากอีกฝั่ง</div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid scroll">
+      <div class="container">
+        <div class="row" id="first-title">
+          <div id="hytext" class="col-lg-6  text-center" data-rellax-speed="10">
+              <img src="simple.png" alt="">
+          </div>
+          <div id="hytext" class="col-lg-6  text-center" data-rellax-speed="10">
+            แปรงส่วนที่บดเคี้ยวอาหาร
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid scroll">
+      <div class="container">
+        <div class="row" id="first-title">
+          <div id="hytext" class="col-lg-6  text-center" data-rellax-speed="10">
+              <img src="simple.png" alt=""></div>
+            <div id="hytext" class="col-lg-6  text-center" data-rellax-speed="10">
+              แปรงด้านในของฟันหน้าบนและล่าง</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid scroll">
+        <div class="row" id="page-title">
+          <div id="medstrong" class="col-md-12 text-center" data-rellax-speed="10">สิ่งต่างๆที่เกิดขึ้นหากไม่ดูแลฟัน</div>
+        </div>
+      </div>
+      <div class="container-fluid scroll">
+          <div class="row" id="first-title">
+            <div id="medstrong" class="col-lg-6 text-center" data-rellax-speed="10" >
+                <img class="badteeth" src="simple.png" alt="">
+              <p class=" mx-auto">ฟันผุ</p></div>
+            <div id="hytext" class="col-lg-6 text-center" data-rellax-speed="10">
+                <p class=" mx-auto">เกิดจากเชื้อแบคทีเรียในช่องปากที่ <br>
+                   ทำลายสารเคลือบฟัน และเนื้อฟัน เกิดกับโดยเฉพาะในเด็กเล็ก
+
+                </p></div>
+          </div>
+      </div>
+      <div class="container-fluid scroll">
+          <div class="row" id="first-title">
+            <div id="medstrong" class="col-lg-6 text-center" data-rellax-speed="10" >
+                <img class="badteeth" src="simple.png" alt="">
+              <p class=" mx-auto">ฟันเหลือง</p></div>
+            <div id="hytext" class="col-lg-6 text-center" data-rellax-speed="10">
+                <p class=" mx-auto">
+                  ส่วนหนึ่งเกิดจากการกินอาหารสีเข้ม<br>
+                  ชากาแฟ หรือน้ำอัดลมที่คุณหนูๆชอบทาน<br>
+                  การแปรงฟันที่ถูกวิธีก็ช่วยลดได้นะ
+                  
+
+                </p></div>
+          </div>
+      </div>
+      <div class="container-fluid scroll">
+          <div class="row" id="first-title">
+            <div id="medstrong" class="col-lg-6 text-center" data-rellax-speed="10" >
+                <img class="badteeth" src="simple.png" alt="">
+              <p class=" mx-auto">กลื่นปาก</p></div>
+            <div id="hytext" class="col-lg-6 text-center" data-rellax-speed="10">
+                <p class=" mx-auto">
+                  เกิดจากแบคทีเรียตกค้างในช่องปาก<br>
+                  ฟันผุก็มีผบต่อกลิ่นปากด้วย ดั้งนั้นแรงฟันจะดีกว่านะ<br>
+                </p></div>
+          </div>
+      </div>
+
+      <div class="container-fluid scroll">
+          <div class="row" id="first-title">
+            <div id="medstrong" class="col-lg-6 text-center" data-rellax-speed="10" >
+                <img class="badteeth" src="simple.png" alt="">
+              <p class=" mx-auto">กลื่นปาก</p></div>
+            <div id="hytext" class="col-lg-6 text-center" data-rellax-speed="10">
+                <p class=" mx-auto">
+                  เกิดจากแบคทีเรียตกค้างในช่องปาก<br>
+                  ฟันผุก็มีผบต่อกลิ่นปากด้วย ดั้งนั้นแรงฟันจะดีกว่านะ<br>
+                </p></div>
+          </div>
+      </div>
+      
+      <div class="container-fluid scroll">
+          <div class="row" id="first-title">
+            <div id="medstrong" class="col-lg-6 text-center" data-rellax-speed="10" >
+                <img class="badteeth" src="simple.png" alt="">
+              <p class=" mx-auto">โรคแทรกซ้อน</p></div>
+            <div id="hytext" class="col-lg-6 text-center" data-rellax-speed="10">
+                <p class=" mx-auto">
+                  ถ้าเราปล่อยฟันพุทิ้งไว้นาน โรคที่ตามมามีเพียบ<br>
+                  ทั้งโรคหัวใจ เบาหวาน ติดเชี้ยอีก น่ากลัววว<br>
+                </p></div>
+          </div>
+      </div>
+
+      <div class="container-fluid scroll">
+          <div class="row" id="page-title">
+            <div id="medstrong" class="col-md-12 text-center" data-rellax-speed="10">เพื่อสุขภาพที่ดี หมั่นแปรงฟันเยอะๆน้าาา</div>
+          </div>
+        </div>
+
+
+
+    <!--
+    <div class="container mb-9 scroll">
+      <div class="row">
+        <div class="col-4 px-6 py-2">
+          <div class="card card-hover" style="width: 100%;">
+            <div class="card-body">
+              <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+
+          
+        <div class="col-4 px-6 py-2">
+          <div class="card card-hover" style="width: 100%;">
+            <div class="card-body">
+              <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 px-6 py-2">
+          <div class="card card-hover" style="width: 100%;">
+            <div class="card-body">
+              <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row rellax">
+        <div class="col-4 px-6 py-2">
+          <div class="card card-hover" style="width: 100%;">
+            <div class="card-body">
+              <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 px-6 py-2">
+          <div class="card card-hover" style="width: 100%;">
+            <div class="card-body">
+              <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 px-6 py-2">
+          <div class="card card-hover" style="width: 100%;">
+            <div class="card-body">
+              <img src="cardImageExample.jpeg" class="card-img-top" alt="...">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</body>
+
+</html>
+<script>
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      }
+    }
+  });
+</script>
