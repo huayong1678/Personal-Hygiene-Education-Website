@@ -52,6 +52,29 @@ body {
     top: calc(50vh - 75px);
 }
 
+.text-header{
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+    color: #1f1f1f;
+    padding-top: 25vh;
+}
+
+.text-content{
+    font-size: 25px;
+    text-align: center;
+    color: #353535;
+    padding-top: 0;
+}
+
+.list-content{
+    font-size: 25px;
+    color: #353535;
+    padding-top: 0;
+    list-style-position: outside;
+    padding-bottom: 10px;
+}
+
 #one {
     /* position: relative;
     top: 50vh; */
@@ -281,4 +304,55 @@ body {
     width: 20vw;
     transform: rotate(-45deg);
     z-index: 900;
+}
+
+#tooth3 {
+    position: absolute;
+    top: calc(100vh + 300px);
+    left: -40px;
+    width: 22vw;
+    transform: rotate(-13deg);
+    z-index: 900;
+}
+
+#tooth4 {
+    position: absolute;
+    top: calc(150vh + 20px);
+    right: -40px;
+    width: 18vw;
+    transform: rotate(9deg);
+    z-index: 900;
+    filter: drop-shadow(0.5px 0px .1px rgb(95, 95, 95));
+}
+
+#dentist {
+    position: absolute;
+    top: calc(150vh + 700px);
+    left: -150px;
+    width: 35vw;
+    transform: scaleX(-1) rotate(-25deg);
+    z-index: 800;
+}
+
+#toothbrush {
+    position: absolute;
+    top: calc(250vh + 800px);
+    right: -200px;
+    width: 35vw;
+    transform: scaleX(-1) rotate(25deg);
+    z-index: 800;
+}
+
+#mouthWash {
+    position: absolute;
+    top: calc(250vh + 1000px);
+    left: 0px;
+    width: 35vw;
+    transform: scaleX(-1);
+    z-index: 800;
+}
+
+.last-row{
+    padding-top: 25vh;
+    padding-bottom: 30vh;
 }

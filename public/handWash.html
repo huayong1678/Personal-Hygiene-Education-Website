@@ -71,18 +71,36 @@
         <div class="container-fluid scroll">
             <div class="row" id="page-title">
                 <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Washing Hands</div>
-                <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">รู้หรือไม่! บนมือของเราสามารถมีแบคทีเรียเกาะอยู่ได้ถึง 3,000 ชนิด</div>
+                <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">รู้หรือไม่!
+                    บนมือของเราสามารถมีแบคทีเรียเกาะอยู่ได้ถึง 3,000 ชนิด</div>
             </div>
         </div>
         <div class="container scroll">
+
+        </div>
+
+        <!-- Footer -->
+        <div class="container-fluid" id="footer">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-6 text-center">
+                    <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+                        right reserved.
+                    </p>
+                </div>
+                <div class="col"></div>
+            </div>
         </div>
 </body>
 
 </html>
 <script>
+    let hashCounter = 0;
+
     // Smooth Scroll
     $('a[href*="#"]').on('click', function (e) {
         e.preventDefault()
+        hashCounter ++;
 
         $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top + 500,
@@ -110,7 +128,7 @@
             previousPage() {
                 window.history.go(-1)
             },
-            nextPage(){
+            nextPage() {
                 router.push("yourroutename")
             }
         }
