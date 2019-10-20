@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kid-Teeth | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="style/stylesheet.css">
+  <link rel="stylesheet" href="style/styleone.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+    rel="stylesheet">
+
+  <!-- Rellax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Flower Decor. -->
+    <!-- <div class="scroll flower" data-rellax-speed="8">
+      <img src="flower.png"/>
+    </div> -->
+
+    <!-- Container -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="hyone" class="col-12 text-center" data-rellax-speed="10">อาบน้ำ</div>
+      </div>
+    </div>
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="reallystrong" class="col-12 text-center" data-rellax-speed="10">รู้ไหม?</div>
+        <div id="hytext" class="col-12 text-center" data-rellax-speed="8">
+            การอาบน้ำเป็นส่วนสำคัญของชีวิตเลยนะ <br>
+            บางคน หลังทำอะไรเสร็จแล้วกลับมาอาบน้ำทุกอย่างเหมือนจะหายไปเลย<br>
+            โดยทั่วไปแล้วโครตอาบน้ำวันละ 2 ครั้ง
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid scroll">
+      <div class="container">
+        <div class="row" id="page-title">
+          <div id="medstrong" class="col-md-6 text-center" data-rellax-speed="10" >
+            ข้อดีของการอาบน้ำ
+          </div>
+          <div id="hytext" class="col-md-6 text-center" data-rellax-speed="10">
+              <ul>
+                <li>อาบตอนเช้าช่วยทำให้ตื่นนอนสดขื่่น</li>
+                <li>อาบก่อนนอนลดความเครียดหลังทำงาน</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid scroll">
+        <div class="row" id="page-title">
+            <div id="reallystrong" class="col-md-12  text-center" data-rellax-speed="10">
+            การอาบน้ำง่ายๆ</div>
+          </div>
+    </div>
+    <div class="container-fluid scroll">
+        <div class="row" id="first-title">
+          <div id="hytext" class="col-md-12  text-center" data-rellax-speed="10">
+              ปรับอุณหภูมิน้ำให้พร้อมอาบ <br><br>
+              <img src="simple.png" alt=""></div>
+        </div>
+    </div>
+    <div class="container-fluid scroll">
+        <div class="row" id="first-title">
+          <div id="hytext" class="col-md-12  text-center" data-rellax-speed="10">
+              ลงไปแช่หรือเปิดฝักบัว <br><br>
+              <img src="simple.png" alt=""></div>
+        </div>
+    </div>
+
+    
+    <!-- https://health.kapook.com/view1669.html -->
+    <div class="container-fluid scroll">
+        <div class="row" id="first-title">
+          <div id="medstrong" class="col-12 text-center mb-5" data-rellax-speed="10">การผ่อนคลายด้วยการแช่น้ำ</div>
+        </div>
+        <div class="row" id="first-title" class="mb-2">
+            <div id="medstrong" class="col-md-6 text-center " data-rellax-speed="10" >
+                น้ำร้อน<br>
+                <strong id="reallystrong">36-38</strong><br> องศา <br>
+                ช่วยบำบัดความรู้สึกเครียด<br>
+                แต่อย่าแช่นานหล่ะ
+            </div>
+            <div id="medstrong" class="col-md-6 text-center" data-rellax-speed="10">
+                น้ำอุ่น<br>
+                <strong id="reallystrong">29-35</strong><br> องศา <br>
+                ช่วยผ่อนคลายความเหนื่อยล้า     
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid scroll">
+        <div class="row" id="first-title">
+          <div id="reallystrong" class="col-md-12 text-center" data-rellax-speed="10">เกร็ตความรู้เรื่องการอาบน้ำ</div>
+        </div>
+    </div>
+
+    <div class="container-fluid scroll">
+        <div class="container">
+            <div class="row" id="first-title">
+                <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+                    การอาบน้ำเย็นนั้นช่วยทั้งฟื้นฟูร่างกายหลังจากที่เหน็ดเหนื่อยมา
+                    และยังทำให้อารมน์แจ่มใสได้ด้วย
+                </div>
+                <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+                    <p style="opacity:.7;">น้ำเย็นสบายช่วยให้รู้สึกผ่อนคลายความเครียดได้อย่างดี ช่วยให้รู้สึกแจ่มใส ทั้งยังกระตุ้นปลายประสาทและสมอง <br>
+                       จึงลดอาการซึมเศร้าได้ คล้ายกับยาต้านอาการซึมเศร้าเลยทีเดียว</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid scroll">
+        <div class="container">
+            <div class="row" id="first-title">
+                <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+                    การอาบน้ำเย็นช่วยเผาพลาญไขมัน อึ้งหล่ะสิ<br>   
+                </div>
+                <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+                    <p style="opacity:.7;">ไขมันเป็นสิ่งที่ช่วยสร้างความอบอุ่นแก่ร่างกาย ดังนั้น เมื่อเราอาบน้ำเย็น <br>
+                       ร่างกายจะเพิ่มเร่งการเผาผลาญไขมัน เพื่อสร้างให้ร่างกายอบอุ่นขึ้น ไขมันก็จะลดลง<br>
+                       แต่ออกกำลังกายด้วยจะดีที่สุดนะ
+                    </p>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid scroll">
+      <div class="container">
+          <div class="row" id="first-title">
+              <div class="col-md-6">
+                <div class="row" id="first-title">
+                  <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+                      เวลาที่ควรใช้ตอนน้ำอาบ
+                  </div>
+                  <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+                    <strong id="reallystrong">5-10</strong><p>นาที</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <p class="hytext text-center" style="font-size: 24px;">
+                  มากกว่านั้นเราจะสังเกตุได้ว่าผิวเราจะเหี่ยวๆ ความชุ่มชื้นจะถูกเอาออกมากเกินไปผิวจะแห้งได้</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </div>
+</body>
+
+</html>
+<script>
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      }
+    }
+  });
+</script>

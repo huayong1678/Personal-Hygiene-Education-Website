@@ -1,0 +1,108 @@
+html,
+body {
+    /*
+    overflow-x: hidden;
+    overflow-y: scroll;
+    */
+    height: 350vh;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#navigation {
+    background: transparent;
+    position: fixed;
+    z-index: 1000;
+}
+
+.scroll {
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    width: 100vw;
+    /* display: flex;
+    flex-direction: column; */
+    z-index: 800;
+}
+
+#page-title {
+    position: relative;
+    top: calc(50vh - 75px);
+}
+
+#one {
+    /* position: relative;
+    top: 50vh; */
+    font-size: 80px;
+    /* font-weight: bold; */
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+#two {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+}
+
+.optionBars-Dark {
+    font-size: 200%;
+    color: rgb(146, 146, 146);
+    transition: 750ms ease;
+}
+
+.optionBars-Light {
+    font-size: 200%;
+    color: rgb(252, 252, 252);
+    transition: 750ms ease;
+}
+
+#buttonBars {
+    background: transparent;
+    border: 0px;
+}
+
+#buttonBars:focus {
+    outline: none;
+}
+
+#bars {
+    background-color: rgb(179, 71, 71);
+    height: 100vh;
+}
+
+.slide {
+    transform: translateX(-40vw);
+    transition: 300ms ease;
+    width: 25vw;
+    position: fixed;
+    z-index: 900;
+    -webkit-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+.slided {
+    transform: translateX(0px);
+    transition: 300ms ease;
+    width: 25vw;
+    position: fixed;
+    z-index: 900;
+    -webkit-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+.card-hover:hover{
+    transform: scale(1.025);
+    transition: 300ms;
+}
+
+.flower{
+    position: absolute;
+    width: 15vw;
+    z-index: 0;
+}
