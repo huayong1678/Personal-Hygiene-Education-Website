@@ -36,3 +36,10 @@
     width:280px;
     height:280px;
 }
+.inline{
+    display: inline-block;
+}
+.r-center{
+    display: flex;
+    align-items: center;
+}
