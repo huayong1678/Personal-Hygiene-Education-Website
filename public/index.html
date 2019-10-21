@@ -392,18 +392,6 @@
 
 </html>
 <script>
-  // Smooth Scroll
-  $('a[href*="#"]').on('click', function (e) {
-    e.preventDefault()
-
-    $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top + 500,
-      },
-      500,
-      'linear'
-    )
-  })
-
   // rellax
   var rellax = new Rellax('.rellax');
 
