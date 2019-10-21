@@ -405,3 +405,8 @@ body {
     z-index: -2;
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
+
+.howTo {
+    width: 100%;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
