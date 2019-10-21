@@ -410,3 +410,23 @@ body {
     width: 100%;
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
+
+#bath1 {
+    position: absolute;
+    transform: rotate(125deg);
+    width: 27.5vw;
+    left: -50px;
+    top: -90px;
+    z-index: -2;
+    opacity: 0.7;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#sponge{
+    position: absolute;
+    transform: rotate(-15deg);
+    right: -30px;
+    top: calc(500px + 10vh);
+    z-index: -2;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}

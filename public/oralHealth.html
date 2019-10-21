@@ -37,7 +37,9 @@
       <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
           :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
       <div class="btn-group" role="group">
-        <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+        <!-- <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button> -->
+        <button @click="homePage()" id="backward"><i class="fas fa-home backward-light"
             :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
         <button @click="nextPage()" id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
             :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
@@ -191,6 +193,9 @@
       },
       nextPage() {
         window.location.href = 'handWash.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
       }
     }
   });
