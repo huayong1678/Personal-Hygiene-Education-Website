@@ -52,12 +52,185 @@
         <div id="hyone" class="col-md-12 text-center" data-rellax-speed="10">ทานอะไรดี</div>
       </div>
     </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kid-Teeth | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="style/stylesheet.css">
+  <link rel="stylesheet" href="style/styleone.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+    rel="stylesheet">
+
+  <!-- Rellax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Flower Decor. -->
+    <!-- <div class="scroll flower" data-rellax-speed="8">
+      <img src="flower.png"/>
+    </div> -->
+
+    <!-- Container -->
     <div class="container-fluid scroll">
       <div class="row" id="page-title">
         <div id="hyone" class="col-md-12 text-center" data-rellax-speed="10">ทานอะไรดี</div>
       </div>
     </div>
-    
+    <div class="container-fluid ">
+      <div class="row" style="padding:200px;">
+        <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+            อาหารหลัก <br> <strong id="reallystrong">5</strong> <br> หมู่ <br> <br> คือ สารอาหารที่สามารถดูดซึมและนำมาใช้ในกระบวนการทำงานของระบบต่าง ๆ <br>
+            ของร่างกาย การขับถ่าย และมีบทบาทสำคัญต่อการเจริญเติบโตพร้อมด้วยสุขภาพที่ดี <br>
+            โดยตามหลักโภชนาการจะแบ่งสารอาหารออกเป็น 5 ประเภท
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mb-5">
+      <div class="container">
+          <div class="row" id="">
+            <div class="col-md-6 mt-3">
+              <div class="col-xs-12 text-center">
+                <a href="#prot" data-toggle="collapse"><img src="simple.png" alt="" style="width: 350px;"></a>
+                <div id="prot" class="collapse p-2">
+                    หมู่ที่ 1 โปรตีนเป็นส่วนประกอบหลักของทุก ๆ เซลล์ในร่างกาย และเป็นสารอาหารชนิดหนึ่งที่ร่างกายจะขาดไม่ได้
+                    มีความสำคัญต่อการเจริญเติบโตของร่างกาย ทั้งยังมีส่วนช่วยซ่อมแซมส่วนที่สึกหรอของร่างกาย
+                    ประกอบไปด้วยเนื้อสัตว์ นม ไข่ ถั่วเมล็ดแห้งต่าง ๆ 
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="col-xs-12 text-center">
+                  <a href="#carb" data-toggle="collapse"><img src="simple.png" alt="" style="width: 350px;"></a>
+                  <div id="carb" class="collapse p-2">
+                      หมู่ที่ 2 คาร์โบไฮเดรต เป็นแหล่งพลังงานสำคัญชนิดหนึ่งของร่างกายที่เราควรได้รับประมาณ 8-12 ทัพพี 
+                      (1 ทัพพีเท่ากับ 5 ช้อนกินข้าว) หรือคิดเป็นสัดส่วนได้ร้อยละ 60-65 ของพลังงานที่ร่างกายต้องการทั้งหมด
+                      ประกอบไปด้วย ข้าวเจ้า ข้าวเหนียว ขนมจีน ขนมปัง และแป้งอื่นๆ
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="row" id="">
+              <div class="col-md-6 mt-3">
+                <div class="col-xs-12 text-center">
+                  <a href="#fat" data-toggle="collapse"><img src="simple.png" alt="" style="width: 350px;"></a>
+                  <div id="fat" class="collapse p-2">
+                      หมู่ที่ 3 น้ำมัน ไขมันจากพืชและไขมันจากสัตว์ เป็นแหล่งพลังงานสำคัญของร่างกาย มีคุณประโยชน์ในด้านให้ความอบอุ่นแก่ร่างกาย แต่ทั้งนี้ก็ควรรับประทานไขมันอย่างพอเหมาะ
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-3">
+                  <div class="col-xs-12 text-center">
+                    <a href="#fruit" data-toggle="collapse"><img src="simple.png" alt="" style="width: 350px;"></a>
+                    <div id="fruit" class="collapse p-2">
+                        หมู่ที่ 4 แร่ธาตุ ใยอาหาร ผักใบเขียวและพืชผักชนิดต่าง ๆ ซึ่งแหล่งของสารอาหารประเภทแร่ธาตุ ใยอาหาร
+                        ผักยังเป็นแหล่งที่ดีของใยอาหาร มีคุณสมบัติช่วยเพิ่มปริมาณและน้ำหนักอุจจาระ ส่งเสริมกระบวนการขับถ่ายให้ถ่ายคล่อง และช่วยดักจับสารเคมีที่เป็นพิษ
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row text-center " id="">
+                <div class="col-md-6 mt-3 mx-auto">
+                  <div class="col-xs-12">
+                    <a href="#veg" data-toggle="collapse"><img src="simple.png" alt="" style="width: 350px;"></a>
+                    <div id="veg" class="collapse p-2">
+                        หมู่ที่ 5 วิตามิน ผลไม้ชนิดต่าง ๆ ซึ่งนอกจากผลไม้จะอุดมไปด้วยวิตามิน แร่ธาตุแล้ว ผลไม้ยังมีคาร์โบไฮเดรตและน้ำตาลอยู่มากกว่าผัก จึงให้พลังงานกับร่างกายได้พอประมาณ
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+      <div class="row" style="">
+        <div id="hytext" class="col-md-12 text-center" data-rellax-speed="10">
+            ปกติคนเราควรได้รับพลังงาน
+        </div>
+        <div id="hytext" class="col-md-6 text-center" data-rellax-speed="10" style="height: 300px;">
+            ผู้ชาย
+        </div>
+        <div id="hytext" class="col-md-6 text-center" data-rellax-speed="10" style="height: 300px;">
+            ผู้หญิง
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-5">
+      <div class="container">
+        <div class="row">
+          <div id="hytext" class="col-md-12 text-center pb-5" data-rellax-speed="10">
+            อาหารที่ไม่ควรทานมากนัก
+          </div>
+          <div id="hytext" class="col-md-6 text-center" data-rellax-speed="10">
+              <div id="hytext" class="col-xs-12" data-rellax-speed="10">
+                  <img src="simple.png" alt="">
+                  <p>ฟาสต์ฟูด</p>
+              </div>
+          </div>
+          
+          <div id="hytext" class="col-md-6 text-center" data-rellax-speed="10">
+              <div id="hytext" class="col-xs-12" data-rellax-speed="10">
+                  <img src="simple.png" alt="">
+                  <p>ของทอด</p>
+              </div>
+          </div>
+
+          <div id="hytext" class="col-md-6 text-center" data-rellax-speed="10">
+              <div id="hytext" class="col-xs-12" data-rellax-speed="10">
+                  <img src="simple.png" alt="">
+                  <p>บุฟเฟต์</p>
+              </div>
+          </div>
+          <div id="hytext" class="col-md-6 text-center" data-rellax-speed="10">
+              <div id="hytext" class="col-xs-12" data-rellax-speed="10">
+                  <img src="simple.png" alt="">
+                  <p>น้ำอัดลม</p>
+              </div>
+          </div>
+          <div id="hytext" class="col-md-12 text-left" data-rellax-speed="10">
+            <div class="container mt-5">
+              <div id="hytext" class="col-xs-12" data-rellax-speed="10">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
@@ -65,7 +238,6 @@
 <script>
   // rellax
   var rellax = new Rellax('.rellax');
-
   // VUE
   var app = new Vue({
     el: '#app',
