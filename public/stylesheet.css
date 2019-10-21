@@ -466,7 +466,16 @@ body {
     transform: rotate(-25deg);
     width: 25vw;
     right: -100px;
-    top: calc(800px + 350vh);
+    top: calc(800px + 300vh);
+    z-index: -100;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+#shower{
+    position: absolute;
+    transform: rotate(15deg);
+    width: 25vw;
+    left: -60px;
+    top: calc(1000px + 400vh);
     z-index: -100;
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
@@ -492,7 +501,7 @@ body {
         margin-top: 1000px;
     }
     100% {
-        margin-top: -100%;
+        margin-top: -150%;
     }
 }
 
@@ -501,7 +510,7 @@ body {
         margin-top: 1000px;
     }
     100% {
-        margin-top: -100%;
+        margin-top: -150%;
     }
 }
 
@@ -510,7 +519,7 @@ body {
         margin-top: 1000px;
     }
     100% {
-        margin-top: -100%;
+        margin-top: -150%;
     }
 }
 
