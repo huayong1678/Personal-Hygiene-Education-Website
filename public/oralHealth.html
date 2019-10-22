@@ -133,6 +133,7 @@
         </div>
         <div class="col"></div>
       </div>
+      </div>
 
       <!-- Footer -->
       <div class="container-fluid" id="footer">
@@ -152,31 +153,23 @@
 
 </html>
 <script>
+  // rellax
+  var rellax = new Rellax('.rellax');
+
   // VUE
   var app = new Vue({
     el: '#app',
     data: {
-      scrollClick: false,
       handleStatus: {
         optionBars: false
       }
-    },
-    mounted() {
-      // rellax
-      var rellax = new Rellax('.rellax');
     },
     methods: {
       handleClick() {
         this.handleStatus.optionBars = !this.handleStatus.optionBars
       },
       previousPage() {
-        // if (this.handleClick) {
-        //   window.history.go(-2)
-        // } else {
-        //   window.history.go(-1)
-        // }
-        // // window.location.href = 'index.html';
-        window.location.href = 'index.html';
+        window.location.href = 'oralHealth.html';
       },
       nextPage() {
         window.location.href = 'handWash.html';

@@ -270,6 +270,14 @@
   z-index: 0;
 }
 
+#food5 {
+  position: absolute;
+  width: 30vw;
+  left: -150px;
+  top: calc(330vh + 800px);
+  z-index: 0;
+}
+
 #foodPyramid{
     animation: spin 18s linear infinite;
 }
