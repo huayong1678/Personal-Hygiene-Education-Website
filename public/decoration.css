@@ -232,3 +232,49 @@
     z-index: -100;
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
+
+/* food.html */
+#food1 {
+    position: absolute;
+    transform: rotate(125deg);
+    width: 27.5vw;
+    left: -50px;
+    top: -90px;
+    z-index: -2;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#food2 {
+    position: absolute;
+    transform: rotate(125deg);
+    width: 27.5vw;
+    right: -50px;
+    top: calc(50vh + 150px);
+    z-index: -2;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#food3 {
+    position: absolute;
+    width: 40vw;
+    left: -150px;
+    top: calc(100vh + 400px);
+    z-index: 0;
+}
+
+#food4 {
+  position: absolute;
+  width: 30vw;
+  right: -150px;
+  top: calc(200vh + 600px);
+  z-index: 0;
+}
+
+#foodPyramid{
+    animation: spin 18s linear infinite;
+}
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}

@@ -152,20 +152,6 @@
 
 </html>
 <script>
-  var hashCounter = 0;
-  // Smooth Scroll
-  $('a[href*="#"]').on('click', function (e) {
-    e.preventDefault()
-    hashCounter++;
-    console.log(hashCounter)
-
-    $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top,
-      },
-      500,
-      'linear'
-    )
-  })
   // VUE
   var app = new Vue({
     el: '#app',

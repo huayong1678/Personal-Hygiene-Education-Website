@@ -8,6 +8,7 @@
   <title>Food & Nutrition | Personal Hygiene</title>
 
   <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
   <link rel="icon" href="assets/logo.png">
 
   <!-- Google Fonts -->
@@ -51,17 +52,26 @@
 
     <!-- Title Decor. -->
     <div class="rellax" data-rellax-speed="8">
-      <img id="food1" src="assets/food1.png" />
+      <img data-toggle="tooltip" data-placement="bottom" title="Sausage : 301 calories" id="food1"
+        src="assets/food1.png" />
     </div>
     <div class="rellax" data-rellax-speed="4">
-      <img id="food2" src="assets/food2.png" />
+      <img data-toggle="tooltip" data-placement="bottom" title="Shrimp Fried Rice : 321 calories" id="food2"
+        src="assets/food2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="food3" src="assets/food_card.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img data-toggle="tooltip" data-placement="bottom" title="Chicken Steak : 239 calories" id="food4"
+        src="assets/food3.png" />
     </div>
 
     <!-- Scroll to See More -->
     <div class="container-fluid seeMore">
       <div class="row">
         <div class="col"></div>
-        <div class="col-auto rellax" data-rellax-speed="5"><a href="#hand-header" class="text-muted card-links">
+        <div class="col-auto rellax" data-rellax-speed="5"><a href="#foodHeader" class="text-muted card-links">
             <div class="nav-scroll">See More.<br><i class="fas fa-chevron-down"></i></div>
           </a></div>
         <div class="col"></div>
@@ -79,50 +89,24 @@
 
     <!-- Content -->
     <div class="container pt-4 scroll" id="hand-header">
-      <div class="row">
-        <div class="col-12 text-header rellax" data-rellax-speed="3">เธอรู้ไหม?</div>
-        <div class="col-12 pt-4 text-content rellax" data-rellax-speed="3">
-          การอาบน้ำเป็นกิจกรรมที่คนเป็นล้านๆก็ทำกันเป็นกิจกรรมประจำวัน เพราะเป็นวิธีการสร้างความสดชื่น
-          และทำความสะอาดร่างกายที่เร็วและมีประสิทธิภาพที่สุด คุณต้องการเรียนรู้วิธีการอาบน้ำหรือไม่ ถ้าใช่ก็อ่านต่อไปเลย
-          และหากต้องการบอกให้คนข้างๆอาบน้ำบ้าง ก็ลองส่งเว็บนี้ให้เขาดูนะ</div>
-      </div>
-      <div class="row">
-        <div class="col-12 text-header">อาบน้ำเย็นช่วยร่างกายฟื้นตัวหลังออกกำลังกาย</div>
-      </div>
-      <div class="row pt-4">
-        <div class="col-12 text-content">
-          คนที่ออกกำลังกายหรือเล่นกีฬา รวมทั้งการวิ่งและการปั่นจักรยาน จะรู้จากประสบการณ์ว่า
-          การอาบน้ำเย็นช่วยฟื้นฟูร่างกายให้สดชื่น และหากเกิดการบาดเจ็บอย่างข้อพลิกหรือแพลง มีอาการอักเสบปวดบวมร้อน
-          วิธีรักษาในช่วง 24 ชั่วโมงแรกคือการประคบเย็น
-          ทั้งนี้เป็นเพราะความเย็นช่วยขจัดกรดแล็คติกออกจากกล้ามเนื้อและลดการอักเสบ
-          นักกีฬาที่ฝึกหนักจนเกือบหมดแรงอาจแช่น้ำเย็นจัดเพื่อบรรเทาความปวดเมื่อย แต่คนทั่วไปแค่อาบน้ำเย็นก็พอแล้ว
+      <div class="row py-5"></div>
+      <div class="row pt-5"></div>
+      <div class="row" id="foodHeader">
+        <div class="col-12 text-content py-0">อาหารหลัก</div>
+        <div class="col-12 text-center display-1">5</div>
+        <div class="col-12 text-content">หมู่</div>
+        <div class="col-12 pt-4 text-content">
+          สารอาหารที่สามารถดูดซึมและนำมาใช้ในกระบวนการทำงานของระบบต่าง ๆ <br>
+          ของร่างกาย การขับถ่าย และมีบทบาทสำคัญต่อการเจริญเติบโตพร้อมด้วยสุขภาพที่ดี <br>
+          โดยตามหลักโภชนาการจะแบ่งสารอาหารออกเป็น 5 ประเภท
         </div>
-      </div>
-      <div class="row content-padding">
-        <div class="col-12 text-header">หลังดื่มแอลกอฮอล์มาอย่าอาบน้ำนะ!</div>
-      </div>
-      <div class="row pt-4">
-        <div class="col-12 text-content">
-          สำหรับผู้ที่ดื่มเหล้าจนเมาหน้าแดง แล้วคิดว่าการอาบน้ำจะช่วยลดอุณหภูมิในร่างกายได้ดี เพราะหลังดื่มเหล้า
-          แอลกอฮอล์จะไปยับยั้งการทำงานของตับ ทำให้การปล่อยกลูโคสออกมาสู่กระแสเลือดน้อยลง
-          แต่ช่วงเวลาอาบน้ำร่างกายจะต้องการกลูโคสมากยิ่งขึ้น เพราะฉะนั้นการอาบน้ำหลังกินเหล้า
-          จึงทำให้ปริมาณน้ำตาลในเลือดไม่เพียงพอดังนั้น การกระทำดังกล่าวนี้จึงทำให้เกิดอาการเวียนหัว หน้ามืด ตาลาย
-          ร่างกายไร้เรี่ยวแรง และเสี่ยงต่อการล้มในห้องน้ำได้
+        <div class="col-3"></div>
+        <div class="col-6  pt-5">
+          <img class="howTo" src="assets/foodPyramid.png" alt="Food Pyramid" id="foodPyramid">
         </div>
+        <div class="col-3"></div>
       </div>
-      <div class="row content-padding">
-        <div class="col-12 text-header">เรามาดูวิดีโอน่ารักๆเกี่ยวกับการอาบน้ำกัน</div>
-      </div>
-      <div class="row">
-        <div class="col"></div>
-        <div class="col pt-5">
-          <iframe width="650" height="315" src="https://www.youtube.com/embed/tvAIrzS0B_o" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="col"></div>
-      </div>
-      <div class="pt-5"></div>
-      <div class="py-5"></div>
+      <div class="row last-row"></div>
 
       <!-- Footer -->
       <div class="container-fluid" id="footer">
@@ -161,10 +145,10 @@
         this.handleStatus.optionBars = !this.handleStatus.optionBars
       },
       previousPage() {
-        window.location.href = 'handWash.html';
+        window.location.href = 'bathing.html';
       },
       nextPage() {
-        window.location.href = 'food.html';
+        window.location.href = '';
       },
       homePage() {
         window.location.href = 'index.html';
