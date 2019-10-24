@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Food & Nutrition | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+    rel="stylesheet">
+
+  <!-- Rellax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        <button @click="homePage()" id="backward"><i class="fas fa-home backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        <button @click="nextPage()" id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img data-toggle="tooltip" data-placement="bottom" title="Sausage : 301 calories" id="food1"
+        src="assets/food1.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img data-toggle="tooltip" data-placement="bottom" title="Shrimp Fried Rice : 321 calories" id="food2"
+        src="assets/food2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="food3" src="assets/food_card.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img data-toggle="tooltip" data-placement="bottom" title="Chicken Steak : 239 calories" id="food4"
+        src="assets/food3.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img data-toggle="tooltip" data-placement="bottom" title="Couscous : 176 calories" id="food5"
+        src="assets/food4.png" />
+    </div>
+    <!-- <div class="rellax" data-rellax-speed="4">
+        <img data-toggle="tooltip" data-placement="bottom" title="Bucket O' Fried Chicken : 2,980 calories" id="food6"
+          src="assets/food5.png" />
+      </div>
+      <div class="rellax" data-rellax-speed="7">
+          <img data-toggle="tooltip" data-placement="bottom" title="Pizza : 2,980 calories" id="food7"
+            src="assets/food6.png" />
+        </div> -->
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-1 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted">See More.<br><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Food & Nutrition</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">จะทราบได้อย่างไรว่าควรกินข้าว ผัก ผลไม้
+          เนื้อสัตว์ นม ได้แค่ไหนจึงถูกหลักโภชนาการ</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll" id="hand-header">
+      <div class="row py-5"></div>
+      <div class="row pt-5"></div>
+      <div class="row" id="foodHeader">
+        <div class="col-12 text-content py-0">อาหารหลัก</div>
+        <div class="col-12 text-center display-1">5</div>
+        <div class="col-12 text-content">หมู่</div>
+        <div class="col-12 pt-4 text-content">
+          สารอาหารที่สามารถดูดซึมและนำมาใช้ในกระบวนการทำงานของระบบต่าง ๆ <br>
+          ของร่างกาย การขับถ่าย และมีบทบาทสำคัญต่อการเจริญเติบโตพร้อมด้วยสุขภาพที่ดี <br>
+          โดยตามหลักโภชนาการจะแบ่งสารอาหารออกเป็น 5 ประเภท
+        </div>
+        <div class="col-3"></div>
+        <div class="col-6  pt-5">
+          <img class="howTo" src="assets/foodPyramid.png" alt="Food Pyramid" id="foodPyramid">
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 py-5"></div>
+        <div class="col-12 text-header">หมู่ที่ 1 โปรตีน</div>
+        <div class="col-12 text-content">
+          โปรตีนเป็นส่วนประกอบหลักของทุก ๆ เซลล์ในร่างกาย และเป็นสารอาหารชนิดหนึ่งที่ร่างกายจะขาดไม่ได้
+          มีความสำคัญต่อการเจริญเติบโตของร่างกาย ทั้งยังมีส่วนช่วยซ่อมแซมส่วนที่สึกหรอของร่างกาย
+          ประกอบไปด้วยเนื้อสัตว์ นม ไข่ ถั่วเมล็ดแห้งต่าง ๆ
+        </div>
+        <div class="col-3"></div>
+        <div class="col-6">
+          <img class="howTo" src="assets/protein.png" alt="protein">
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 py-5"></div>
+        <div class="col-12 text-header">หมู่ที่ 2 คาร์โบไฮเดรต</div>
+        <div class="col-12 text-content">
+          คาร์โบไฮเดรตเป็นแหล่งพลังงานสำคัญชนิดหนึ่งของร่างกายที่เราควรได้รับประมาณ 8-12 ทัพพี
+          (1 ทัพพีเท่ากับ 5 ช้อนกินข้าว) หรือคิดเป็นสัดส่วนได้ร้อยละ 60-65 ของพลังงานที่ร่างกายต้องการทั้งหมด
+          ประกอบไปด้วย ข้าวเจ้า ข้าวเหนียว ขนมจีน ขนมปัง และแป้งอื่นๆ
+        </div>
+        <div class="col-3"></div>
+        <div class="col-6">
+          <img class="howTo" src="assets/carb.png" alt="protein">
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 py-5"></div>
+        <div class="col-12 text-header">หมู่ที่ 3 ไขมัน</div>
+        <div class="col-12 text-content">
+          น้ำมัน ไขมันจากพืชและไขมันจากสัตว์ เป็นแหล่งพลังงานสำคัญของร่างกาย มีคุณประโยชน์ในด้านให้ความอบอุ่นแก่ร่างกาย
+          แต่ทั้งนี้ก็ควรรับประทานไขมันอย่างพอเหมาะ
+        </div>
+        <div class="col-3"></div>
+        <div class="col-6">
+          <img class="howTo" src="assets/fat.png" alt="fat">
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 py-5"></div>
+        <div class="col-12 text-header">หมู่ที่ 4 แร่ธาตุ</div>
+        <div class="col-12 text-content">
+          แร่ธาตุ ใยอาหาร ผักใบเขียวและพืชผักชนิดต่าง ๆ ซึ่งแหล่งของสารอาหารประเภทแร่ธาตุ ใยอาหาร
+          ผักยังเป็นแหล่งที่ดีของใยอาหาร มีคุณสมบัติช่วยเพิ่มปริมาณและน้ำหนักอุจจาระ
+          ส่งเสริมกระบวนการขับถ่ายให้ถ่ายคล่อง และช่วยดักจับสารเคมีที่เป็นพิษ
+        </div>
+        <div class="col-3"></div>
+        <div class="col-6">
+          <img class="howTo" src="assets/veg.png" alt="vegetable">
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 py-5"></div>
+        <div class="col-12 text-header">หมู่ที่ 5 วิตามิน</div>
+        <div class="col-12 text-content">
+          วิตามิน ผลไม้ชนิดต่าง ๆ ซึ่งนอกจากผลไม้จะอุดมไปด้วยวิตามิน แร่ธาตุแล้ว
+          ผลไม้ยังมีคาร์โบไฮเดรตและน้ำตาลอยู่มากกว่าผัก จึงให้พลังงานกับร่างกายได้พอประมาณ
+        </div>
+        <div class="col-3"></div>
+        <div class="col-6">
+          <img class="howTo" src="assets/fruit.png" alt="vegetable">
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 py-5"></div>
+        <div class="col-12 text-header">เรามาเรียนรู้วิธีการทานอาหารที่ดีกัน</div>
+        <div class="col"></div>
+        <div class="col pt-5">
+          <iframe width="650" height="315" src="https://www.youtube.com/embed/Gmh_xMMJ2Pw" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col"></div>
+        <div class="col-12 py-5"></div>
+        <div class="col-12 py-5"></div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'bathing.html';
+      },
+      nextPage() {
+        window.location.href = '';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

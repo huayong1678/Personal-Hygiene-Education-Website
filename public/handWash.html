@@ -2,183 +2,209 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Washing Hands | Personal Hygiene</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Washing Hands | Personal Hygiene</title>
 
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="icon" href="assets/logo.png">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
-        rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+    rel="stylesheet">
 
-    <!-- Rellax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+  <!-- Rellax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
 
-    <!-- Icon API -->
-    <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
 
-    <!-- VUE CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div id="app">
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-dark bg-transparent" id="navigation">
-            <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
-                    :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
-            <div class="btn-group" role="group">
-                <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
-                        :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
-                <button id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
-                        :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
-            </div>
-        </nav>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        <button @click="homePage()" id="backward"><i class="fas fa-home backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        <button @click="nextPage()" id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+      </div>
+    </nav>
 
-        <!-- Option Bar -->
-        <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
 
-        <!-- Title Decor. -->
-        <div class="rellax" data-rellax-speed="8">
-            <img id="hand1" src="assets/hand1.png" />
-        </div>
-        <div class="rellax" data-rellax-speed="3">
-            <img id="hand2" src="assets/hand2.png" />
-        </div>
-        <div class="rellax" data-rellax-speed="2">
-            <img id="cake" src="assets/cake.png" />
-        </div>
-        <div class="rellax" data-rellax-speed="4">
-            <img id="bacts" src="assets/bacts.png" />
-        </div>
-        <div class="rellax" data-rellax-speed="1">
-                <img id="hand3" src="assets/hand3.png" />
-            </div>
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="hand1" src="assets/hand1.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="hand2" src="assets/hand2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="cake" src="assets/cake.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="bacts" src="assets/bacts.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="1">
+      <img id="hand3" src="assets/hand3.png" />
+    </div>
 
-        <!-- Scroll to See More -->
-        <div class="container-fluid seeMore">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-auto rellax" data-rellax-speed="5"><a href="#hand-header" class="text-muted card-links">
-                        <div class="nav-scroll">See More.<br><i class="fas fa-chevron-down"></i></div>
-                    </a></div>
-                <div class="col"></div>
-            </div>
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-1 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted">See More.<br><i class="fas fa-chevron-down"></i></div>
         </div>
+        <div class="col"></div>
+      </div>
+    </div>
 
-        <!-- Title -->
-        <div class="container-fluid scroll">
-            <div class="row" id="page-title">
-                <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Washing Hands</div>
-                <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">รู้หรือไม่!
-                    บนมือของเราสามารถมีแบคทีเรียเกาะอยู่ได้ถึง 3,000 ชนิด</div>
-            </div>
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Washing Hands</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">รู้หรือไม่!
+          บนมือของเราสามารถมีแบคทีเรียเกาะอยู่ได้ถึง 3,000 ชนิด</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll" id="hand-header">
+      <div class="row">
+        <div class="col-12 text-header rellax" data-rellax-speed="3">จริงหรอเนี่ย?</div>
+        <div class="col-12 pt-4 text-content rellax" data-rellax-speed="3">
+          คุณทราบหรือไม่ว่าการจะล้างมือจนมือสะอาดจริงนั้นต้องใช้เวลาในการล้างประมาณ 40 วินาทีถึงหนึ่งนาที
+          หรือโดยคร่าวๆ ก็เท่ากับการร้องเพลง "แฮปปี้เบิร์ธเดย์" ต่อกันสองรอบ คุณอาจไม่จำต้องร้องเพลง
+          อวยพรวันเกิดออกมาจริงๆ เพียงตระหนักไว้ว่าควรใช้เวลาล้างมือให้นานกว่าเดิมก็เพียงพอแล้ว</div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-header">ถ้าล้างมือไม่สะอาดจะเป็นไงนะ</div>
+      </div>
+      <div class="row">
+        <div class="col-12 pt-4 text-content">
+          มือ เป็นแหล่งแพร่เชื้อโรคต่างๆ ได้ เมื่อใช้มือหยิบจับอาหาร หรือสิ่ง ของต่างๆ
+          และมือสามารถนำเชื้อโรคไปปนเปื้อนสิ่งของรอบๆ ตัว
+          ทำให้ผู้อื่นได้รับเชื้อโรคไปด้วยการล้างมือให้สะอาดอย่างถูกวิธี จึงเป็นวิธีที่มีความสำคัญ
+          เพื่อป้องกัน ไม่ใช้เชื้อโรคต่างๆ เข้าสู่ร่างกาย
         </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col pt-4">
+          <iframe width="650" height="315" src="https://www.youtube.com/embed/NoxdS4eXy18" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-header">แล้วเราจะล้างมือให้สะอาดได้ยังไงหละ?</div>
+        <div class="col-1"></div>
+        <div class="col-5 pt-4" data-toggle="tooltip" data-placement="bottom" title="อี๋~ ล้างมือดีกว่า">
+          <img src="assets/howToWash1.png" alt="Hands full of Bacts" class="howTo" />
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5 pt-1" data-toggle="tooltip" data-placement="bottom" title="เปิดก็อกน้ำเลย">
+          <img src="assets/howToWash2.png" alt="Turn on the water tab" class="howTo" />
+        </div>
+        <div class="col-3"></div>
+        <div class="col-6 pt-1" data-toggle="tooltip" data-placement="right" title="ล้างมือให้เปียก">
+          <img src="assets/howToWash3.png" alt="Sokes your hands" class="howTo">
+        </div>
+        <div class="col-3"></div>
+        <div class="col-6" data-toggle="tooltip" data-placement="right" title="ถูฝ่ามือและซอกนิ้วด้วยสบู่">
+          <img src="assets/howToWash4.png" alt="Scrubb your palms and between your fingers" class="howTo">
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5" data-toggle="tooltip" data-placement="left" title="ถูหลังมือและซอกนิ้ว">
+          <img src="assets/howToWash5.png" alt="Scrubb back of your palms and between your fingers" class="howTo">
+        </div>
+        <div class="col-3"></div>
+        <div class="col-8" data-toggle="tooltip" data-placement="left" title="ถูซอกนิ้วโป้งและสันหมัด">
+          <img src="assets/howToWash6.png" alt="Scrubb between your thumb and index" class="howTo">
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5" data-toggle="tooltip" data-placement="left" title="ถูบริเวณข้อมือ">
+          <img src="assets/howToWash7.png" alt="Scrubb your wrists" class="howTo">
+        </div>
+        <div class="col-1"></div>
+        <div class="col-6" data-toggle="tooltip" data-placement="bottom"
+          title="ล้างมือด้วยน้ำสะอาดและเช็ดให้แห้งด้วยผ้าหรือกระดาษ">
+          <img src="assets/howToWash8.png" alt="Rinse and dry your hands" class="howTo">
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="col-6 py-0 rellax" data-rellax-speed="0.5" data-toggle="tooltip" data-placement="bottom"
+        title=มือสะอาดแล้ว>
+        <img src="assets/howToWash9.png" alt="Finish wasing your hands" class="howTo">
+      </div>
+      <div class="col"></div>
 
-        <!-- Content -->
-        <div class="container pt-4 scroll" id="hand-header">
-            <div class="row">
-                <div class="col-12 text-header rellax" data-rellax-speed="3">จริงหรอเนี่ย?</div>
-                <div class="col-12 pt-4 text-content rellax" data-rellax-speed="3">
-                    คุณทราบหรือไม่ว่าการจะล้างมือจนมือสะอาดจริงนั้นต้องใช้เวลาในการล้างประมาณ 40 วินาทีถึงหนึ่งนาที
-                    หรือโดยคร่าวๆ ก็เท่ากับการร้องเพลง "แฮปปี้เบิร์ธเดย์" ต่อกันสองรอบ คุณอาจไม่จำต้องร้องเพลง
-                    อวยพรวันเกิดออกมาจริงๆ เพียงตระหนักไว้ว่าควรใช้เวลาล้างมือให้นานกว่าเดิมก็เพียงพอแล้ว</div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-header">ถ้าล้างมือไม่สะอาดจะเป็นไงนะ</div>
-            </div>
-            <div class="row">
-                <div class="col-12 pt-4 text-content">
-                    มือ เป็นแหล่งแพร่เชื้อโรคต่างๆ ได้ เมื่อใช้มือหยิบจับอาหาร หรือสิ่ง ของต่างๆ
-                    และมือสามารถนำเชื้อโรคไปปนเปื้อนสิ่งของรอบๆ ตัว
-                    ทำให้ผู้อื่นได้รับเชื้อโรคไปด้วยการล้างมือให้สะอาดอย่างถูกวิธี จึงเป็นวิธีที่มีความสำคัญ
-                    เพื่อป้องกัน ไม่ใช้เชื้อโรคต่างๆ เข้าสู่ร่างกาย
-                </div>
-            </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col pt-4">
-                    <iframe width="650" height="315" src="https://www.youtube.com/embed/NoxdS4eXy18" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="col"></div>
-            </div>
-            <div class="row last-row">
-                <div class="col-12 text-header">แล้วเราจะล้างมือให้สะอาดได้ยังไงหละ?</div>
-                <div class="col"></div>
-                <div class="col-6 pt-4 list-content">
-                    <ul>
-                        <li>พบทันตแพทย์</li>
-                        <li>แปรงฟันด้วยยาสีฟันที่มีส่วนผสมของฟลูออไรด์</li>
-                        <li>กลั้วปากด้วยน้ำยาบ้วนปากผสมฟลูออไรด์</li>
-                        <li>จำกัดการรับประทานขนมขบเคี้ยว</li>
-                    </ul>
-                </div>
-                <div class="col"></div>
-            </div>
-
-            <!-- Footer -->
-            <div class="container-fluid" id="footer">
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col-6 text-center">
-                        <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
-                            right reserved.
-                        </p>
-                    </div>
-                    <div class="col"></div>
-                </div>
-            </div>
+      <!-- Footer -->
+      <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6 text-center">
+            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+              right reserved.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
 <script>
-    let hashCounter = 0;
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 
-    // Smooth Scroll
-    $('a[href*="#"]').on('click', function (e) {
-        e.preventDefault()
-        hashCounter++;
+  // rellax
+  var rellax = new Rellax('.rellax');
 
-        $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top + 500,
-            },
-            500,
-            'linear'
-        )
-    })
-
-    // rellax
-    var rellax = new Rellax('.rellax');
-
-    // VUE
-    var app = new Vue({
-        el: '#app',
-        data: {
-            handleStatus: {
-                optionBars: false
-            }
-        },
-        methods: {
-            handleClick() {
-                this.handleStatus.optionBars = !this.handleStatus.optionBars
-            },
-            previousPage() {
-                window.history.go(-1)
-            },
-            nextPage() {
-                router.push("yourroutename")
-            }
-        }
-    });
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'oralHealth.html';
+      },
+      nextPage() {
+        window.location.href = 'bathing.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
 </script>

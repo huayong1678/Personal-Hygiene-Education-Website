@@ -8,6 +8,7 @@
   <title>Oral Health | Personal Hygiene</title>
 
   <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
   <link rel="icon" href="assets/logo.png">
 
   <!-- Google Fonts -->
@@ -37,7 +38,9 @@
       <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
           :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
       <div class="btn-group" role="group">
-        <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+        <!-- <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button> -->
+        <button @click="homePage()" id="backward"><i class="fas fa-home backward-light"
             :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
         <button @click="nextPage()" id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
             :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
@@ -71,13 +74,12 @@
     </div>
 
     <!-- Scroll to See More -->
-    <div class="container-fluid seeMore">
+    <div class="container-fluid">
       <div class="row">
         <div class="col"></div>
-        <div class="col-auto rellax" data-rellax-speed="5"><a @click="scrollClick = true" href="#tooth-header"
-            class="text-muted card-links">
-            <div class="nav-scroll">See More.<br><i class="fas fa-chevron-down"></i></div>
-          </a></div>
+        <div class="col-1 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted">See More.<br><i class="fas fa-chevron-down"></i></div>
+        </div>
         <div class="col"></div>
       </div>
     </div>
@@ -130,67 +132,50 @@
         </div>
         <div class="col"></div>
       </div>
-
-      <!-- Footer -->
-      <div class="container-fluid" id="footer">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col-6 text-center">
-            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
-              right reserved.
-            </p>
-          </div>
-          <div class="col"></div>
-        </div>
-      </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid" id="footer">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-6 text-center">
+        <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+          right reserved.
+        </p>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+  </div>
 
 </body>
 
 </html>
 <script>
-  var hashCounter = 0;
-  // Smooth Scroll
-  $('a[href*="#"]').on('click', function (e) {
-    e.preventDefault()
-    hashCounter++;
-    console.log(hashCounter)
+  // rellax
+  var rellax = new Rellax('.rellax');
 
-    $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top,
-      },
-      500,
-      'linear'
-    )
-  })
   // VUE
   var app = new Vue({
     el: '#app',
     data: {
-      scrollClick: false,
       handleStatus: {
         optionBars: false
       }
-    },
-    mounted() {
-      // rellax
-      var rellax = new Rellax('.rellax');
     },
     methods: {
       handleClick() {
         this.handleStatus.optionBars = !this.handleStatus.optionBars
       },
       previousPage() {
-        // if (this.handleClick) {
-        //   window.history.go(-2)
-        // } else {
-        //   window.history.go(-1)
-        // }
-        // // window.location.href = 'index.html';
-        window.location.href = 'index.html';
+        window.location.href = 'oralHealth.html';
       },
       nextPage() {
         window.location.href = 'handWash.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
       }
     }
   });

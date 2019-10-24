@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Taking a Bath | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="bubbleAnimation.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+    rel="stylesheet">
+
+  <!-- Rellax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Bubbles -->
+    <div id="background-wrap">
+      <div class="bubble x1"></div>
+      <div class="bubble x2"></div>
+      <div class="bubble x3"></div>
+      <div class="bubble x4"></div>
+      <div class="bubble x5"></div>
+      <div class="bubble x6"></div>
+      <div class="bubble x7"></div>
+      <div class="bubble x8"></div>
+      <div class="bubble x9"></div>
+      <div class="bubble x10"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        <button @click="homePage()" id="backward"><i class="fas fa-home backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        <button @click="nextPage()" id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="bath1" src="assets/bath1.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="sponge" src="assets/sponge.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="brush" src="assets/brush.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img id="bottle" src="assets/bottle.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="beer" src="assets/beer.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="sponge2" src="assets/sponge2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="shower" src="assets/shower.png" />
+    </div>
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-1 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted">See More.<br><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Let's take a bath</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">รู้หรือไม่
+          การอาบน้ำร้อนนานๆทำให้ผิวของสาวๆแย่ลงได้นะ!</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll" id="hand-header">
+      <div class="row">
+        <div class="col-12 text-header rellax" data-rellax-speed="3">เธอรู้ไหม?</div>
+        <div class="col-12 pt-4 text-content rellax" data-rellax-speed="3">
+          การอาบน้ำเป็นกิจกรรมที่คนเป็นล้านๆก็ทำกันเป็นกิจกรรมประจำวัน เพราะเป็นวิธีการสร้างความสดชื่น
+          และทำความสะอาดร่างกายที่เร็วและมีประสิทธิภาพที่สุด คุณต้องการเรียนรู้วิธีการอาบน้ำหรือไม่ ถ้าใช่ก็อ่านต่อไปเลย
+          และหากต้องการบอกให้คนข้างๆอาบน้ำบ้าง ก็ลองส่งเว็บนี้ให้เขาดูนะ</div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-header">อาบน้ำเย็นช่วยร่างกายฟื้นตัวหลังออกกำลังกาย</div>
+      </div>
+      <div class="row pt-4">
+        <div class="col-12 text-content">
+          คนที่ออกกำลังกายหรือเล่นกีฬา รวมทั้งการวิ่งและการปั่นจักรยาน จะรู้จากประสบการณ์ว่า
+          การอาบน้ำเย็นช่วยฟื้นฟูร่างกายให้สดชื่น และหากเกิดการบาดเจ็บอย่างข้อพลิกหรือแพลง มีอาการอักเสบปวดบวมร้อน
+          วิธีรักษาในช่วง 24 ชั่วโมงแรกคือการประคบเย็น
+          ทั้งนี้เป็นเพราะความเย็นช่วยขจัดกรดแล็คติกออกจากกล้ามเนื้อและลดการอักเสบ
+          นักกีฬาที่ฝึกหนักจนเกือบหมดแรงอาจแช่น้ำเย็นจัดเพื่อบรรเทาความปวดเมื่อย แต่คนทั่วไปแค่อาบน้ำเย็นก็พอแล้ว
+        </div>
+      </div>
+      <div class="row content-padding">
+        <div class="col-12 text-header">หลังดื่มแอลกอฮอล์มาอย่าอาบน้ำนะ!</div>
+      </div>
+      <div class="row pt-4">
+        <div class="col-12 text-content">
+          สำหรับผู้ที่ดื่มเหล้าจนเมาหน้าแดง แล้วคิดว่าการอาบน้ำจะช่วยลดอุณหภูมิในร่างกายได้ดี เพราะหลังดื่มเหล้า
+          แอลกอฮอล์จะไปยับยั้งการทำงานของตับ ทำให้การปล่อยกลูโคสออกมาสู่กระแสเลือดน้อยลง
+          แต่ช่วงเวลาอาบน้ำร่างกายจะต้องการกลูโคสมากยิ่งขึ้น เพราะฉะนั้นการอาบน้ำหลังกินเหล้า
+          จึงทำให้ปริมาณน้ำตาลในเลือดไม่เพียงพอดังนั้น การกระทำดังกล่าวนี้จึงทำให้เกิดอาการเวียนหัว หน้ามืด ตาลาย
+          ร่างกายไร้เรี่ยวแรง และเสี่ยงต่อการล้มในห้องน้ำได้
+        </div>
+      </div>
+      <div class="row content-padding">
+        <div class="col-12 text-header">เรามาดูวิดีโอน่ารักๆเกี่ยวกับการอาบน้ำกัน</div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col pt-5">
+          <iframe width="650" height="315" src="https://www.youtube.com/embed/tvAIrzS0B_o" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="pt-5"></div>
+      <div class="py-5"></div>
+
+      <!-- Footer -->
+      <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6 text-center">
+            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+              right reserved.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'handWash.html';
+      },
+      nextPage() {
+        window.location.href = 'food.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>
