@@ -175,7 +175,7 @@
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#sponge{
+#sponge {
     position: absolute;
     transform: rotate(-15deg);
     right: -30px;
@@ -184,7 +184,7 @@
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#brush{
+#brush {
     position: absolute;
     transform: rotate(45deg);
     width: 25vw;
@@ -194,7 +194,7 @@
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#bottle{
+#bottle {
     position: absolute;
     transform: rotate(-25deg);
     width: 25vw;
@@ -204,7 +204,7 @@
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#beer{
+#beer {
     position: absolute;
     transform: rotate(15deg);
     width: 25vw;
@@ -214,7 +214,7 @@
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#sponge2{
+#sponge2 {
     position: absolute;
     transform: rotate(-25deg);
     width: 25vw;
@@ -223,7 +223,8 @@
     z-index: -100;
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
-#shower{
+
+#shower {
     position: absolute;
     transform: rotate(15deg);
     width: 25vw;
@@ -263,26 +264,56 @@
 }
 
 #food4 {
-  position: absolute;
-  width: 30vw;
-  right: -150px;
-  top: calc(200vh + 600px);
-  z-index: 0;
+    position: absolute;
+    width: 30vw;
+    right: -150px;
+    top: calc(200vh + 600px);
+    z-index: 0;
 }
 
 #food5 {
-  position: absolute;
-  width: 30vw;
-  left: -150px;
-  top: calc(330vh + 800px);
-  z-index: 0;
+    position: absolute;
+    width: 30vw;
+    left: -150px;
+    top: calc(330vh + 2000px);
+    z-index: 0;
 }
 
-#foodPyramid{
+/* #food6 {
+    position: absolute;
+    width: 32.5vw;
+    right: -150px;
+    top: calc(930vh + 1900px);
+    z-index: 0;
+}
+
+#food7 {
+    position: absolute;
+    width: 32.5vw;
+    left: -100px;
+    transform: scaleX(-1) rotate(-12deg);
+    top: calc(1150vh + 2200px);
+    z-index: 0;
+} */
+
+#foodPyramid {
     animation: spin 18s linear infinite;
 }
 
+#foodBottom{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    z-index: -2;
+}
+
 @keyframes spin {
-    0%{transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
