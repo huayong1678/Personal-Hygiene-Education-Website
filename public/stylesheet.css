@@ -6,6 +6,20 @@ body {
     scroll-behavior: smooth;
 }
 
+/* fonts */
+@font-face {
+    font-family: Fredericka the Great;
+    src: url(fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Inconsolata;
+    src: url(fonts/Inconsolata/Inconsolata-Regular.ttf);
+}
+
 /* VUE */
 #app {
     overflow-y: hidden;
@@ -255,6 +269,6 @@ body {
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-.content-padding{
+.content-padding {
     padding-top: 24vh;
 }
