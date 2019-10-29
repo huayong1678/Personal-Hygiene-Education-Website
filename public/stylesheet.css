@@ -32,6 +32,12 @@ body {
     width: 100vw;
 }
 
+#angleDown {
+    width: 10px;
+    padding: 0px;
+    filter: invert(0.5);
+}
+
 /* Page Content */
 .scroll {
     overflow: hidden;
@@ -90,15 +96,16 @@ body {
 }
 
 .optionBars-Dark {
-    font-size: 200%;
-    color: rgb(146, 146, 146);
-    transition: 750ms ease;
+    width: 35px;
+    filter: invert(0.6);
+    transition: 300ms ease;
+    opacity: 0.7;
 }
 
 .optionBars-Light {
-    font-size: 200%;
-    color: rgb(97, 97, 97);
-    transition: 750ms ease;
+    width: 35px;
+    filter: invert(0.5);
+    transition: 300ms ease;
 }
 
 #buttonBars {
@@ -199,16 +206,15 @@ body {
 }
 
 .backward-light {
-    font-size: 200%;
-    color: rgb(146, 146, 146);
-    opacity: .5;
+    width: 30px;
+    filter: invert(0.5);
     transition: 300ms ease;
+    opacity: .5;
 }
 
 .backward-dark {
-    font-size: 200%;
-    color: rgb(97, 97, 97);
-    opacity: .5;
+    width: 30px;
+    filter: invert(0.4);
     transition: 300ms ease;
 }
 
