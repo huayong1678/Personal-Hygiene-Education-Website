@@ -6,6 +6,20 @@ body {
     scroll-behavior: smooth;
 }
 
+/* fonts */
+@font-face {
+    font-family: Fredericka the Great;
+    src: url(fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Inconsolata;
+    src: url(fonts/Inconsolata/Inconsolata-Regular.ttf);
+}
+
 /* VUE */
 #app {
     overflow-y: hidden;
@@ -30,6 +44,12 @@ body {
     position: fixed;
     z-index: 1000;
     width: 100vw;
+}
+
+#angleDown {
+    width: 10px;
+    padding: 0px;
+    filter: invert(0.5);
 }
 
 /* Page Content */
@@ -90,15 +110,16 @@ body {
 }
 
 .optionBars-Dark {
-    font-size: 200%;
-    color: rgb(146, 146, 146);
-    transition: 750ms ease;
+    width: 35px;
+    filter: invert(0.6);
+    transition: 300ms ease;
+    opacity: 0.7;
 }
 
 .optionBars-Light {
-    font-size: 200%;
-    color: rgb(97, 97, 97);
-    transition: 750ms ease;
+    width: 35px;
+    filter: invert(0.5);
+    transition: 300ms ease;
 }
 
 #buttonBars {
@@ -199,16 +220,15 @@ body {
 }
 
 .backward-light {
-    font-size: 200%;
-    color: rgb(146, 146, 146);
-    opacity: .5;
+    width: 30px;
+    filter: invert(0.5);
     transition: 300ms ease;
+    opacity: .5;
 }
 
 .backward-dark {
-    font-size: 200%;
-    color: rgb(97, 97, 97);
-    opacity: .5;
+    width: 30px;
+    filter: invert(0.4);
     transition: 300ms ease;
 }
 
@@ -249,6 +269,6 @@ body {
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-.content-padding{
+.content-padding {
     padding-top: 24vh;
 }

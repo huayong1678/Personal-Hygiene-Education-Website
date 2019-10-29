@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #hyone{
     text-align: end;
     font-size:75px;
@@ -45,4 +46,43 @@
 }
 .testborder{
     border: 1px solid red;
+=======
+#hyone{
+    text-align: end;
+    font-size:75px;
+}
+#hytwo{
+    font-size:25px;
+    line-height:125px;
+}
+
+#hytext{
+    font-size:24px;
+}
+
+#reallystrong{
+    font-size:60px;
+}
+#medstrong{
+    font-size:30px;
+}
+.pic{
+    position: relative;
+}
+.center-title{
+    position: relative;
+    top: calc(50vh - 160px);
+}
+.text-on-pic{
+    position: absolute;
+    top: calc(50vh - 160px);
+    left: calc(45%);
+}
+.texton{
+    opacity:.6;
+}
+.badteeth{
+    width:280px;
+    height:280px;
+>>>>>>> dev
 }

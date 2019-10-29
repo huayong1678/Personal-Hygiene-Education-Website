@@ -1,10 +1,9 @@
 .pic{
-    width:100px;
-    height:200px;
+    width:25px;
+    height:50px;
     display: inline-block;
     background: red;
     background-image: url("logo.png");
-    background-size: contain;
     background-repeat: repeat-y;
 }
 .letter1{
@@ -19,22 +18,22 @@
         background-position: 0 0;
     }
     10%{
-        background-position: 0 0px;
+        background-position: 0 0;
     }
     40%{
-        background-position: 0 30px;
+        background-position: 0 20px;
     }
     50%{
-        background-position: 0 30px;
+        background-position: 0 25px;
     }
     60%{
-        background-position: 0 50px;
+        background-position: 0 25px;
     }
     90%{
-        background-position: 0 90px;
+        background-position: 0 45px;
     }
     100%{
-        background-position: 0 100px;
+        background-position: 0 50px;
     }
 }
 
@@ -43,21 +42,21 @@
         background-position: 0 0;
     }
     10%{
-        background-position: 0 0px;
+        background-position: 0 0;
     }
     40%{
-        background-position: 0 -40px;
+        background-position: 0 -20px;
     }
     50%{
-        background-position: 0 -50px;
+        background-position: 0 -25px;
     }
     60%{
-        background-position: 0 -50px;
+        background-position: 0 -25px;
     }
     90%{
-        background-position: 0 -90px;
+        background-position: 0 -45px;
     }
     100%{
-        background-position: 0 -100px;
+        background-position: 0 -50px;
     }
 }

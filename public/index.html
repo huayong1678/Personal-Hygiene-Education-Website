@@ -11,32 +11,29 @@
   <link rel="stylesheet" href="decoration.css">
   <link rel="icon" href="assets/logo.png">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
-    rel="stylesheet">
-
   <!-- Rellax -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+  <script src="rellax.min.js"></script>
 
-  <!-- Icon API -->
-  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+  <!-- VUE -->
+  <script src="vue.js"></script>
 
-  <!-- VUE CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-  <!-- Bootstrap CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
   <div id="app">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-transparent" id="navigation">
-      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
-          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+        <!-- <i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i> -->
+      </button>
     </nav>
 
     <!-- Option Bar -->
@@ -67,7 +64,9 @@
       <div class="row">
         <div class="col"></div>
         <div class="col-1 rellax" data-rellax-speed="5">
-          <div class="nav-scroll seeMore text-muted">See More.<br><i class="fas fa-chevron-down"></i></div>
+          <div class="nav-scroll seeMore text-muted">See More.<br>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
         </div>
         <div class="col"></div>
       </div>
