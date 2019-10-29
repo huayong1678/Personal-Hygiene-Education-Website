@@ -35,8 +35,6 @@
 .badteeth{
     width:280px;
     height:280px;
-<<<<<<< HEAD
-=======
 }
 .inline{
     display: inline-block;
@@ -47,5 +45,4 @@
 }
 .testborder{
     border: 1px solid red;
->>>>>>> 36d06030af942d6eed9d20e4ade1da4a34090dcd
 }
