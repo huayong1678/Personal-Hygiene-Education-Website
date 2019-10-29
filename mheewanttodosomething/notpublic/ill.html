@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oral Health | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="style/stylesheet.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+    rel="stylesheet">
+
+  <!-- Rellax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+      <div class="btn-group" role="group">
+        <!-- <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button> -->
+        <button @click="homePage()" id="backward"><i class="fas fa-home backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        <button @click="nextPage()" id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="1">
+      <img id="tooth1" src="assets/tooth_healthy.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="tooth2" src="assets/tooth_decay.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="5">
+      <img id="tooth3" src="assets/tooth_decay2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="1">
+      <img id="tooth4" src="assets/tooth_blink.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="dentist" src="assets/dentist.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="toothbrush" src="assets/toothbrush.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="mouthWash" src="assets/mouthWash.png" />
+    </div>
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid seeMore">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-auto rellax" data-rellax-speed="5"><a @click="scrollClick = true" href="#tooth-header"
+            class="text-muted card-links">
+            <div class="nav-scroll">See More.<br><i class="fas fa-chevron-down"></i></div>
+          </a></div>
+        <div class="col"></div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Worker ' s Common ill</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">โรคในช่วงวัยทำงาน</div>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="container pt-4 scroll" id="tooth-header">
+      <div class="row">
+        <div class="col-12 text-header rellax" data-rellax-speed="3">Do You Know?</div>
+        <div class="col-12 pt-4 text-content rellax" data-rellax-speed="3">
+            คนส่วนใหญ่มักไม่ให้ความสำคัญกับสุขภาพมากนัก โดยเฉพาะคนวัยทำงานที่มักจะลืมคำนึงถึงการดูแลสุขภาพของตนเองและครอบครัว <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-header">ไมเกรน</div>
+      </div>
+      <div class="row">
+        <div class="col-12 pt-4 text-content">
+            ไมเกรน เกิดจากความผิดปกติของระบบไฟฟ้าที่ผิวสมอง ทำให้สมองเกิดการกระตุ้นได้ง่ายและไวกว่าคนปกติ
+             หลังจากสมองถูกกระตุ้นแล้ว จะเกิดกระแสไฟฟ้าวิ่งไปตามผิวของสมองอย่างช้าๆ
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-header">การดูแลตนเองสำหรับผู้ป่วยไมเกรน</div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-8 pt-4 list-content">
+            <ul>
+                <li>สังเกตและหลีกเลี่ยงสิ่งกระตุ้น ที่ทำให้เกิดอาการปวดศีรษะ</li>
+                <li>นอนพักผ่อนให้เพียงพอ และตรงตามเวลาทุกวัน</li>
+                <li>ออกกำลังกายอย่างสม่ำเสมอ ไม่หักโหมจนเกินไป</li>
+                <li>งดสูบบุหรี่</li>
+                <li>งดเครื่องดื่มที่มีคาเฟอีน</li>
+                <li>ถ้าอาการปวดศีรษะรุนแรงมากขึ้น หรือมีลักษณะเปลี่ยนแปลงไป ควรปรึกษาแพทย์ทันที</li>
+            </ul>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+            <div class="col-12 text-header">กรดไหลย้อน</div>
+          </div>
+          <div class="row">
+            <div class="col-12 pt-4 text-content">
+                    กรดไหลย้อนเกิดจากการทำงานที่ผิดปกติของกล้ามเนื้อหูรูดบริเวณส่วนปลายของหลอดอาหาร
+                    ทำให้กรดหรือน้ำย่อยภายในกระเพาะอาหารไหลย้อนกลับขึ้นมาบริเวณหลอดอาหารจนสร้างความระคายเคืองกับผนังของหลอดอาหาร
+                นอกจากนี้พฤติกรรมในชีวิตประจำวันหรือโรคบางชนิดมีส่วนกระตุ้นการทำงานของหลอดอาหารให้เกิดความผิดปกติได้
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-12 text-header">การป้องกันอาการกรดไหลย้อน</div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col-8 pt-4 list-content">
+                <ul>
+                    <li>รับประทานอาหารให้ตรงเวลา</li>
+                    <li>หลีกเลี่ยงปัจจัยในชีวิตประจำวันที่ไปกระตุ้นให้เกิดภาวะนี้มากที่สุด</li>
+                    <li>ออกกำลังกายอย่างสม่ำเสมอ</li>
+                </ul>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+                <div class="col-12 text-header">ตับข็ง</div>
+              </div>
+              <div class="row">
+                <div class="col-12 pt-4 text-content">
+                        กรดไหลย้อนเกิดจากการทำงานที่ผิดปกติของกล้ามเนื้อหูรูดบริเวณส่วนปลายของหลอดอาหาร
+                        ทำให้กรดหรือน้ำย่อยภายในกระเพาะอาหารไหลย้อนกลับขึ้นมาบริเวณหลอดอาหารจนสร้างความระคายเคืองกับผนังของหลอดอาหาร
+                    นอกจากนี้พฤติกรรมในชีวิตประจำวันหรือโรคบางชนิดมีส่วนกระตุ้นการทำงานของหลอดอาหารให้เกิดความผิดปกติได้
+                </div>
+              </div>
+            <div class="row">
+                <div class="col-12 text-header">การป้องกันอาการกรดไหลย้อน</div>
+              </div>
+              <div class="row">
+                <div class="col"></div>
+                <div class="col-8 pt-4 list-content">
+                    <ul>
+                        <li>รับประทานอาหารให้ตรงเวลา</li>
+                        <li>หลีกเลี่ยงปัจจัยในชีวิตประจำวันที่ไปกระตุ้นให้เกิดภาวะนี้มากที่สุด</li>
+                        <li>ออกกำลังกายอย่างสม่ำเสมอ</li>
+                    </ul>
+                </div>
+                <div class="col"></div>
+            </div>
+
+      <!-- Footer -->
+      <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6 text-center">
+            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+              right reserved.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+  var hashCounter = 0;
+  // Smooth Scroll
+  $('a[href*="#"]').on('click', function (e) {
+    e.preventDefault()
+    hashCounter++;
+    console.log(hashCounter)
+
+    $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top,
+      },
+      500,
+      'linear'
+    )
+  })
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      scrollClick: false,
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    mounted() {
+      // rellax
+      var rellax = new Rellax('.rellax');
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        // if (this.handleClick) {
+        //   window.history.go(-2)
+        // } else {
+        //   window.history.go(-1)
+        // }
+        // // window.location.href = 'index.html';
+        window.location.href = 'index.html';
+      },
+      nextPage() {
+        window.location.href = 'handWash.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>
