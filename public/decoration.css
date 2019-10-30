@@ -300,7 +300,7 @@
     animation: spin 18s linear infinite;
 }
 
-#foodBottom{
+#foodBottom {
     position: absolute;
     width: 100%;
     left: 0px;
@@ -314,6 +314,175 @@
     }
 
     100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* officeSyndrome.html */
+#office1 {
+    position: absolute;
+    transform: rotate(125deg);
+    width: 40vw;
+    left: -50px;
+    top: -90px;
+    z-index: -2;
+}
+
+#office2 {
+    position: absolute;
+    transform: rotate(-25.5deg);
+    width: 40vw;
+    right: -100px;
+    top: 600px;
+    z-index: -2;
+}
+
+#office3 {
+    position: absolute;
+    transform: scaleX(-1);
+    width: 40vw;
+    left: -100px;
+    bottom: calc(170vh + 450px);
+    z-index: -2;
+}
+
+#office4 {
+    position: absolute;
+    width: 35vw;
+    right: -50px;
+    top: calc(250vh + 2550px);
+    z-index: 2;
+}
+
+#symptomLeft1{
+    position: absolute;
+    width: 25vw;
+    left: -50px;
+    transform: scaleX(-1);
+    top: calc(220vh + 450px);
+    z-index: -2;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#symptomLeft2{
+    position: absolute;
+    width: 25vw;
+    left: -50px;
+    transform: scaleX(-1);
+    top: calc(220vh + 900px);
+    z-index: 0;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#symptomLeft3{
+    position: absolute;
+    width: 25vw;
+    left: -50px;
+    transform: scaleX(-1);
+    top: calc(220vh + 900px);
+    z-index: -2;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#symptomLeft4{
+    position: absolute;
+    width: 25vw;
+    left: -55x;
+    transform: scaleX(-1);
+    top: calc(220vh + 1350px);
+    z-index: 5;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#symptomLeft5{
+    position: absolute;
+    width: 25vw;
+    top: calc(220vh + 1350px);
+    z-index: 10;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#symptomRight1{
+    position: absolute;
+    width: 25vw;
+    right: -100px;
+    top: calc(220vh + 440px);
+    z-index: -2;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#symptomRight2{
+    position: absolute;
+    width: 17.5vw;
+    right: -50px;
+    top: calc(220vh + 900px);
+    z-index: 10;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#symptomRight3{
+    position: absolute;
+    width: 25vw;
+    right: -50px;
+    top: calc(220vh + 1400px);
+    z-index: 5;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+#symptomRight4{
+    position: absolute;
+    width: 20vw;
+    right: -50px;
+    top: calc(220vh + 1900px);
+    z-index: 2;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+}
+
+.clock_all{
+    position: relative;
+    width: 24vw;
+}
+
+.clock {
+    width: 100%;
+}
+
+#clock_base {
+    z-index: 0;
+}
+
+#clock_hour {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: clockSpin 360000ms linear infinite;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+}
+
+#clock_min {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    animation: clockSpin 60000ms linear infinite;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+}
+
+#clock_sec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    animation: clockSpin 10000ms linear infinite;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+}
+
+@keyframes clockSpin{
+    form {
+        transform: rotate(0deg);
+    }
+    to {
         transform: rotate(360deg);
     }
 }
