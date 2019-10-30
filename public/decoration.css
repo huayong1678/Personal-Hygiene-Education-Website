@@ -300,7 +300,7 @@
     animation: spin 18s linear infinite;
 }
 
-#foodBottom{
+#foodBottom {
     position: absolute;
     width: 100%;
     left: 0px;
@@ -314,6 +314,83 @@
     }
 
     100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* officeSyndrome.html */
+#office1 {
+    position: absolute;
+    transform: rotate(125deg);
+    width: 40vw;
+    left: -50px;
+    top: -90px;
+    z-index: -2;
+}
+
+#office2 {
+    position: absolute;
+    transform: rotate(-25.5deg);
+    width: 40vw;
+    right: -100px;
+    top: 600px;
+    z-index: -2;
+}
+
+#office3 {
+    position: absolute;
+    transform: rotate(-25.5deg);
+    width: 40vw;
+    left: -100px;
+    top: 600px;
+    z-index: -2;
+}
+
+.clock_all{
+    position: relative;
+    width: 24vw;
+}
+
+.clock {
+    width: 100%;
+}
+
+#clock_base {
+    z-index: 0;
+}
+
+#clock_hour {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: clockSpin 360000ms linear infinite;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+}
+
+#clock_min {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    animation: clockSpin 60000ms linear infinite;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+}
+
+#clock_sec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    animation: clockSpin 10000ms linear infinite;
+    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+}
+
+@keyframes clockSpin{
+    form {
+        transform: rotate(0deg);
+    }
+    to {
         transform: rotate(360deg);
     }
 }
