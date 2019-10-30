@@ -22,7 +22,7 @@ body {
 
 /* VUE */
 #app {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 /* Page Footer */
