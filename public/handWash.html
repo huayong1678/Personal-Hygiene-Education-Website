@@ -24,8 +24,11 @@
   <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-  <div id="app">
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-transparent" id="navigation">
       <button @click="handleClick()" id="buttonBars">
@@ -179,6 +182,18 @@
 
 </html>
 <script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
   // Tooltip Bootstrap
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()

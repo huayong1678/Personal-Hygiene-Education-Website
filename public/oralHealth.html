@@ -24,8 +24,11 @@
   <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-  <div id="app">
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-transparent" id="navigation">
       <button @click="handleClick()" id="buttonBars">
@@ -132,26 +135,35 @@
         <div class="col"></div>
       </div>
     </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="container-fluid" id="footer">
-    <div class="row">
-      <div class="col"></div>
-      <div class="col-6 text-center">
-        <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
-          right reserved.
-        </p>
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
       </div>
-      <div class="col"></div>
     </div>
   </div>
-  </div>
-
 </body>
 
 </html>
 <script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
   // rellax
   var rellax = new Rellax('.rellax');
 
