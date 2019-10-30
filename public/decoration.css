@@ -1,282 +1,282 @@
 /* Index.html */
 #man1 {
-    position: absolute;
-    width: 45vw;
-    left: -80px;
-    top: 10px;
-    z-index: -2;
+  position: absolute;
+  width: 45vw;
+  left: -80px;
+  top: 10px;
+  z-index: -2;
 }
 
 #man2 {
-    position: absolute;
-    width: 45vw;
-    right: -50px;
-    top: 400px;
-    z-index: -3;
+  position: absolute;
+  width: 45vw;
+  right: -50px;
+  top: 400px;
+  z-index: -3;
 }
 
 #man3 {
-    position: absolute;
-    width: 35vw;
-    left: -50px;
-    top: calc(180vh + 1500px);
-    z-index: -1;
+  position: absolute;
+  width: 35vw;
+  left: -50px;
+  top: calc(180vh + 1500px);
+  z-index: -1;
 }
 
 #woman1 {
-    position: absolute;
-    width: 37.5vw;
-    left: -150px;
-    top: calc(100vh + 800px);
-    z-index: -3;
+  position: absolute;
+  width: 37.5vw;
+  left: -150px;
+  top: calc(100vh + 800px);
+  z-index: -3;
 }
 
 #woman2 {
-    position: absolute;
-    width: 40vw;
-    right: -200px;
-    top: calc(120vh + 1300px);
-    z-index: -4;
+  position: absolute;
+  width: 40vw;
+  right: -200px;
+  top: calc(120vh + 1300px);
+  z-index: -4;
 }
 
 #woman3 {
-    position: absolute;
-    width: 40vw;
-    right: -150px;
-    top: calc(200vh + 2700px);
-    z-index: -1;
+  position: absolute;
+  width: 40vw;
+  right: -150px;
+  top: calc(200vh + 2700px);
+  z-index: -1;
 }
 
 /* oralHealth.html */
 #tooth1 {
-    position: absolute;
-    top: 0px;
-    width: 20vw;
-    transform: rotate(25deg);
-    z-index: 900;
+  position: absolute;
+  top: 0px;
+  width: 20vw;
+  transform: rotate(25deg);
+  z-index: 900;
 }
 
 #tooth2 {
-    position: absolute;
-    top: calc(60vh + 200px);
-    right: -40px;
-    width: 20vw;
-    transform: rotate(-45deg);
-    z-index: 900;
+  position: absolute;
+  top: calc(60vh + 200px);
+  right: -40px;
+  width: 20vw;
+  transform: rotate(-45deg);
+  z-index: 900;
 }
 
 #tooth3 {
-    position: absolute;
-    top: calc(100vh + 300px);
-    left: -40px;
-    width: 22vw;
-    transform: rotate(-13deg);
-    z-index: 900;
+  position: absolute;
+  top: calc(100vh + 300px);
+  left: -40px;
+  width: 22vw;
+  transform: rotate(-13deg);
+  z-index: 900;
 }
 
 #tooth4 {
-    position: absolute;
-    top: calc(150vh + 20px);
-    right: -40px;
-    width: 18vw;
-    transform: rotate(9deg);
-    z-index: 900;
-    filter: drop-shadow(0.5px 0px .1px rgb(95, 95, 95));
+  position: absolute;
+  top: calc(150vh + 20px);
+  right: -40px;
+  width: 18vw;
+  transform: rotate(9deg);
+  z-index: 900;
+  filter: drop-shadow(0.5px 0px .1px rgb(95, 95, 95));
 }
 
 #dentist {
-    position: absolute;
-    top: calc(150vh + 700px);
-    left: -150px;
-    width: 35vw;
-    transform: scaleX(-1) rotate(-25deg);
-    z-index: 800;
+  position: absolute;
+  top: calc(150vh + 700px);
+  left: -150px;
+  width: 35vw;
+  transform: scaleX(-1) rotate(-25deg);
+  z-index: 800;
 }
 
 #toothbrush {
-    position: absolute;
-    top: calc(250vh + 800px);
-    right: -200px;
-    width: 35vw;
-    transform: scaleX(-1) rotate(25deg);
-    z-index: 800;
+  position: absolute;
+  top: calc(250vh + 800px);
+  right: -200px;
+  width: 35vw;
+  transform: scaleX(-1) rotate(25deg);
+  z-index: 800;
 }
 
 #mouthWash {
-    position: absolute;
-    top: calc(250vh + 1000px);
-    left: 0px;
-    width: 35vw;
-    transform: scaleX(-1);
-    z-index: 800;
+  position: absolute;
+  top: calc(250vh + 1000px);
+  left: 0px;
+  width: 35vw;
+  transform: scaleX(-1);
+  z-index: 800;
 }
 
 /* handWash.html */
 
 #hand1 {
-    position: absolute;
-    transform: rotate(125deg);
-    width: 20vw;
-    left: 0px;
-    top: -30px;
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(125deg);
+  width: 20vw;
+  left: 0px;
+  top: -30px;
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #hand2 {
-    position: absolute;
-    transform: rotate(-45deg);
-    width: 30vw;
-    right: -55px;
-    top: 400px;
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 30vw;
+  right: -55px;
+  top: 400px;
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #cake {
-    position: absolute;
-    transform: rotate(35deg);
-    width: 25vw;
-    left: 0px;
-    top: calc(100vh + 350px);
-    z-index: 1000;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(35deg);
+  width: 25vw;
+  left: 0px;
+  top: calc(100vh + 350px);
+  z-index: 1000;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #bacts {
-    position: absolute;
-    width: 25vw;
-    right: -20px;
-    top: calc(180vh + 850px);
-    z-index: 1000;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  width: 25vw;
+  right: -20px;
+  top: calc(180vh + 850px);
+  z-index: 1000;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #hand3 {
-    position: absolute;
-    transform: rotate(45deg);
-    width: 30vw;
-    left: -80px;
-    top: calc(220vh + 300px);
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(45deg);
+  width: 30vw;
+  left: -80px;
+  top: calc(220vh + 300px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 /* bathing.html */
 
 #bath1 {
-    position: absolute;
-    transform: rotate(125deg);
-    width: 27.5vw;
-    left: -50px;
-    top: -90px;
-    z-index: -2;
-    opacity: 0.7;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(125deg);
+  width: 27.5vw;
+  left: -50px;
+  top: -90px;
+  z-index: -2;
+  opacity: 0.7;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #sponge {
-    position: absolute;
-    transform: rotate(-15deg);
-    right: -30px;
-    top: calc(500px + 10vh);
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(-15deg);
+  right: -30px;
+  top: calc(500px + 10vh);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #brush {
-    position: absolute;
-    transform: rotate(45deg);
-    width: 25vw;
-    left: -100px;
-    top: calc(500px + 80vh);
-    z-index: -100;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(45deg);
+  width: 25vw;
+  left: -100px;
+  top: calc(500px + 80vh);
+  z-index: -100;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #bottle {
-    position: absolute;
-    transform: rotate(-25deg);
-    width: 25vw;
-    right: -100px;
-    top: calc(800px + 220vh);
-    z-index: -100;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(-25deg);
+  width: 25vw;
+  right: -100px;
+  top: calc(800px + 220vh);
+  z-index: -100;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #beer {
-    position: absolute;
-    transform: rotate(15deg);
-    width: 25vw;
-    left: -100px;
-    top: calc(800px + 250vh);
-    z-index: -100;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(15deg);
+  width: 25vw;
+  left: -100px;
+  top: calc(800px + 250vh);
+  z-index: -100;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #sponge2 {
-    position: absolute;
-    transform: rotate(-25deg);
-    width: 25vw;
-    right: -100px;
-    top: calc(800px + 300vh);
-    z-index: -100;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(-25deg);
+  width: 25vw;
+  right: -100px;
+  top: calc(800px + 300vh);
+  z-index: -100;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #shower {
-    position: absolute;
-    transform: rotate(15deg);
-    width: 25vw;
-    left: -60px;
-    top: calc(1000px + 400vh);
-    z-index: -100;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(15deg);
+  width: 25vw;
+  left: -60px;
+  top: calc(1000px + 400vh);
+  z-index: -100;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 /* food.html */
 #food1 {
-    position: absolute;
-    transform: rotate(125deg);
-    width: 27.5vw;
-    left: -50px;
-    top: -90px;
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(125deg);
+  width: 27.5vw;
+  left: -50px;
+  top: -90px;
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #food2 {
-    position: absolute;
-    transform: rotate(125deg);
-    width: 27.5vw;
-    right: -50px;
-    top: calc(50vh + 150px);
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+  position: absolute;
+  transform: rotate(125deg);
+  width: 27.5vw;
+  right: -50px;
+  top: calc(50vh + 150px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
 #food3 {
-    position: absolute;
-    width: 40vw;
-    left: -150px;
-    top: calc(100vh + 400px);
-    z-index: 0;
+  position: absolute;
+  width: 40vw;
+  left: -150px;
+  top: calc(100vh + 400px);
+  z-index: 0;
 }
 
 #food4 {
-    position: absolute;
-    width: 30vw;
-    right: -150px;
-    top: calc(200vh + 600px);
-    z-index: 0;
+  position: absolute;
+  width: 30vw;
+  right: -150px;
+  top: calc(200vh + 600px);
+  z-index: 0;
 }
 
 #food5 {
-    position: absolute;
-    width: 30vw;
-    left: -150px;
-    top: calc(330vh + 2000px);
-    z-index: 0;
+  position: absolute;
+  width: 30vw;
+  left: -150px;
+  top: calc(330vh + 2000px);
+  z-index: 0;
 }
 
 /* #food6 {
@@ -297,192 +297,223 @@
 } */
 
 #foodPyramid {
-    animation: spin 18s linear infinite;
+  animation: spin 18s linear infinite;
 }
 
 #foodBottom {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    bottom: 0px;
-    z-index: -2;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  z-index: -2;
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* officeSyndrome.html */
 #office1 {
-    position: absolute;
-    transform: rotate(125deg);
-    width: 40vw;
-    left: -50px;
-    top: -90px;
-    z-index: -2;
+  position: absolute;
+  transform: rotate(125deg);
+  width: 40vw;
+  left: -50px;
+  top: -90px;
+  z-index: -2;
 }
 
 #office2 {
-    position: absolute;
-    transform: rotate(-25.5deg);
-    width: 40vw;
-    right: -100px;
-    top: 600px;
-    z-index: -2;
+  position: absolute;
+  transform: rotate(-25.5deg);
+  width: 40vw;
+  right: -100px;
+  top: 600px;
+  z-index: -2;
 }
 
 #office3 {
-    position: absolute;
-    transform: scaleX(-1);
-    width: 40vw;
-    left: -100px;
-    bottom: calc(170vh + 450px);
-    z-index: -2;
+  position: absolute;
+  transform: scaleX(-1);
+  width: 40vw;
+  left: -100px;
+  bottom: calc(170vh + 450px);
+  z-index: -2;
 }
 
 #office4 {
-    position: absolute;
-    width: 35vw;
-    right: -50px;
-    top: calc(250vh + 2550px);
-    z-index: 2;
+  position: absolute;
+  width: 35vw;
+  right: -50px;
+  top: calc(250vh + 2550px);
+  z-index: 2;
 }
 
-#symptomLeft1{
-    position: absolute;
-    width: 25vw;
-    left: -50px;
-    transform: scaleX(-1);
-    top: calc(220vh + 450px);
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomLeft1 {
+  position: absolute;
+  width: 25vw;
+  left: -50px;
+  transform: scaleX(-1);
+  top: calc(220vh + 450px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#symptomLeft2{
-    position: absolute;
-    width: 25vw;
-    left: -50px;
-    transform: scaleX(-1);
-    top: calc(220vh + 900px);
-    z-index: 0;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomLeft2 {
+  position: absolute;
+  width: 25vw;
+  left: -50px;
+  transform: scaleX(-1);
+  top: calc(220vh + 900px);
+  z-index: 0;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#symptomLeft3{
-    position: absolute;
-    width: 25vw;
-    left: -50px;
-    transform: scaleX(-1);
-    top: calc(220vh + 900px);
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomLeft3 {
+  position: absolute;
+  width: 25vw;
+  left: -50px;
+  transform: scaleX(-1);
+  top: calc(220vh + 900px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#symptomLeft4{
-    position: absolute;
-    width: 25vw;
-    left: -55x;
-    transform: scaleX(-1);
-    top: calc(220vh + 1350px);
-    z-index: 5;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomLeft4 {
+  position: absolute;
+  width: 25vw;
+  left: -55x;
+  transform: scaleX(-1);
+  top: calc(220vh + 1350px);
+  z-index: 5;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#symptomLeft5{
-    position: absolute;
-    width: 25vw;
-    top: calc(220vh + 1350px);
-    z-index: 10;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomLeft5 {
+  position: absolute;
+  width: 25vw;
+  top: calc(220vh + 1350px);
+  z-index: 10;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#symptomRight1{
-    position: absolute;
-    width: 25vw;
-    right: -100px;
-    top: calc(220vh + 440px);
-    z-index: -2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomRight1 {
+  position: absolute;
+  width: 25vw;
+  right: -100px;
+  top: calc(220vh + 440px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#symptomRight2{
-    position: absolute;
-    width: 17.5vw;
-    right: -50px;
-    top: calc(220vh + 900px);
-    z-index: 10;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomRight2 {
+  position: absolute;
+  width: 17.5vw;
+  right: -50px;
+  top: calc(220vh + 900px);
+  z-index: 10;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#symptomRight3{
-    position: absolute;
-    width: 25vw;
-    right: -50px;
-    top: calc(220vh + 1400px);
-    z-index: 5;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomRight3 {
+  position: absolute;
+  width: 25vw;
+  right: -50px;
+  top: calc(220vh + 1400px);
+  z-index: 5;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-#symptomRight4{
-    position: absolute;
-    width: 20vw;
-    right: -50px;
-    top: calc(220vh + 1900px);
-    z-index: 2;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
+#symptomRight4 {
+  position: absolute;
+  width: 20vw;
+  right: -50px;
+  top: calc(220vh + 1900px);
+  z-index: 2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
 }
 
-.clock_all{
-    position: relative;
-    width: 24vw;
+.clock_all {
+  position: relative;
+  width: 24vw;
 }
 
 .clock {
-    width: 100%;
+  width: 100%;
 }
 
 #clock_base {
-    z-index: 0;
+  z-index: 0;
 }
 
 #clock_hour {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    animation: clockSpin 360000ms linear infinite;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: clockSpin 360000ms linear infinite;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
 }
 
 #clock_min {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    animation: clockSpin 60000ms linear infinite;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  animation: clockSpin 60000ms linear infinite;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
 }
 
 #clock_sec {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    animation: clockSpin 10000ms linear infinite;
-    filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  animation: clockSpin 10000ms linear infinite;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
 }
 
-@keyframes clockSpin{
-    form {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+@keyframes clockSpin {
+  form {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* smokeing.html */
+#smoke1 {
+  position: absolute;
+  transform: rotate(125deg);
+  width: 40vw;
+  left: -150px;
+  top: -150px;
+  z-index: -2;
+}
+
+#smoke3 {
+  position: absolute;
+  transform: rotate(-25deg);
+  width: 20vw;
+  right: -25px;
+  top: 600px;
+  z-index: -2;
+  filter: saturate(0.6);
+}
+
+#smoke4 {
+  position: absolute;
+  transform: rotate(2.5deg);
+  width: 5vw;
+  right: 175px;
+  top: 800px;
+  z-index: -2;
+  filter: saturate(0.65);
 }
