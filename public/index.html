@@ -41,7 +41,45 @@
 
     <!-- Option Bar -->
     <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]">
-      <div class="container"></div>
+      <div class="container-fluid">
+        <h4>Table of contents</h4>
+        <a class="col-12 h6 pl-3 card-links text-muted" href="#" role="button">Home</a>
+        <a class="col-12 h6 pl-3 card-links text-muted" data-toggle="collapse" href="#contentCollapse" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample1">Cleaning your body</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse">
+              <ul>
+                <li><a class="bars-links text-muted" href="oralHealth.html">Oral Health</a></li>
+                <li><a class="bars-links text-muted" href="handWash.html">Washing Hand</a></li>
+                <li><a class="bars-links text-muted" href="bathing.html">Bathing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a class="col-12 h6 pl-3 card-links text-muted" data-toggle="collapse" href="#contentCollapse1" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample1">Consuming</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse1">
+              <ul>
+                <li><a class="bars-links text-muted" href="food.html">Oral Health</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a class="col-12 h6 pl-3 card-links text-muted" data-toggle="collapse" href="#contentCollapse2" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample1">Daily-life Disease</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse2">
+              <ul>
+                <li><a class="bars-links text-muted" href="officeSyndrome.html">Office Syndrome</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Title Decor. -->
@@ -404,7 +442,7 @@
   var myVar;
 
   function myFunction() {
-    myVar = setTimeout(showPage, 4000);
+    myVar = setTimeout(showPage, 0);
   }
 
   function showPage() {

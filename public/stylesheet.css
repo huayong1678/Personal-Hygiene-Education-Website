@@ -199,6 +199,9 @@ body {
     background-color: #fff;
     opacity: 0.8;
     height: 100vh;
+    padding-top: 75px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .slide {
@@ -281,6 +284,17 @@ body {
     text-decoration: none;
     color: #212529;
     display: inline-block;
+}
+
+.bars-links,
+.bars-links:hover,
+.bars-links:link,
+.bars-links:active,
+.bars-links:visited {
+    text-decoration: none;
+    color: #212529;
+    display: inline-block;
+    font-size: 90%;
 }
 
 .backward-light {
