@@ -396,7 +396,7 @@
 
 #symptomLeft5{
     position: absolute;
-    width: 35vw;
+    width: 25vw;
     top: calc(220vh + 1350px);
     z-index: 10;
     filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.205));
