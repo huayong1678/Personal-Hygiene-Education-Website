@@ -58,6 +58,7 @@
 .btn-reset {
   color: white;
   margin-top: 10px;
+  width: 100px;
   border-radius: 5px;
   background: rgb(54, 54, 54);
   display: inline-block;

@@ -498,6 +498,15 @@
   z-index: -2;
 }
 
+#smoke2 {
+  position: absolute;
+  transform: rotate(55deg);
+  width: 40vw;
+  left: -190px;
+  top: calc(100vh + 180px);
+  z-index: -2;
+}
+
 #smoke3 {
   position: absolute;
   transform: rotate(-25deg);
@@ -516,4 +525,22 @@
   top: 800px;
   z-index: -2;
   filter: saturate(0.65);
+}
+
+#smoke5 {
+  position: absolute;
+  transform: rotate(-25deg);
+  width: 25vw;
+  right: -150px;
+  top: calc(100vh + 800px);
+  z-index: -2;
+}
+#smoke6 {
+  position: absolute;
+  transform: rotate(12.5deg);
+  width: 15vw;
+  right: 110px;
+  top: calc(100vh + 1000px);
+  z-index: -2;
+  filter: saturate(0.9);
 }
