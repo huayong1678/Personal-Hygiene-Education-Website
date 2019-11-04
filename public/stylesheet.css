@@ -4,6 +4,7 @@ body {
     height: auto;
     font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
+    z-index: -300;
 }
 
 /* Preloader */
@@ -247,7 +248,6 @@ body {
     z-index: 0;
     text-align: center;
     height: 7vh;
-    padding-bottom: 1vh;
     top: 92vh;
 }
 
@@ -337,6 +337,8 @@ body {
     }
 }
 
+/* Another Seperating Method is using blank col in Bootstrap */
+/* Old Method being tidied Later */
 .last-row {
     padding-top: 25vh;
     padding-bottom: 30vh;
@@ -348,4 +350,27 @@ body {
 
 .content-padding {
     padding-top: 24vh;
+}
+
+/* New Experimental Sepatating Method */
+.separator {
+    height: 50vh;
+}
+
+.final-row {
+    height: calc(50vh - 150px);
+}
+
+/* rotate img */
+.tiltLeft-1 {
+    transform: rotate(-12.5deg);
+}
+.tiltLeft-2 {
+    transform: rotate(-25deg);
+}
+.tiltRight-1 {
+    transform: rotate(12.5deg);
+}
+.tiltRight-2 {
+    transform: rotate(25deg);
 }
