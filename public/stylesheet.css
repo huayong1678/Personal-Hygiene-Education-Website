@@ -365,12 +365,19 @@ body {
 .tiltLeft-1 {
     transform: rotate(-12.5deg);
 }
+
 .tiltLeft-2 {
     transform: rotate(-25deg);
 }
+
 .tiltRight-1 {
     transform: rotate(12.5deg);
 }
+
 .tiltRight-2 {
     transform: rotate(25deg);
+}
+
+.logo-size{
+    width: 30px;
 }

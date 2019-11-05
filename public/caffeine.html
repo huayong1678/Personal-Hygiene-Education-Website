@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Caffeine | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="caffeine1" src="assets/caffeine1.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="caffeine3" src="assets/caffeine3.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="caffeine2" src="assets/caffeine2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img id="caffeine4" src="assets/caffeine4.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="caffeine5" src="assets/caffeine5.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="caffeine6" src="assets/caffeine6.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="caffeine7" src="assets/caffeine7.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="caffeine8" src="assets/caffeine8.png" />
+    </div>
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted w-100">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Caffeine</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">
+          ตกลงแล้วการบริโภคคาเฟอีนนั้นเกิดประโยชน์หรือมีโทษมากกว่ากัน</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll" id="hand-header">
+      <div class="row py-5"></div>
+      <div class="row">
+        <div class="col-12 text-content">มันอยู่ในไหนกันหละ</div>
+        <div class="col-12 display-4 text-center">คาเฟอีน</div>
+        <div class="col-12 py-4 text-content">
+          คาเฟอีนมีอยู่ในอาหารหลายชนิดที่ผู้คนนิยมรับประทานกันในชีวิตประจำวัน เช่น <b>กาแฟ ชา โคล่า เครื่องดื่มชูกำลัง
+            ช็อกโกแลต</b> เป็นต้น นอกจากนี้ กาแฟดีแคฟหรือกาแฟที่ระบุว่าไม่มีสารคาเฟอีนนั้น
+          ความจริงแล้วยังมีคาเฟอีนเป็นส่วนประกอบอยู่ เพียงแต่มีปริมาณน้อยมาก
+          หรือแม้แต่ยาแก้ปวดบางชนิดก็มีคาเฟอีนผสมอยู่ด้วยเช่นกัน
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-header">รู้หรือไม่</div>
+        <div class="col-12 py-4 text-content">
+          อาหารและเครื่องดื่มแต่ละชนิดจะมีปริมาณคาเฟอีนไม่เท่ากัน ซึ่งอาหารที่มีคาเฟอีนมากที่สุด คือ กาแฟ โดยกาแฟประมาณ
+          240 มิลลิลิตร จะมีคาเฟอีนอยู่ประมาณ 95-200 มิลลิกรัม
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row w-100 justify-content-center">
+        <div class="col-12 text-content">ควรบริโภคคาเฟอีนเท่าไหร่</div>
+        <div class="col-12 display-4 text-center pb-5">ในหนึ่งวัน</div>
+        <div class="card text-center">
+          <div class="card-header">
+            คนทั่วไปไม่ควรบริโภคคาเฟอีนเกินวันละ 400 มิลลิกรัม
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">กาแฟประมาณ 4 แก้ว</li>
+            <li class="list-group-item">เครื่องดื่มชูกำลัง 2 ขวด</li>
+            <li class="list-group-item">โคล่าประมาณ 10 กระป๋อง</li>
+          </ul>
+        </div>
+        <div class="col-12 text-center pt-4 text-danger">
+          <small>***นอกจากปริมาณคาเฟอีนที่ต้องควบคุมแล้ว<br>
+            ยังต้องระวังเรื่องการบริโภคน้ำตาลส่วนเกินที่อยู่ในอาหารแต่ละชนิดด้วย</small>
+        </div>
+      </div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row">
+        <div class="col-12 text-content">ประโยชน์ของ</div>
+        <div class="col-12 display-4 text-center pb-4">คาเฟอีน</div>
+      </div>
+
+      <!-- Toasts -->
+      <div aria-live="polite" aria-atomic="true" class="row">
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ช่วยให้สมองทำงานได้ดีขึ้น</b><br>คาเฟอีนจะไปปิดกั้นสารสื่อประสาทชนิดหนึ่ง
+            ซึ่งส่งผลให้ปริมาณของสารสื่อประสาทชนิดอื่นอย่างโดปามีนและนอร์อิพิเนฟรินเพิ่มสูงขึ้น
+            จนทำให้มีการส่งข้อมูลของเซลล์ประสาทภายในสมองเพิ่มมากขึ้น จากการศึกษาจึงพบว่า
+            คาเฟอีนอาจทำให้ประสิทธิภาพในการทำงานของสมองดีขึ้นในหลาย ๆ ด้าน เช่น อารมณ์ ความจำ การตอบสนอง ความระมัดระวัง
+            ระดับพลังงาน และกระบวนการคิดทั่วไป เป็นต้น
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ช่วยเพิ่มสมรรถภาพร่างกาย</b><br>โดยคาเฟอีนอาจเพิ่มระดับอะดรีนาลีน
+            ซึ่งเป็นฮอร์โมนที่มีฤทธิ์ช่วยเตรียมร่างกายให้พร้อมสำหรับการออกกำลังกายอย่างหนัก
+            และคาเฟอีนยังช่วยสลายไขมันให้เป็นพลังงานอีกด้วย นอกจากนี้
+            คาเฟอีนยังอาจช่วยเพิ่มความทนทานและอาจช่วยให้เหนื่อยช้าลง
+            แต่คาเฟอีนอาจไม่เพิ่มสมรรถภาพทางร่างกายในกรณีที่ต้องใช้แรงมากในระยะเวลาสั้น ๆ อย่างการยกของหรือการวิ่งเร็ว
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ช่วยให้ระบบเผาผลาญทำงานได้ดีขึ้น</b><br>โดยมีการศึกษาพบว่า
+            คาเฟอีนจะเพิ่มอัตราการเผาผลาญในร่างกายให้มากขึ้น และมีงานค้นคว้าอื่น ๆ ที่ระบุว่า
+            คาเฟอีนสามารถเพิ่มอัตราการเผาผลาญของคนอ้วน 10 เปอร์เซ็นต์ และเพิ่มอัตราการเผาผลาญของคนผอม 29 เปอร์เซ็นต์
+            อย่างไรก็ตาม มีความเป็นไปได้ว่าประสิทธิภาพนี้จะลดลงในผู้ที่บริโภคคาเฟอีนในระยะยาว
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ช่วยให้หายใจได้ดีขึ้น</b><br>คาเฟอีนอาจเพิ่มประสิทธิภาพของระบบหายใจในผู้ที่เป็นโรคหอบหืดได้
+            แต่ก็เป็นเพียงในระยะเวลาสั้น ๆ ประมาณ 4 ชั่วโมงเท่านั้น นอกจากนี้
+            แพทย์ยังอาจใช้คาเฟอีนกับเด็กทารกที่คลอดก่อนกำหนดที่มีปัญหาด้านการหายใจได้ด้วย
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ลดอาการปวดภายในร่างกาย</b><br>มีการศึกษาพบว่า การใช้คาเฟอีนร่วมกับยาแก้ปวดอาจช่วยลดอาการปวดได้
+            และอาจใช้คาเฟอีนลดอาการปวดหัวที่เกิดจากหลายสาเหตุด้วย เช่น
+            การบริโภคคาเฟอีนร่วมกับยาแก้ปวดเพื่อรักษาอาการปวดหัวไมเกรนและปวดหัวจากความเครียด
+            หรือแพทย์อาจให้ผู้ป่วยบริโภคหรือฉีดคาเฟอีนเข้าเส้นเลือด เพื่อป้องกันอาการปวดหัวหลังเข้ารับการผ่าตัด
+            รวมทั้งป้องกันอาการปวดหัวหลังฉีดยาชาเข้าทางช่องเหนือไขสันหลัง เป็นต้น
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ลดความเสี่ยงโรคซึมเศร้า</b><br>คาเฟอีนอาจช่วยลดความเสี่ยงโรคซึมเศร้าและลดความเสี่ยงต่อการฆ่าตัวตายได้
+            โดยมีงานวิจัยพบว่า การบริโภคคาเฟอีนนั้นอาจช่วยลดความเสี่ยงต่อการเกิดโรคซึมเศร้าในผู้ใหญ่ได้ อย่างไรก็ตาม
+            มีงานวิจัยบางส่วนที่เผยว่า การบริโภคคาเฟอีนอาจเพิ่มความเสี่ยงต่อโรคซึมเศร้าในเด็กได้เช่นกัน
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ลดความเสี่ยงต่อการเกิดนิ่วในถุงน้ำดี</b><br>การบริโภคคาเฟอีนวันละประมาณ 400 มิลลิกรัม
+            อาจช่วยลดความเสี่ยงต่อการเกิดนิ่วในถุงน้ำดีได้ และยังมีการศึกษาพบว่า
+            คาเฟอีนอาจมีส่วนช่วยกระตุ้นการหดตัวของถุงน้ำดีและการไหลเวียนของน้ำดี ซึ่งอาจช่วยลดการเกิดนิ่วได้อีกด้วย
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ป้องกันโรคเบาหวาน</b><br>มีการวิจัยที่พบว่า ผู้ที่ดื่มกาแฟวันละ 1 แก้ว อาจเสี่ยงเกิดโรคเบาหวานประเภทที่ 2
+            ลดลง 7 เปอร์เซ็นต์ หากดื่มกาแฟมากขึ้นก็อาจทำให้ความเสี่ยงลดลงไปอีก อย่างไรก็ตาม
+            การบริโภคอาหารหรือเครื่องดื่มที่มีคาเฟอีนควรเป็นแบบไม่เติมน้ำตาล
+            และไม่บริโภคคาเฟอีนมากเกินปริมาณสูงสุดที่กำหนดต่อวัน และจากการค้นคว้า
+            แม้พบว่าคาเฟอีนอาจช่วยป้องกันโรคเบาหวานได้ แต่สารชนิดนี้ก็อาจไม่สามารถรักษาผู้ป่วยที่เป็นโรคเบาหวานประเภทที่
+            2 อยู่แล้วได้
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ลดความเสี่ยงโรคอัลไซเมอร์และโรคพาร์กินสัน</b><br>ไม่เพียงแต่คาเฟอีนจะช่วยให้สมองทำงานได้ดีขึ้นเท่านั้น
+            แต่อาจช่วยลดความเสี่ยงต่อโรคอัลไซเมอร์และโรคพาร์กินสันได้อีกด้วย โดยโรคทั้ง 2
+            ชนิดนี้มีสาเหตุมาจากความผิดปกติในการทำงานของสมอง อย่างไรก็ตาม
+            จากการศึกษาไม่พบว่าการบริโภคคาเฟอีนจะทำให้ความเสี่ยงต่อโรคพาร์กินสันลดลงได้ในผู้ที่สูบบุหรี่
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ลดความเสี่ยงโรคตับ</b><br>มีงานวิจัยที่พบว่า ผู้ที่ดื่มกาแฟวันละ 4 แก้วขึ้นไป
+            อาจมีความเสี่ยงต่อการเกิดโรคตับแข็งลดลงมากถึง 80 เปอร์เซ็นต์
+            และบางงานวิจัยยังบอกด้วยว่าสารคาเฟอีนอาจช่วยลดความเสี่ยงต่อโรคมะเร็งตับได้ประมาณ 40 เปอร์เซ็นต์
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ลดความเสี่ยงของโรคมะเร็งบางชนิด</b><br>คาเฟอีนมีสารต้านอนุมูลอิสระซึ่งเป็นประโยชน์ต่อร่างกายและอาจช่วยป้องกันการเกิดมะเร็งได้
+            โดยมีงานวิจัยพบว่า การดื่มกาแฟวันละ 3-4 แก้วอาจช่วยลดความเสี่ยงต่อโรคมะเร็งได้ถึง 18 เปอร์เซ็นต์ นอกจากนี้
+            ยังพบด้วยว่ากาแฟอาจลดความเสี่ยงต่อโรคมะเร็งหลายชนิด ได้แก่ มะเร็งเยื่อบุโพรงมดลูก มะเร็งต่อมลูกหมาก
+            มะเร็งผิวหนัง และมะเร็งตับ
+          </div>
+        </div>
+      </div>
+
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row">
+        <div class="col-12 text-content">ผลข้างเคียงของ</div>
+        <div class="col-12 display-4 text-center pb-4">คาเฟอีน</div>
+      </div>
+
+      <!-- Toasts -->
+      <div aria-live="polite" aria-atomic="true" class="row">
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>นอนไม่หลับ</b><br>ประโยชน์อย่างหนึ่งของคาเฟอีน คือ ทำให้ตื่นตัวไม่ง่วงนอน แต่ในขณะเดียวกัน
+            การบริโภคคาเฟอีนมากเกินไปอาจทำให้นอนไม่หลับได้ โดยมีการศึกษาพบว่า หากได้รับคาเฟอีนมากเกินไป
+            อาจต้องใช้เวลานานขึ้นกว่าจะนอนหลับ และยังอาจทำให้ระยะเวลาและคุณภาพการนอนลดลงได้อีกด้วย โดยเฉพาะในผู้สูงอายุ
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>เกิดความวิตกกังวล</b><br>แม้คาเฟอีนอาจกระตุ้นให้สมองทำงานได้ดีขึ้น แต่หากได้รับคาเฟอีนมากเกินไป
+            อาจทำให้เกิดความผิดปกติภายในสมองอย่างเป็นโรควิตกกังวลได้ โดยมีการศึกษาพบว่า การบริโภคคาเฟอีนเกินวันละ 1,000
+            มิลลิกรัม อาจทำให้เกิดความวิตกกังวลหรือความกระวนกระวายใจ
+            ซึ่งผลกระทบที่เกิดขึ้นอาจแตกต่างกันออกไปในแต่ละบุคคล
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>เกิดความเมื่อยล้า</b><br>การบริโภคคาเฟอีนอาจเพิ่มพลังงานและประสิทธิภาพต่าง ๆ ภายในร่างกายได้
+            แต่หลังจากหมดฤทธิ์แล้ว คาเฟอีนอาจทำให้เกิดความเมื่อยล้าตามมาได้เช่นเดียวกัน โดยมีการศึกษาพบว่า
+            แม้เครื่องดื่มชูกำลังที่ผสมคาเฟอีนอาจทำให้รู้สึกตื่นตัวและเพิ่มความรู้สึกเป็นเวลาหลายชั่วโมง
+            แต่ก็อาจทำให้ร่างกายรู้สึกเมื่อยล้ามากกว่าปกติในวันต่อมาได้
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ติดคาเฟอีน</b><br>คาเฟอีนจะทำให้สมองหลั่งสารบางอย่างออกมาในลักษณะที่คล้ายกับการติดสารเสพติด
+            จึงอาจเกิดอาการติดคาเฟอีนได้ นอกจากนี้ หากเป็นผู้ที่บริโภคคาเฟอีนปริมาณมากในแต่ละวัน
+            หรือมีภาวะติดคาเฟอีนอยู่แล้วหยุดบริโภคทันที อาจทำให้เกิดความผิดปกติขึ้นในร่างกายได้
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>กล้ามเนื้อและกระดูกเสียหาย</b><br>หากบริโภคคาเฟอีนมากเกินไป
+            อาจทำให้ร่างกายดูดซึมแคลเซียมน้อยลงจนเกิดภาวะกระดูกพรุน
+            หรืออาจทำให้อัตราเมตาบอลิซึมสูงเกินไปจนเกิดอาการกล้ามเนื้อเกร็ง นอกจากนี้ แม้จะเป็นกรณีที่พบได้น้อย
+            แต่การดื่มคาเฟอีนในปริมาณมากอาจเกี่ยวข้องกับการเกิดภาวะกล้ามเนื้อสลายได้
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ความดันโลหิตเพิ่มสูงขึ้น</b><br>การบริโภคคาเฟอีนปริมาณมากอาจทำให้ความดันโลหิตเพิ่มสูงขึ้นชั่วคราว
+            จึงอาจเกิดผลกระทบต่อระบบประสาท
+            และอาจทำให้หัวใจเต้นเร็วขึ้นจนอาจเกิดความผิดปกติอย่างภาวะหัวใจห้องบนเต้นสั่นพลิ้วได้ นอกจากนี้
+            การที่ความดันโลหิตเพิ่มสูงขึ้นนั้น อาจเพิ่มความเสี่ยงต่อโรคหัวใจและโรคหลอดเลือดสมองได้เช่นกัน
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ระบบย่อยอาหารและระบบขับถ่ายมีปัญหา</b><br>คาเฟอีนทำให้กรดในกระเพาะอาหารมีปริมาณเพิ่มขึ้น
+            จึงอาจทำให้มีอาการแสบร้อนกลางอก หรือมีอาการกรดไหลย้อนได้ อีกทั้งหากได้รับคาเฟอีนมากเกินไป
+            อาจทำให้ถ่ายเหลวเหลวหรือท้องเสียได้ นอกจากนี้ การที่ร่างกายขับคาเฟอีนส่วนเกินออกมาทางปัสสาวะ
+            อาจทำให้ปัสสาวะมากและบ่อยขึ้น
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>กระทบต่อทารกในครรภ์</b><br>ผู้ที่กำลังตั้งครรภ์อยู่ควรลดปริมาณการบริโภคคาเฟอีนลง
+            เพราะคาเฟอีนอาจถูกส่งผ่านไปยังเด็กในท้อง จนอาจเกิดความผิดปกติอย่างเด็กมีน้ำหนักตัวลดลง
+            หรืออาจทำให้แท้งลูกได้
+          </div>
+        </div>
+        <div class="toast col-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
+          data-delay="700">
+          <div class="toast-header bg-transparent">
+            <img src="assets/logo.svg" class="rounded logo-size mr-2" alt="...">
+            <strong class="mr-auto">Caffeine | Personal Health</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <b>ทำให้ผู้ป่วยมีอาการแย่ลง</b><br>การบริโภคคาเฟอีนอาจทำให้การเจ็บป่วยบางอย่างแย่ลงได้ เช่น โรคต้อหิน
+            โรควิตกกังวล โรคจิตเภท โรคลมชัก โรคเบาหวาน ภาวะเลือดออกผิดปกติ หรือปัญหาเกี่ยวกับการกลั้นปัสสาวะ เป็นต้น
+            อีกทั้งการบริโภคคาเฟอีนมากเกินไปอาจทำให้ผู้ที่มีอาการท้องเสีย ลำไส้แปรปรวน
+            หรือผู้ที่เป็นโรคไบโพลาร์มีอาการแย่ลงได้ นอกจากนี้
+            การบริโภคคาเฟอีนร่วมกับครีเอทีนก็อาจทำให้อาการของโรคพาร์กินสันแย่ลงได้อีกด้วย
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<script>
+  // Toasts
+  $('.toast').toast('show')
+  $('body').on('click', '.close', function () {
+    console.log('Hee')
+    console.log(this)
+    $(this).closest('.toast').toast('hide')
+  })
+
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'sleep.html';
+      },
+      nextPage() {
+        window.location.href = '#';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>
