@@ -705,10 +705,50 @@
 
 #caffeine8 {
   position: absolute;
+  transform: rotate(12.5deg);
+  width: 30vw;
+  right: -150px;
+  top: calc(550vh + 550px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#caffeine9 {
+  position: absolute;
   transform: rotate(-12.5deg);
+  width: 30vw;
+  left: -150px;
+  top: calc(600vh + 400px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#caffeine10 {
+  position: absolute;
+  transform: rotate(12.5deg);
+  width: 30vw;
+  right: -150px;
+  top: calc(750vh + 800px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#caffeine11 {
+  position: absolute;
+  transform: rotate(-12.5deg);
+  width: 30vw;
+  left: -150px;
+  top: calc(850vh + 400px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#caffeine12 {
+  position: absolute;
+  transform: rotate(12.5deg);
   width: 25vw;
   right: -150px;
-  top: calc(500vh + 200px);
+  top: calc(950vh + 550px);
   z-index: -2;
   filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
 }
