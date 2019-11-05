@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smoking | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="cigarette.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="smoke1" src="assets/smoking1.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="5">
+      <img id="smoke3" src="assets/smoke3.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="5">
+      <img id="smoke4" src="assets/smoke4.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="smoke2" src="assets/smoke2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="smoke5" src="assets/smoke5.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="smoke6" src="assets/smoke6.png" />
+    </div>
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted w-100">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Smoking helps you lose weight ?</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">one lung at a time!</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll" id="hand-header">
+      <div class="row py-5"></div>
+      <div class="row" id="foodHeader">
+        <div class="col-12 text-header">เกิดเป็นบุหรี่แค่จุดก็ผิดแล้ว</div>
+        <div class="col-12 py-4 text-content">
+          บุหรี่ นับเป็นสิ่งเสพติดที่มีโทษมากมาย และเป็นสาเหตุสำคัญของการเกิดโรคมะเร็งในระบบทางเดินหายใจ โรคหัวใจ
+          ความดันโลหิตสูง ฯลฯ โดยการสูบบุหรี่ไม่ได้ทำให้เกิดโรคทันทีทันใด
+          แต่สารพิษจะค่อยๆสะสมในร่างกายและก่อให้เกิดโรคได้ในอนาคต หากผู้สูบได้รู้ถึงอันตรายนี้
+          อาจช่วยให้เป็นแรงบันดาลใจในการเลิกบุหรี่มากยิ่งขึ้น
+        </div>
+      </div>
+      <center>
+        <div class="wrapper py-4">
+          <div class="cigarette">
+            <div class="filter"></div>
+            <div class="space"></div>
+            <div class="tobacco">
+              <div class="burn"></div>
+            </div>
+            <br style="clear: both;" />
+            <div class="smoke"></div>
+          </div>
+          <div class="btn-smoke">Smoke it!</div>
+          <div class="btn-reset">Reset!</div>
+        </div>
+      </center>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row" id="foodHeader">
+        <div class="col-12 pt-4 text-content">ที่มีต่อตัวผู้สูบ</div>
+        <div class="col-12 text-center display-4">โทษของบุหรี่</div>
+        <div class="col-12 py-4 text-content">
+          บุหรี่ นับเป็นสิ่งเสพติดที่มีโทษมากมาย และเป็นสาเหตุสำคัญของการเกิดโรคมะเร็งในระบบทางเดินหายใจ โรคหัวใจ
+          ความดันโลหิตสูง ฯลฯ โดยการสูบบุหรี่ไม่ได้ทำให้เกิดโรคทันทีทันใด
+          แต่สารพิษจะค่อยๆสะสมในร่างกายและก่อให้เกิดโรคได้ในอนาคต หากผู้สูบได้รู้ถึงอันตรายนี้
+          อาจช่วยให้เป็นแรงบันดาลใจในการเลิกบุหรี่มากยิ่งขึ้น
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-3">
+          <a data-toggle="collapse" href="#smokingPregnant" role="button" aria-expanded="false"
+            aria-controls="smokingPregnant">
+            <img src="assets/smokeCause1.png" alt="" class="howTo" data-toggle="tooltip" data-placement="left"
+              title="เสี่ยงแท้งลูก">
+          </a>
+        </div>
+        <div class="col-5">
+          <a data-toggle="collapse" href="#smokingLung" role="button" aria-expanded="false" aria-controls="smokingLung">
+            <img src="assets/smokeCause2.png" alt="" class="howTo" data-toggle="tooltip" data-placement="right"
+              title="เสี่ยงถุงลมโป่งพอง">
+          </a>
+        </div>
+        <div class="col-2"></div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-3 px-1 py-3">
+          <div class="collapse multi-collapse" id="smokingPregnant">
+            <div class="card card-body cards-links">
+              <b>สำหรับผู้หญิงที่สูบบุหรี่</b> นอกจากจะมีความเสี่ยงต่อการเสียชีวิตสูงกว่าผู้ชายแล้ว
+              หากสูบในช่วงตั้งครรภ์ก็ยิ่งทำให้เสี่ยงต่อการแท้งลูกได้อีกด้วย เนื่องจากสารเคมีในบุหรี่จะทำให้รกเกาะต่ำ
+              เสี่ยงต่อการเกิดโรคแทรกซ้อน และอาจเกิดภาวะครรภ์เป็นพิษตามมาได้ ดังนั้นหากรู้ตัวว่ากำลังตั้งครรภ์
+              ควรเลิกสูบบุหรี่ทันที และหลีกเลี่ยงการสูดดมควันบุหรี่ด้วย
+            </div>
+          </div>
+        </div>
+        <div class="col-5 px-1 py-3">
+          <div class="collapse multi-collapse" id="smokingLung">
+            <div class="card card-body">
+              <b>ถุงลมโป่งพอง</b> เกิดจากการที่เนื้อปอดและถุงลมเล็กๆ ค่อยๆ เสื่อมสภาพลงจนโป่งพองในที่สุด
+              ซึ่งส่วนใหญ่แล้วจะเป็นเพราะการสูบบุหรี่เป็นเวลานาน โดยสารนิโคติน ไนโตรเจนไดออกไซด์ และสารเคมีอื่นๆ
+              จะเข้าไปทำลายเซลล์เนื้อเยื่อของปอด และทำให้ถุงลมเล็กๆ ฉีกขาด ผู้ป่วยจะมีอาการหายใจลำบากและหายใจยากขึ้น
+              บางคนอาจรู้สึกหายใจได้ไม่เต็มปอดจนต้องหายใจถี่และเร็วขึ้นกว่าปกติ
+              ซึ่งก็สร้างความทรมานให้ผู้ป่วยได้มากทีเดียว
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-3">
+          <a data-toggle="collapse" href="#smokingHeart" role="button" aria-expanded="false"
+            aria-controls="smokingPregnant">
+            <img src="assets/smokeCause3.png" alt="" class="howTo" data-toggle="tooltip" data-placement="right"
+              title="เสี่ยงโรคหัวใจและหลอดเลือด">
+          </a>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-3 px-1 py-3">
+          <div class="collapse multi-collapse" id="smokingHeart">
+            <div class="card card-body cards-links">
+              <b>โรคหัวใจและหลอดเลือด</b> เป็นโรคที่อันตรายเป็นอย่างมาก
+              โดยเฉพาะภาวะหลอดเลือดหัวใจตีบตันที่อาจนำไปสู่ภาวะหัวใจวายเฉียบพลัน
+              ซึ่งผู้สูบบุหรี่มีความเสี่ยงต่อโรคนี้สูงมาก เนื่องจากสารนิโคตินและสารเสพติดอื่นๆ ในบุหรี่
+              จะทำให้หลอดเลือดหัวใจหดตัวและตีบลง ส่งผลให้เลือดไปเลี้ยงหัวใจไม่เพียงพอ
+              จึงทำให้หัวใจขาดเลือดจนเกิดภาวะหัวใจวายเฉียบพลันได้
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row py-5"></div>
+    </div>
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Cigarette
+  $(document).ready(function () {
+    $('.btn-smoke').click(function () {
+      $('.burn').show();
+      $('.tobacco').animate({
+        width: "0cm"
+      }, 8000);
+      $('#smoke2').animate({
+        opacity: "0"
+      }, 8000);
+      $('.burn').animate({
+        left: "0cm"
+      }, 8000, function () {
+        $(this).fadeOut();
+        $('.btn-reset').css("display", "inline-block");
+        $('.btn-smoke').css("display", "none");
+      });
+    });
+
+    $('.btn-reset').click(function () {
+      $(this).fadeOut();
+      $('.tobacco').css("width", "5.5cm");
+      $('.burn').css("left", "208px");
+      $('.btn-reset').css("display", "none");
+      $('.btn-smoke').css("display", "inline-block");
+    });
+  });
+
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'officeSyndrome.html';
+      },
+      nextPage() {
+        window.location.href = 'sleep.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

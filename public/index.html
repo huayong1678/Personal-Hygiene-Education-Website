@@ -24,8 +24,11 @@
   <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-  <div id="app">
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-transparent" id="navigation">
       <button @click="handleClick()" id="buttonBars">
@@ -37,7 +40,47 @@
     </nav>
 
     <!-- Option Bar -->
-    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]">
+      <div class="container-fluid">
+        <h4>Table of contents</h4>
+        <a class="col-12 h6 pl-3 card-links text-muted" href="#" role="button">Home</a>
+        <a class="col-12 h6 pl-3 card-links text-muted" data-toggle="collapse" href="#contentCollapse" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample1">Cleaning your body</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse">
+              <ul>
+                <li><a class="bars-links text-muted" href="oralHealth.html">Oral Health</a></li>
+                <li><a class="bars-links text-muted" href="handWash.html">Washing Hand</a></li>
+                <li><a class="bars-links text-muted" href="bathing.html">Bathing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a class="col-12 h6 pl-3 card-links text-muted" data-toggle="collapse" href="#contentCollapse1" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample1">Consuming</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse1">
+              <ul>
+                <li><a class="bars-links text-muted" href="food.html">Oral Health</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a class="col-12 h6 pl-3 card-links text-muted" data-toggle="collapse" href="#contentCollapse2" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample1">Daily-life Disease</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse2">
+              <ul>
+                <li><a class="bars-links text-muted" href="officeSyndrome.html">Office Syndrome</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Title Decor. -->
     <div class="rellax" data-rellax-speed="10">
@@ -55,20 +98,19 @@
     <div class="rellax" data-rellax-speed="1">
       <img id="man3" src="assets/man3.png" />
     </div>
-    <div class="rellax" data-rellax-speed="2">
+    <!-- <div class="rellax" data-rellax-speed="2">
       <img id="woman3" src="assets/woman3.png" />
-    </div>
+    </div> -->
 
     <!-- Scroll to See More -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col-1 rellax" data-rellax-speed="5">
-          <div class="nav-scroll seeMore text-muted">See More.<br>
+      <div class="row justify-content-center">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted w-100">
+            <p class="m-0 p-0">See More.</p>
             <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
           </div>
         </div>
-        <div class="col"></div>
       </div>
     </div>
 
@@ -84,7 +126,7 @@
     <div class="container scroll">
       <div class="row pt-5"></div>
       <div class="row pt-5"></div>
-      <div class="row" id="cards-section">
+      <div class="row">
         <div class="col-4 px-6 py-2">
           <a href="oralHealth.html" class="card-links">
             <div class="card card-hover" style="width: 100%;">
@@ -148,23 +190,21 @@
                 <img src="assets/officeSyndrome_card.png" class="card-img-top pb-3" alt="...">
                 <h5 class="card-title pb-1">Office Syndrome</h5>
                 <h6 class="card-subtitle pb-2 text-muted">แค่นั่งเฉยๆก็ป่วยได้หรอ</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
+                <p class="card-text">ออฟฟิศซินโดรม ภัยร้ายใกล้ตัวของชาวออฟฟิศ</p>
               </div>
             </div>
           </a>
         </div>
         <div class="col-4 px-6 py-2">
-          <a href="#" class="card-links">
+          <a href="smoking.html" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="assets/cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
-                <h5 class="card-title pb-1">Card title</h5>
-                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
+                <img src="assets/smoke_card.png" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Smoking</h5>
+                <h6 class="card-subtitle pb-2 text-muted">ไม่รู้จักกันมาทำร้ายเราทำไม</h6>
+                <p class="card-text">การสูบบุหรี่ถือเป็นการทำลายสุขภาพ
+                  ทั้งต่อตัวผู้สูบเองและผู้อยู่ใกล้ชิดที่สูดเอาอากาศที่มีควันบุหรี่เข้าไป
+                  เพราะควันบุหรี่ประกอบด้วยสารพิษมากมาย</p>
               </div>
             </div>
           </a>
@@ -172,29 +212,28 @@
       </div>
       <div class="row">
         <div class="col-4 px-6 py-2">
-          <a href="#" class="card-links">
+          <a href="sleep.html" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="assets/cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
-                <h5 class="card-title pb-1">Card title</h5>
-                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
+                <img src="assets/sleep_card.png" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Sleeping</h5>
+                <h6 class="card-subtitle pb-2 text-muted">เหนื่อยจังงีบหน่อยนะ</h6>
+                <p class="card-text">เพราะการนอนเป็นการพักผ่อนที่ดีที่สุดที่ร่างกายต้องการ แต่บางครั้งนอนเพียงพอก็แล้ว
+                  เข้านอนแต่หัวค่ำก็แล้ว แต่ก็ยังรู้สึกว่าพักผ่อนไม่เพียงพอซักที ทำยังไงดีนะ...</p>
               </div>
             </div>
           </a>
         </div>
         <div class="col-4 px-6 py-2">
-          <a href="#" class="card-links">
+          <a href="caffeine.html" class="card-links">
             <div class="card card-hover" style="width: 100%;">
               <div class="card-body">
-                <img src="assets/cardImageExample.jpeg" class="card-img-top pb-3" alt="...">
-                <h5 class="card-title pb-1">Card title</h5>
-                <h6 class="card-subtitle pb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
+                <img src="assets/caffeiene_card.png" class="card-img-top pb-3" alt="...">
+                <h5 class="card-title pb-1">Caffeine</h5>
+                <h6 class="card-subtitle pb-2 text-muted">ไม่ไหวแล้วขออีกแก้วนะ~</h6>
+                <p class="card-text">บางคนเชื่อว่าคาเฟอีนอาจทำให้กระปรี้กระเปร่า
+                  แต่บางคนกลับรู้สึกปวดหัว คลื่นไส้ ใจสั่น
+                  ตกลงแล้วคาเฟอีนนั้นเกิดประโยชน์หรือมีโทษมากกว่ากัน หาคำตอบได้จากบทความนี้</p>
               </div>
             </div>
           </a>
@@ -395,6 +434,18 @@
 
 </html>
 <script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 4000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
   // VUE
   var app = new Vue({
     el: '#app',

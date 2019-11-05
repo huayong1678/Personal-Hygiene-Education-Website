@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sleeping | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="twinkingStars.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Twinking Stars -->
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="sleep1" src="assets/sleep1.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="sleep2" src="assets/sleep2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="1">
+      <img id="sleep3" src="assets/sleep_TV.png" data-toggle="tooltip" data-placement="right"
+        title="ไม่ควรนอนดูทีวีในห้องนอน เนื่องจากแสงสว่างจากทีวีอาจทำให้มีการยับยั้งการหลั่งของสารสื่อประสาทเมลาโตนินซึ่งเป็นตัวที่ช่วยเรื่องนอน จนมีผลทำให้นอนดึกขึ้น" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="sleep4" src="assets/sleep_watch.png" data-toggle="tooltip" data-placement="right"
+        title="ช่วงที่นอนไม่หลับ พยายามหลีกเลี่ยงการดูนาฬิกา เนื่องจากจะยิ่งทำให้เกิดความกังวลจนทำให้นอนหลับยากขึ้นไปอีก" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="sleep5" src="assets/sleep_water.png" data-toggle="tooltip" data-placement="right"
+        title="ไม่ควรดื่มน้ำปริมาณมากเกินไปก่อนไปเข้านอน เนื่องจากอาจทำให้ตื่นขึ้นมากลางดึกเพื่อไปเข้าห้องน้ำแล้วกลับมานอนต่อไม่หลับ" />
+    </div>
+    <div class="rellax" data-rellax-speed="1">
+      <img id="sleep6" src="assets/sleep_food.png" data-toggle="tooltip" data-placement="right"
+        title="ไม่ควรทานอาหารขณะกำลังไปเข้านอนเนื่องจากอาจทำให้จุกแน่นท้องจนนอนไม่หลับ" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="sleep7" src="assets/sleep_time.png" data-toggle="tooltip" data-placement="right"
+        title="ควรมีเวลาเข้านอนและตื่นนอนให้เหมาะสมและสม่ำเสมอไม่ว่าจะเป็นวันทำงานหรือวันหยุด" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="sleep8" src="assets/sleep_thermometer.png" data-toggle="tooltip" data-placement="right"
+        title="ในห้องนอนควรมืดสนิท เงียบ และมีอุณหภูมิที่เหมาะสม ไม่ร้อนหรือเย็นจนเกินไป" />
+    </div>
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore w-100">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Getting to Bed!</div>
+        <div id="two" class="col-12 rellax" data-rellax-speed="4">เพราะการนอนเป็นการพักผ่อนที่ดีที่สุดที่ร่างกายต้องการ
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-5 scroll" id="hand-header">
+      <div class="row py-3"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row">
+        <div class="col-12 text-content">ในช่วงกลางคืน</div>
+        <div class="col-12 text-center display-3">ก่อนนอนควรทำอย่างไร</div>
+      </div>
+      <div class="row separator"></div>
+      <div class="row h-100 w-100">
+        <div class="col-12 text-content">ในช่วงกลางวัน</div>
+        <div class="col-12 text-center display-3">ควรทำอย่างไร</div>
+        <div class="col-1"></div>
+        <div class="col-4">
+          <img src="assets/sleep_coffee.png" alt="" class="howTo tiltLeft-1 py-3">
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5 my-auto mx-auto bg-light rounded">
+          <p class="h5 text-center text-dark py-2 px-1">" ไม่ควรดื่มกาแฟหรือเครื่องดื่มที่มีส่วนผสมของสารคาเฟอีน
+            โดยเฉพาะอย่างยิ่งในคนที่มีปัญหาเรื่องนอนไม่หลับ ถ้าจะดื่มก็ไม่ควรเกินเที่ยงวัน "</p>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-5 my-auto mx-auto bg-light rounded">
+          <p class="h5 text-center text-dark py-2 px-1">" หลีกเลี่ยงเหล้า บุหรี่ โดยเฉพาะอย่างยิ่งใกล้เวลาเข้านอน "</p>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-4">
+          <img src="assets/sleep_alcohol.png" alt="" class="howTo tiltRight-1 py-3">
+        </div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-4">
+          <img src="assets/sleep_workout.png" alt="" class="howTo tiltLeft-1 py-3">
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5 my-auto mx-auto bg-light rounded">
+          <p class="h5 text-center text-dark py-2 px-1">" ออกกำลังกายอย่างสม่ำเสมอ แต่ไม่ควรใกล้เวลานอนจนเกินไป ควรให้ห่างจากเวลาเข้านอนอย่างน้อย 3-5 ชั่วโมง เนื่องจากอุณหภูมิในร่างกายที่สูงขึ้นจากการออกกำลังกายอาจมีผลรบกวนช่วงเริ่มนอน "</p>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row final-row"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Animation
+  $(function () {
+    $('#app').css({
+      "background": "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 38%, rgba(20,17,23,1) 44%, rgba(17,2,34,1) 72%, rgba(17,0,36,1) 76%, rgba(0,0,59,1) 91%, rgba(0,45,59,1) 100%)",
+      "transition": "background 10s ease 3s",
+      "color": "#fff",
+      "transition": "color 10s ease 3s",
+    });
+    $('.text-header').css({
+      "color": "#fff",
+      "transition": "color 10s ease 3s",
+    });
+    $('.text-content').css({
+      "color": "#efefef",
+      "transition": "color 10s ease 3s",
+    });
+    $('.two').css({
+      "color": "#efefef",
+      "transition": "color 10s ease 3s",
+    });
+  });
+
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'smoking.html';
+      },
+      nextPage() {
+        window.location.href = 'caffeine.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

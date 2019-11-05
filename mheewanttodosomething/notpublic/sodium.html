@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oral Health | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="style/stylesheet.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Lato&display=swap"
+    rel="stylesheet">
+
+  <!-- Rellax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+
+  <!-- Icon API -->
+  <script src="https://kit.fontawesome.com/5ee604299a.js" crossorigin="anonymous"></script>
+
+  <!-- VUE CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars"><i class="fas fa-bars optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]"></i></button>
+      <div class="btn-group" role="group">
+        <!-- <button @click="previousPage()" id="backward"><i class="fas fa-arrow-circle-left backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button> -->
+        <button @click="homePage()" id="backward"><i class="fas fa-home backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+        <button @click="nextPage()" id="backward"><i class="fas fa-arrow-alt-circle-right backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]"></i></button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="1">
+      <img id="tooth1" src="assets/tooth_healthy.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="tooth2" src="assets/tooth_decay.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="5">
+      <img id="tooth3" src="assets/tooth_decay2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="1">
+      <img id="tooth4" src="assets/tooth_blink.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="dentist" src="assets/dentist.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="toothbrush" src="assets/toothbrush.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="mouthWash" src="assets/mouthWash.png" />
+    </div>
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid seeMore">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-auto rellax" data-rellax-speed="5"><a @click="scrollClick = true" href="#tooth-header"
+            class="text-muted card-links">
+            <div class="nav-scroll">See More.<br><i class="fas fa-chevron-down"></i></div>
+          </a></div>
+        <div class="col"></div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">So(fuck)dium</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">อันตรายใกล้ตัวที่สุดอย่างหนึ่งของคนไทย</div>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="container pt-4 scroll" id="tooth-header">
+      <div class="row">
+        <div class="col-12 text-header rellax" data-rellax-speed="3">Don't you know?</div>
+        <div class="col-12 pt-4 text-content rellax" data-rellax-speed="3">
+          ปริมาณโซเดียมทีควร่ได้รับต่อวันคือ 2000มิลลิกรัม แต่อาหารไทย1มื้อก็1000กว่าๆแล้ว
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 pt-4 text-content">
+          <strong>โซเดียม</strong> เป็นส่วนประกอบหนึ่งของเกลือ และอยู่ในอาหารรสเค็มทุกชนิด 
+          โดยมีประโยชน์ต่อระบบการทำงานของร่างกายหลายส่วน เช่น ปรับสมดุลของเหลวและเกลือแร่ใน  
+          ร่างกาย ช่วยส่งกระแสไฟฟ้าไปตามเส้นประสาทให้ทำงานเป็นปกติ ช่วยการหดและคลายตัวของกล้ามเนื้อ 
+          และช่วยควบคุมการเต้นของหัวใจ แต่ในทางกลับกัน หากกินอาหารที่มีโซเดียมมากเกินไปทำให้เสี่ยงที่จะเกิดปัญหาต่อสุขภาพ
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-header">โซเดียมกับอาหารไทย</div>
+      </div>
+      <div class="row">
+        <div class="col-12 pt-4 text-content" style="width: 100%;">
+          <img src="saltyfood.jpg" alt=""> 
+          <br><br>
+          รูปแสดงให้เห็นถึงปริมาณโซเดียมที่อยู่ในอาหารที่พวกเราชอบกินกันเป็นประจำ
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-12 text-header">โซเดียมมาก ปัญหามาก</div>
+      </div>
+      <div class="row">
+        <div class="col-12 pt-4 text-content">
+            เมื่อกินอาหารที่มีรสเค็มโซเดียมจะเข้าสู่ร่างกายและปนเปื้อนในเลือด ทำให้เลือดเสียสมดุล 
+            หลอดเลือดจึงพยายามดูดน้ำเข้ามาเจือจางโซเดียม จนทำให้แรงดันเลือดสูงขึ้น และหากกินเค็มมากเกินไปบ่อยๆ 
+            โรคเรื้อรังต่างๆ ได้รอคิวถามหาอย่างแน่นอน
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-12 text-header">ลดโซเดียม ดีต่อกาย</div>
+      </div>
+      <div class="row">
+        <div class="col-12 pt-4 text-content">
+            ถ้าปรุงอาหารเองควรลดประมาณเครื่องปรุงรสอย่างน้ำปลา เกลือ ซอสปรุงรส น้ำมันหอย ผงชูรส
+            <br>
+            หรือถ้าสั่งอาหารให้เลี่ยงการปรุงรสเพื่ม หรือสั่งแม่ค้าว่าเค็มน้อยลง
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6 text-center">
+            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+              right reserved.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+  var hashCounter = 0;
+  // Smooth Scroll
+  $('a[href*="#"]').on('click', function (e) {
+    e.preventDefault()
+    hashCounter++;
+    console.log(hashCounter)
+
+    $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top,
+      },
+      500,
+      'linear'
+    )
+  })
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      scrollClick: false,
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    mounted() {
+      // rellax
+      var rellax = new Rellax('.rellax');
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        // if (this.handleClick) {
+        //   window.history.go(-2)
+        // } else {
+        //   window.history.go(-1)
+        // }
+        // // window.location.href = 'index.html';
+        window.location.href = 'index.html';
+      },
+      nextPage() {
+        window.location.href = 'handWash.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>
