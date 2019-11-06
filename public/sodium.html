@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Salty & Sodium | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="sodium1" src="assets/sodium1.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="sodium2" src="assets/sodium2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="sodium3" src="assets/sodium3.png" />
+      <img id="sodium4" src="assets/sodium4.png" />
+      <img id="sodium5" src="assets/sodium5.png" />
+      <img id="sodium6" src="assets/sodium6.png" />
+      <img id="sodium7" src="assets/sodium7.png" />
+      <img id="sodium8" src="assets/sodium8.png" />
+    </div>
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted w-100">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">It's too salty.</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">เค็มแต่ดีจริงหรอ</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll" id="hand-header">
+      <div class="row">
+        <div class="col-12 text-header" data-rellax-speed="3">เธอรู้ไหม?</div>
+        <div class="col-12 pt-4 text-content" data-rellax-speed="3">
+          จากสถิติทั่วทั้งโลก และรวมถึงประเทศไทย พบว่า คนในยุคปัจจุบันมีการกินอาหารที่มีรสเค็มเพิ่มมากขึ้น
+          โดยจะพบว่ามีการได้รับปริมาณของเกลือเฉลี่ยต่อคนสูงกว่าค่าปริมาณสารอาหารที่ควรได้รับประจำวัน
+          สำหรับคนไทยที่กำหนดให้ได้รับเกลือไม่เกินวันละ 1 ช้อนชา โดยที่มีโซเดียมไม่เกินวันละ 2,300 มิลลิกรัม
+          แต่ค่าเฉลี่ยของคนไทย คือ ได้รับเกลือประมาณวันละ 2 ช้อนชา โดยมีโซเดียมต่อวันมากกว่า 4,000 มิลลิกรัม
+          การได้รับโซเดียมที่มากกว่าปริมาณที่แนะนำจะทำให้เกิดปัญหาทางสุขภาพตามมา</div>
+      </div>
+      <div class="separator"></div>
+      <div class="row w-100 justify-content-center">
+        <div class="col-12 text-content">แหล่งที่มาของ</div>
+        <div class="col-12 display-4 text-center pb-3">โซเดียม</div>
+        <div class="col-6 card text-center px-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">เครื่องปรุงอาหารที่มีปริมาณของโซเดียมอยู่สูง เช่น เกลือ น้ำปลา ซีอิ๊วขาว ผงชูรส
+              กะปิ ผงปรุงรส น้ำมันหอย เครื่องพริกแกง น้ำปลาร้า ผงฟู</li>
+            <li class="list-group-item">ประเภทของอาหารที่มีโซเดียมสูง เช่น อาหารกระป๋อง บะหมี่กึ่งสำเร็จรูป ไข่เค็ม
+              ลูกชิ้น ไส้กรอก แคบหมู ขนมถุงกรุบกรอบ อาหารดองเค็ม อาหารแช่อิ่ม อาหารตากแห้ง เครื่องดื่ม ขนมปัง</li>
+          </ul>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row w-100 justify-content-center">
+        <div class="col-12 text-content">ข้อควรระวังเมื่อชอบกิน</div>
+        <div class="col-12 display-4 text-center pb-3">อาหารรสเค็ม</div>
+        <div class="col-6 card text-center px-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item alternate-color">
+              ผู้ที่ชอบรับประทานอาหารรสเค็มมีความเสี่ยงต่อการมีน้ำหนักตัวเกินและเป็นโรคอ้วนได้ง่าย</li>
+            <li class="list-group-item alternate-color">
+              โดยปกติแล้วระบบประสาทการรับรู้รสชาติของอาหารที่ลิ้นจะลดน้อยลงเมื่ออายุเพิ่มมากขึ้น ดังนั้น
+              โดยส่วนใหญ่แล้วจะพบว่าคนที่ชอบกินอาหารรสเค็มจะเพิ่มความเค็มมากขึ้นเรื่อยๆ ซึ่งไม่ดีต่อสุขภาพ</li>
+            <li class="list-group-item alternate-color">
+              การกินอาหารที่มีโซเดียมสูง เป็นสาเหตุของการเกิดภาวะไตเสื่อม
+              เนื่องจากไตซึ่งเป็นอวัยวะที่กรองของเสียและน้ำออกนอกร่างกายจะต้องทำงานหนัก เมื่อมีโซเดียมในร่างกายสูง
+              และเมื่อต้องทำงานหนักเป็นประจำไตก็จะเสื่อมเร็วขึ้น</li>
+            <li class="list-group-item alternate-color">
+              เพิ่มความเสี่ยงต่อการเกิดโรคความดันโลหิตสูงและตามมาด้วยความเสี่ยงต่อโรคหัวใจและหลอดเลือด
+              เนื่องมาจากการที่ร่างกายได้รับโซเดียมจะไปเพิ่มเซลล์กล้ามเนื้อของหัวใจและหลอดเลือด
+              ทำให้เกิดความดันโลหิตที่สูงขึ้นและหัวใจทำงานหนักมากขึ้น</li>
+            <li class="list-group-item alternate-color">
+              การได้รับปริมาณของโซเดียมสูงในระยะยาวจะเพิ่มความเสี่ยงต่อการเกิดโรคสมองเสื่อม</li>
+          </ul>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row w-100 justify-content-center">
+        <div class="col-12 text-content">โซเดียมจากอาหาร</div>
+        <div class="col-12 display-4 text-center pb-3">วิธีการลดปริมาณ</div>
+        <div class="col-6 card text-center px-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              เน้นการกินอาหารสดมากกว่าอาหารที่ผ่านกระบวนการแปรรูป</li>
+            <li class="list-group-item">
+              หลีกเลี่ยงหรือกินแต่น้อยสำหรับอาหารที่มีรสเค็มมาก เช่น อาหารดองเค็ม อาหารกระป๋อง อาหารตากแห้งเค็ม</li>
+            <li class="list-group-item">
+              ชิมอาหารก่อนปรุง หากจะใส่เครื่องปรุงควรใส่ทีละน้อย</li>
+            <li class="list-group-item">
+              ใช้เครื่องจิ้มต่างๆ ในปริมาณน้อย เช่น น้ำจิ้มไก่ ซีอิ๊วหวาน น้ำจิ้มแจ่ว น้ำพริกต่างๆ เพราะมักจะมีรสเค็ม
+            </li>
+            <li class="list-group-item">
+              อ่านฉลากโภชนาการในปริมาณของโซเดียมทั้งหมด</li>
+            <li class="list-group-item">
+              ใช้สมุนไพรในการปรุงประกอบอาหารจะช่วยให้รสชาติอาหารดีขึ้นโดยช่วยลดการเติมเกลือลงในอาหาร</li>
+            <li class="list-group-item">
+              ทำอาหารทานเอง เพื่อเลือกวัตถุดิบที่นำมาปรุงได้</li>
+            <li class="list-group-item">
+              ลดการทานอาหารที่ใช้ผงฟูเป็นส่วนประกอบ พวกขนมปัง เบเกอร์รี่ต่างๆ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row content-padding">
+        <div class="col-12 text-header">เรามาดูวิดีโอเกี่ยวกับการบริโภคโซเดียมดีกว่า</div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col pt-5">
+          <iframe width="650" height="315" src="https://www.youtube.com/embed/48Y1JDUHJIw" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="final-row"></div>
+
+      <!-- Footer -->
+      <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6 text-center">
+            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+              right reserved.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 0);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'caffeine.html';
+      },
+      nextPage() {
+        window.location.href = '#';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

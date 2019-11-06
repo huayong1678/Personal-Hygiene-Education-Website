@@ -1,279 +1,279 @@
 html,
 body {
-    overflow-x: hidden;
-    height: auto;
-    font-family: 'Lato', sans-serif;
-    scroll-behavior: smooth;
-    z-index: -300;
+  overflow-x: hidden;
+  height: auto;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+  z-index: -300;
 }
 
 /* Preloader */
 #loader {
-    position: absolute;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
 }
 
 #loaderImage {
-    position: absolute;
-    width: 200px;
-    top: calc(50vh - 100px);
-    left: calc(50vw - 100px);
-    -webkit-animation: spin 2s ease infinite;
-    animation: spin 2s ease infinite;
-    opacity: 0.8;
+  position: absolute;
+  width: 200px;
+  top: calc(50vh - 100px);
+  left: calc(50vw - 100px);
+  -webkit-animation: spin 2s ease infinite;
+  animation: spin 2s ease infinite;
+  opacity: 0.8;
 }
 
 /* Add animation to "page content" */
 .animate-bottom {
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
 }
 
 @-webkit-keyframes animatebottom {
-    from {
-        bottom: -100px;
-        opacity: 0
-    }
+  from {
+    bottom: -100px;
+    opacity: 0
+  }
 
-    to {
-        bottom: 0px;
-        opacity: 1
-    }
+  to {
+    bottom: 0px;
+    opacity: 1
+  }
 }
 
 @keyframes animatebottom {
-    from {
-        bottom: -100px;
-        opacity: 0
-    }
+  from {
+    bottom: -100px;
+    opacity: 0
+  }
 
-    to {
-        bottom: 0;
-        opacity: 1
-    }
+  to {
+    bottom: 0;
+    opacity: 1
+  }
 }
 
 
 @keyframes spin {
-    form {
-        transform: rotate(0deg);
-    }
+  form {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* fonts */
 @font-face {
-    font-family: Fredericka the Great;
-    src: url(fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf);
+  font-family: Fredericka the Great;
+  src: url(fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf);
 }
 
 @font-face {
-    font-family: Lato;
-    src: url(fonts/Lato/Lato-Regular.ttf);
+  font-family: Lato;
+  src: url(fonts/Lato/Lato-Regular.ttf);
 }
 
 @font-face {
-    font-family: Inconsolata;
-    src: url(fonts/Inconsolata/Inconsolata-Regular.ttf);
+  font-family: Inconsolata;
+  src: url(fonts/Inconsolata/Inconsolata-Regular.ttf);
 }
 
 /* VUE */
 #app {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Page Footer */
 #footer {
-    position: relative;
-    bottom: 0px;
-    height: 60px;
+  position: relative;
+  bottom: 0px;
+  height: 60px;
 }
 
 #footer-text {
-    padding-top: 25px;
-    font-size: 75%;
-    display: inline-block;
+  padding-top: 25px;
+  font-size: 75%;
+  display: inline-block;
 }
 
 /* Option Bar */
 #navigation {
-    background: transparent;
-    position: fixed;
-    z-index: 1000;
-    width: 100vw;
+  background: transparent;
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
 }
 
 #angleDown {
-    width: 10px;
-    padding: 0px;
-    filter: invert(0.5);
+  width: 10px;
+  padding: 0px;
+  filter: invert(0.5);
 }
 
 /* Page Content */
 .scroll {
-    overflow: hidden;
-    align-items: center;
-    min-height: 100vh;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-    width: 100vw;
-    z-index: 800;
+  overflow: hidden;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  width: 100vw;
+  z-index: 800;
 }
 
 #page-title {
-    position: relative;
-    top: calc(50vh - 75px);
+  position: relative;
+  top: calc(50vh - 75px);
 }
 
 .text-header {
-    font-size: 45px;
-    font-weight: 500;
-    text-align: center;
-    color: #1f1f1f;
-    padding-top: 25vh;
+  font-size: 45px;
+  font-weight: 500;
+  text-align: center;
+  color: #1f1f1f;
+  padding-top: 25vh;
 }
 
 .text-content {
-    font-size: 25px;
-    text-align: center;
-    color: #353535;
-    padding-top: 0;
+  font-size: 25px;
+  text-align: center;
+  color: #353535;
+  padding-top: 0;
 }
 
 .list-content {
-    font-size: 25px;
-    color: #353535;
-    padding-top: 0;
-    list-style-position: outside;
-    padding-bottom: 10px;
+  font-size: 25px;
+  color: #353535;
+  padding-top: 0;
+  list-style-position: outside;
+  padding-bottom: 10px;
 }
 
 #one {
-    /* position: relative;
+  /* position: relative;
     top: 50vh; */
-    font-size: 80px;
-    /* font-weight: bold; */
-    text-align: center;
-    font-family: 'Fredericka the Great', cursive;
-    display: block;
+  font-size: 80px;
+  /* font-weight: bold; */
+  text-align: center;
+  font-family: 'Fredericka the Great', cursive;
+  display: block;
 }
 
 #two {
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Inconsolata', monospace;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
 }
 
 .optionBars-Dark {
-    width: 35px;
-    filter: invert(0.6);
-    transition: 300ms ease;
-    opacity: 0.7;
+  width: 35px;
+  filter: invert(0.6);
+  transition: 300ms ease;
+  opacity: 0.7;
 }
 
 .optionBars-Light {
-    width: 35px;
-    filter: invert(0.5);
-    transition: 300ms ease;
+  width: 35px;
+  filter: invert(0.5);
+  transition: 300ms ease;
 }
 
 #buttonBars {
-    background: transparent;
-    border: 0px;
+  background: transparent;
+  border: 0px;
 }
 
 #buttonBars:focus {
-    outline: none;
+  outline: none;
 }
 
 #bars {
-    background-color: #fff;
-    opacity: 0.8;
-    height: 100vh;
-    padding-top: 75px;
-    padding-left: 50px;
-    padding-right: 50px;
+  background-color: #fff;
+  opacity: 0.8;
+  height: 100vh;
+  padding-top: 75px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .slide {
-    transform: translateX(-40vw);
-    transition: 300ms ease;
-    width: 25vw;
-    position: fixed;
-    z-index: 900;
-    -webkit-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
+  transform: translateX(-40vw);
+  transition: 300ms ease;
+  width: 25vw;
+  position: fixed;
+  z-index: 900;
+  -webkit-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
 .slided {
-    transform: translateX(0px);
-    transition: 300ms ease;
-    width: 25vw;
-    position: fixed;
-    z-index: 900;
-    -webkit-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
+  transform: translateX(0px);
+  transition: 300ms ease;
+  width: 25vw;
+  position: fixed;
+  z-index: 900;
+  -webkit-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
 .card-hover {
-    height: 450px;
-    transition: 300ms ease;
-    text-decoration: none;
+  height: 450px;
+  transition: 300ms ease;
+  text-decoration: none;
 }
 
 .card-hover:hover {
-    transform: scale(1.025);
-    transition: 300ms ease;
-    text-decoration: none;
+  transform: scale(1.025);
+  transition: 300ms ease;
+  text-decoration: none;
 }
 
 #cards-section {
-    padding-bottom: 5vh;
+  padding-bottom: 5vh;
 }
 
 .seeMore {
-    position: absolute;
-    z-index: 0;
-    text-align: center;
-    height: 7vh;
-    top: 92vh;
+  position: absolute;
+  z-index: 0;
+  text-align: center;
+  height: 7vh;
+  top: 92vh;
 }
 
 .nav-scroll {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .nav-scroll:hover {
-    animation: spinScroll 500ms ease;
+  animation: spinScroll 500ms ease;
 }
 
 @keyframes spinScroll {
-    0% {
-        opacity: 0.7;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
 
-    50% {
-        opacity: 1.0;
-        transform: scale(1.25);
-    }
+  50% {
+    opacity: 1.0;
+    transform: scale(1.25);
+  }
 
-    100% {
-        opacity: 0.7;
-        transform: scale(1);
-    }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
 }
 
 .card-links,
@@ -281,9 +281,9 @@ body {
 .card-links:link,
 .card-links:active,
 .card-links:visited {
-    text-decoration: none;
-    color: #212529;
-    display: inline-block;
+  text-decoration: none;
+  color: #212529;
+  display: inline-block;
 }
 
 .bars-links,
@@ -291,93 +291,103 @@ body {
 .bars-links:link,
 .bars-links:active,
 .bars-links:visited {
-    text-decoration: none;
-    color: #212529;
-    display: inline-block;
-    font-size: 90%;
+  text-decoration: none;
+  color: #212529;
+  display: inline-block;
+  font-size: 90%;
 }
 
 .backward-light {
-    width: 30px;
-    filter: invert(0.5);
-    transition: 300ms ease;
-    opacity: .5;
+  width: 30px;
+  filter: invert(0.5);
+  transition: 300ms ease;
+  opacity: .5;
 }
 
 .backward-dark {
-    width: 30px;
-    filter: invert(0.4);
-    transition: 300ms ease;
+  width: 30px;
+  filter: invert(0.4);
+  transition: 300ms ease;
 }
 
 #backward {
-    background: transparent;
-    border: 0px;
+  background: transparent;
+  border: 0px;
 }
 
 #backward:focus {
-    outline: none;
+  outline: none;
 }
 
 .shake:hover {
-    animation: shake 200ms ease;
+  animation: shake 200ms ease;
 }
 
 @keyframes shake {
-    0% {
-        transform: scale(1) rotate(7deg);
-    }
+  0% {
+    transform: scale(1) rotate(7deg);
+  }
 
-    50% {
-        transform: scale(1.05) rotate(-7deg);
-    }
+  50% {
+    transform: scale(1.05) rotate(-7deg);
+  }
 
-    100% {
-        transform: scale(1) rotate(0deg);
-    }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 /* Another Seperating Method is using blank col in Bootstrap */
 /* Old Method being tidied Later */
 .last-row {
-    padding-top: 25vh;
-    padding-bottom: 30vh;
+  padding-top: 25vh;
+  padding-bottom: 30vh;
 }
 
 .howTo {
-    width: 100%;
+  width: 100%;
 }
 
 .content-padding {
-    padding-top: 24vh;
+  padding-top: 24vh;
 }
 
 /* New Experimental Sepatating Method */
 .separator {
-    height: 50vh;
+  height: 50vh;
 }
 
 .final-row {
-    height: calc(50vh - 150px);
+  height: calc(50vh - 300px);
 }
 
 /* rotate img */
 .tiltLeft-1 {
-    transform: rotate(-12.5deg);
+  transform: rotate(-12.5deg);
 }
 
 .tiltLeft-2 {
-    transform: rotate(-25deg);
+  transform: rotate(-25deg);
 }
 
 .tiltRight-1 {
-    transform: rotate(12.5deg);
+  transform: rotate(12.5deg);
 }
 
 .tiltRight-2 {
-    transform: rotate(25deg);
+  transform: rotate(25deg);
 }
 
-.logo-size{
-    width: 30px;
+.logo-size {
+  width: 30px;
+}
+
+.alternate-color:nth-child(odd) {
+  background: rgb(245, 245, 245);
+}
+
+.alternate-color:hover {
+  background-color: rgb(31, 31, 31);
+  color: rgb(255, 255, 255);
+  transition: 285ms ease;
 }
