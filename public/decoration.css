@@ -535,6 +535,7 @@
   top: calc(100vh + 800px);
   z-index: -2;
 }
+
 #smoke6 {
   position: absolute;
   transform: rotate(12.5deg);
@@ -749,6 +750,87 @@
   width: 25vw;
   right: -150px;
   top: calc(950vh + 550px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+/* sodium */
+#sodium1 {
+  transform: rotate(37.5deg);
+  position: absolute;
+  width: 15vw;
+  left: -25px;
+  top: -100px;
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#sodium2 {
+  transform: rotate(-17.5deg);
+  position: absolute;
+  width: 30vw;
+  right: -75px;
+  top: calc(50vh + 100px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#sodium3 {
+  transform: rotate(7.5deg);
+  position: absolute;
+  width: 30vw;
+  left: -150px;
+  top: calc(150vh + 300px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#sodium4 {
+  transform: rotate(7.5deg);
+  position: absolute;
+  width: 27.5vw;
+  right: -150px;
+  top: calc(250vh + 400px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#sodium5 {
+  transform: rotate(-7.5deg);
+  position: absolute;
+  width: 27.5vw;
+  left: -150px;
+  top: calc(375vh + 400px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#sodium6 {
+  transform: rotate(12.5deg);
+  position: absolute;
+  width: 27.5vw;
+  right: -150px;
+  top: calc(475vh + 400px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#sodium7 {
+  transform: rotate(12.5deg);
+  position: absolute;
+  width: 27.5vw;
+  right: -150px;
+  top: calc(475vh + 400px);
+  z-index: -2;
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
+}
+
+#sodium8 {
+  transform: rotate(12.5deg);
+  position: absolute;
+  width: 35vw;
+  left: -50px;
+  top: calc(700vh + 150px);
   z-index: -2;
   filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
 }
