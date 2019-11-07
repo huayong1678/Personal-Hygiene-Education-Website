@@ -834,3 +834,30 @@
   z-index: -2;
   filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.5));
 }
+
+/* Water */
+.water_all {
+  position: relative;
+}
+
+#glassWithoutWater {
+  z-index: 0;
+  width: 100%;
+}
+
+#waterInTheGlass {
+  z-index: 9;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#waterTap {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

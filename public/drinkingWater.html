@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drinking Water | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="wave.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Wave -->
+    <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <!-- <div class="rellax" data-rellax-speed="8">
+      <img id="" src="assets/" />
+    </div> -->
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted w-100">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">/woːʔɐ/ or /wôtər/</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">การดื่มน้ำสิ่งสำคัญที่มองข้ามไม่ได้</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll">
+      <div class="row">
+        <div class="col-12 text-header">น้ำกับสิ่งมีชีวิต</div>
+        <div class="col-12 py-4 text-content">
+          ร่างกายมนุษย์มีน้ำเป็นส่วนประกอบประมาณร้อยละ 70 ในเลือดมีน้ำเป็นองค์ประกอบร้อยละ 92
+          ในสมองมีน้ำเป็นองค์ประกอบร้อยละ 85 ถ้าพิจารณาในแต่ละเซลล์จะมีน้ำเป็นองค์ประกอบร้อยละ 60
+          นอกจากนี้น้ำเป็นส่วนประกอบสำคัญและจำเป็นของเซลล์ทุกชนิด ไม่ว่าจะเป็นเซลพืช เซลล์สัตว์ และเซลล์มนุษย์
+          ทุกเซลล์ล้วนประกอบด้วยน้ำทั้งนั้น ในเซลล์มนุษย์และเซลล์สัตว์มีน้ำประมาณ 2 ใน 3 ของน้ำหนักร่างกาย
+          ในพืชบกมีน้ำประมาณร้อยละ 50–75 ถ้าเป็นพืชน้ำอาจมีน้ำมากกว่าร้อยละ 95 โดยน้ำหนัก
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <div class="water_all">
+            <img src="assets/water1.png" id="glassWithoutWater" alt="">
+            <img src="assets/water2.png" id="waterInTheGlass" alt="">
+            <img src="assets/water3.png" id="waterTap" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">หน้าที่สำคัญที่สุดของ</div>
+        <div class="col-12 display-4 text-center">น้ำ</div>
+        <div class="col-12 pt-4 pb-2">
+          <p class="text-content text-justify">
+            <img src="assets/number1.png" style="display: inline; height: 25px;" alt="">
+            เป็นตัวกลางในการเกิดปฏิกิริยาเคมีทุกชนิด ในกระบวนการเมตาบอลิซึมของร่างกาย
+            ปฏิกิริยาเคมีในร่างกายทุกชนิดต้องอาศัยน้ำ เซลล์จะไม่สามารถทำงานได้ถ้าไม่มีน้ำ
+          </p>
+        </div>
+        <div class="col-12 pb-2">
+          <p class="text-content text-justify">
+            <img src="assets/number2.png" style="display: inline; height: 25px;" alt="">
+            น้ำช่วยให้การขับถ่ายกากอาหารในลำไส้ใหญ่เป็นไปโดยสะดวก ความผิดปกติของการถ่ายอุจจาระเกิดขึ้น
+            เนื่องจากขาดสมดุลของการดูดซึมน้ำกลับเข้าสู่เซลล์ลำไส้ เชื้อโรคที่เป็นสาเหตุให้เกิดโรคอุจจาระร่วงหลายชนิด
+            สร้างสารพิษที่มีผลต่อกลไกการควบคุมสมดุลสารน้ำภายในลำไส้
+          </p>
+        </div>
+        <div class="col-12 pb-2">
+          <p class="text-content text-justify">
+            <img src="assets/number3.png" style="display: inline; height: 25px;" alt="">
+            สารพิษรวมทั้งสารเคมีในร่างกายที่อาจเป็นพิษ ถูกกำจัดออกจากร่างกายโดยอาศัยน้ำ
+            กระบวนการขับถ่ายสารพิษเกิดขึ้นร่วมกับการขับถ่ายทางปัสสาวะและอุจจาระและน้ำช่วยควบคุมอุณหภูมิของร่างกาย
+            อีกทั้งน้ำยังช่วยรักษาระดับความเป็นกรดด่างของเลือดรวมทั้งของเหลวต่างๆ ในร่างกาย
+            น้ำช่วยระบายความร้อนของร่างกายในรูปของเหงื่อ
+          </p>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">แล้วเราควรดื่มน้ำ</div>
+        <div class="col-12 display-4 text-center">มากแค่ไหนใน1วัน?</div>
+        <div class="col-12 text-content">
+          เราควรพยายามดื่มน้ำให้เป็นนิสัยโดย สำหรับผู้ชายควรดื่มไม่น้อยกว่า 3.7 ลิตร/วัน และหญิงควรไม่น้อยกว่า 2.7
+          ลิตรต่อวัน หรือวิธีง่ายๆ ก็สังเกตสีของปัสสาวะ ถ้าหากปัสวะมีสีเข้มแสดงว่าเราดื่มน้ำน้อยไป
+          ถ้าหากสีปัสาวะต้องมีสีเหลือจางๆสภาพใส ไร้มูกหรือสิ่งเจอปนถือว่าอยู่ในระดับปรกติ
+        </div>
+      </div>
+      <div class="separator"></div>
+    </div>
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  $(function () {
+    $('#footer').css({
+      "color": "#fff",
+    });
+  });
+
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 0);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'food.html';
+      },
+      nextPage() {
+        window.location.href = 'smoking.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>
