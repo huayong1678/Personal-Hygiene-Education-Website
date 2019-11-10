@@ -69,9 +69,12 @@
     <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
 
     <!-- Title Decor. -->
-    <!-- <div class="rellax" data-rellax-speed="8">
-      <img id="" src="assets/" />
-    </div> -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="pm2" src="assets/pm2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img id="pm3" src="assets/pm3.png" />
+    </div>
 
 
     <!-- Scroll to See More -->
@@ -98,7 +101,7 @@
     <div class="container pt-4 scroll">
       <div class="row">
         <div class="col-12 text-content">คืออะไร</div>
-        <div class="col-12 text-center display-4">PM2.5</div>
+        <div class="col-12 text-center display-4">PM 2.5</div>
         <div class="col-12 py-4 text-content">
           PM 2.5 เป็นอนุภาคขนาดเล็กที่มีเส้นผ่านศูนย์กลางเฉลี่ยน้อยกว่า 2.5 ไมโครเมตร แขวนลอยอยู่ในอากาศรวมกับไอน้ำ ควัน
           และก๊าซต่างๆ ไม่สามารถมองเห็นได้ด้วยตาเปล่าถึงจะเป็นเพียงฝุ่นละอองขนาดจิ๋ว
@@ -113,58 +116,79 @@
       </div>
       <div class="separator"></div>
       <div class="row">
-        <div class="col-12 text-content">หน้าที่สำคัญที่สุดของ</div>
-        <div class="col-12 display-4 text-center">น้ำ</div>
-        <div class="col-12 pt-4 pb-2">
-          <p class="text-content text-justify">
-            <img src="assets/number1.png" style="display: inline; height: 25px;" alt="">
-            เป็นตัวกลางในการเกิดปฏิกิริยาเคมีทุกชนิด ในกระบวนการเมตาบอลิซึมของร่างกาย
-            ปฏิกิริยาเคมีในร่างกายทุกชนิดต้องอาศัยน้ำ เซลล์จะไม่สามารถทำงานได้ถ้าไม่มีน้ำ
-          </p>
-        </div>
-        <div class="col-12 pb-2">
-          <p class="text-content text-justify">
-            <img src="assets/number2.png" style="display: inline; height: 25px;" alt="">
-            น้ำช่วยให้การขับถ่ายกากอาหารในลำไส้ใหญ่เป็นไปโดยสะดวก ความผิดปกติของการถ่ายอุจจาระเกิดขึ้น
-            เนื่องจากขาดสมดุลของการดูดซึมน้ำกลับเข้าสู่เซลล์ลำไส้ เชื้อโรคที่เป็นสาเหตุให้เกิดโรคอุจจาระร่วงหลายชนิด
-            สร้างสารพิษที่มีผลต่อกลไกการควบคุมสมดุลสารน้ำภายในลำไส้
-          </p>
-        </div>
-        <div class="col-12 pb-2">
-          <p class="text-content text-justify">
-            <img src="assets/number3.png" style="display: inline; height: 25px;" alt="">
-            สารพิษรวมทั้งสารเคมีในร่างกายที่อาจเป็นพิษ ถูกกำจัดออกจากร่างกายโดยอาศัยน้ำ
-            กระบวนการขับถ่ายสารพิษเกิดขึ้นร่วมกับการขับถ่ายทางปัสสาวะและอุจจาระและน้ำช่วยควบคุมอุณหภูมิของร่างกาย
-            อีกทั้งน้ำยังช่วยรักษาระดับความเป็นกรดด่างของเลือดรวมทั้งของเหลวต่างๆ ในร่างกาย
-            น้ำช่วยระบายความร้อนของร่างกายในรูปของเหงื่อ
-          </p>
+        <div class="col-12 text-content">ฝุ่น PM 2.5</div>
+        <div class="col-12 text-center display-4">มาจากไหน?</div>
+        <div class="col-12 py-4 text-content">
+          สาเหตุของการเกิดฝุ่นละอองมีหลายปัจจัย เช่น โรงผลิตไฟฟ้า ควันท่อไอเสียจากรถยนต์ การเผาไม้ทำลายป่า เผาขยะ
+          รวมถึงควันบุหรี่ด้วย ซึ่งปกติแล้วกิจกรรมต่างๆ ที่คนเราทำทุกวันก็ส่งผลให้เกิดฝุ่นละอองใหม่ๆ เพิ่มขึ้นอยู่แล้ว
+          แต่แหล่งต้นตอสำคัญของฝุ่น PM 2.5 ในบรรยากาศ คือ การเผาไหม้เชื้อเพลิงธรรมชาติที่ไม่สมบูรณ์
+          และฝุ่นจากการก่อสร้าง
         </div>
       </div>
       <div class="separator"></div>
-      <div class="row">
-        <div class="col-12 text-content">แล้วเราควรดื่มน้ำ</div>
-        <div class="col-12 display-4 text-center">มากแค่ไหนใน1วัน?</div>
-        <div class="col-12 text-content">
-          เราควรพยายามดื่มน้ำให้เป็นนิสัยโดย สำหรับผู้ชายควรดื่มไม่น้อยกว่า 3.7 ลิตร/วัน และหญิงควรไม่น้อยกว่า 2.7
-          ลิตรต่อวัน หรือวิธีง่ายๆ ก็สังเกตสีของปัสสาวะ ถ้าหากปัสวะมีสีเข้มแสดงว่าเราดื่มน้ำน้อยไป
-          ถ้าหากสีปัสาวะต้องมีสีเหลือจางๆสภาพใส ไร้มูกหรือสิ่งเจอปนถือว่าอยู่ในระดับปรกติ
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">ฝุ่น PM 2.5</div>
+        <div class="col-12 text-center display-4">มีผลกระทบต่อร่างกายอย่างไร?</div>
+        <div class="col-12 py-4 text-content">
+          ความน่ากลัวของเจ้าฝุ่นร้ายนี้ คือ ฝุ่น PM 2.5 เป็นเจ้าฝุ่นร้ายที่มองไม่เห็นด้วยตาเปล่า ไม่มีกลิ่น
+          ขนาดเล็กจิ๋วมาก
+          สามารถผ่านเข้าไปในร่างกายเราลึกได้ถึงถุงลมปอด
+          บางส่วนสามารถเล็ดรอดผ่านผนังถุงลมเข้าเส้นเลือดฝอยล่องลอยอยู่ในกระแสเลือด
+          และกระจายตัวแทรกซึมไปทั่วร่างกายของเราได้
+        </div>
+        <div class="col-6 card text-dark text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">กระตุ้นให้คนที่มี <b>โรคระบบทางเดินหายใจเรื้อรัง</b> เกิดอาการกำเริบ<br>เช่น
+              โรคจมูกอักเสบภูมิแพ้ โรคหอบหืด และโรคถุงลมโป่งพอง</li>
+            <li class="list-group-item">กระตุ้นให้คนที่มี <b>โรคระบบหัวใจและหลอดเลือดเรื้อรัง</b> เกิดอาการกำเริบ
+              <br>โดยเฉพาะโรคกล้ามเนื้อหัวใจขาดเลือด</li>
+            <li class="list-group-item">สำหรับผลระยะยาวจะทำให้ <b>การทำงานของปอดถดถอย</b>
+              อาจเกิดโรคถุงลมโป่งพองได้แม้จะไม่สูบบุหรี่ก็ตาม และเพิ่มโอกาสทำให้เกิดมะเร็งปอดได้ด้วย</li>
+          </ul>
+        </div>
+        <div class="col-12 text-center pt-4 text-danger">
+          <small>***ความน่ากลัวของเจ้าฝุ่นร้ายนี้ คือ กระตุ้นให้เกิดสารอนุมูลอิสระ<br>
+            รบกวนสมดุลต่างๆ ของร่างกาย และกระตุ้นยีนที่เกี่ยวข้องกับการหลั่งสารอักเสบ<br>
+            ซึ่งมีอันตรายต่อเนื้อเยื่อในร่างกายของเรามาก แล้วส่งผลกระทบต่างๆ ตามมา</small>
         </div>
       </div>
       <div class="separator"></div>
-    </div>
-    <!-- Footer -->
-    <div class="container-fluid" id="footer">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col-6 text-center">
-          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
-            right reserved.
-          </p>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">จากฝุ่น PM 2.5</div>
+        <div class="col-12 text-center display-4">ข้อแนะนำและวิธีป้องกันตนเอง</div>
+        <div class="col-6 my-4 card text-dark text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ลดการใช้ยานพาหนะส่วนตัว หันมาใช้ระบบขนส่งสาธารณะ</li>
+            <li class="list-group-item">หลีกเลี่ยงการเผาไหม้ในที่โล่งแจ้ง เผาพื้นที่เพื่อเตรียมการทำเกษตรกรรม เผาขยะ
+              หรือวัสดุเหลือใช้</li>
+            <li class="list-group-item">ควบคุมกระบวนการก่อสร้างให้มีฝุ่นน้อยที่สุด</li>
+            <li class="list-group-item">ออกกำลังกายในที่ร่ม ฝุ่นน้อยๆ และไม่ควรใส่หน้ากากอนามัยเวลาออกกำลังกาย</li>
+            <li class="list-group-item">รับประทานอาหารเสริม อาหารที่มีวิตามินซี และวิตามินอีสูง เช่น ถั่ว ปลา(มีโอเมก้า
+              3 มาก)</li>
+            <li class="list-group-item">ใส่หน้ากากอนามัยทุกครั้งที่จำเป็นต้องออกข้างนอกบ้าน หรือที่โล่งแจ้ง</li>
+          </ul>
         </div>
-        <div class="col"></div>
+        <div class="col-12 text-center pt-4 text-danger">
+          <small>***ให้ใส่หน้ากากพิเศษชนิดที่เรียกว่า “เอ็นเก้าห้า (N95)”
+            โดยเฉพาะผู้ป่วยที่เป็นโรคระบบทางเดินหายใจหรือโรคหัวใจเรื้อรัง<br>สำหรับคนทั่วไปอย่างน้อยให้ใส่
+            “หน้ากากอนามัย”
+            โดยต้องใส่ให้ถูกต้อง หากใส่ผิดรอยพับจะกักเก็บฝุ่นละอองในรอยพับ ทำให้หายใจลำบาก</small>
+        </div>
+      </div>
+      <div class="row py-5"></div>
+      <!-- Footer -->
+      <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6 text-center">
+            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+              right reserved.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>
@@ -172,7 +196,7 @@
   // Animation
   $(function () {
     $('#app').css({
-      "background": "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(12,15,11,1) 100%)",
+      "background": "linear-gradient(to bottom, rgba(2,2,2,1) 0%, rgba(12,15,11,1) 100%)",
       "transition": "background 10s ease 3s",
       "color": "#fff",
       "transition": "color 10s ease 3s",

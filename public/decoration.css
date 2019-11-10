@@ -861,3 +861,25 @@
   top: 0;
   left: 0;
 }
+
+/* PM2.5 */
+
+#pm2 {
+  transform: rotate(37.5deg);
+  position: absolute;
+  width: 30vw;
+  left: -150px;
+  top: -100px;
+  z-index: -2;
+  filter: saturate(0.2);
+}
+
+#pm3 {
+  transform: rotate(-17.5deg);
+  position: absolute;
+  width: 26.5vw;
+  right: -150px;
+  top: 50vh;
+  z-index: -2;
+  filter: saturate(0.2);
+}
