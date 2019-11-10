@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Drinking Water | Personal Hygiene</title>
+  <title>Particulate Matter | Personal Hygiene</title>
 
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="decoration.css">
-  <link rel="stylesheet" href="wave.css">
+  <link rel="stylesheet" href="fog.css">
   <link rel="icon" href="assets/logo.png">
 
   <!-- Rellax -->
@@ -30,10 +30,18 @@
     <img id="loaderImage" src="assets/logo.svg" alt="">
   </div>
   <div id="app" style="display:none;" class="animate-bottom">
-    <!-- Wave -->
-    <div class="ocean">
-      <div class="wave"></div>
-      <div class="wave"></div>
+    <!-- Fog -->
+    <div id="foglayer_01" class="fog">
+      <div class="image01"></div>
+      <div class="image02"></div>
+    </div>
+    <div id="foglayer_02" class="fog">
+      <div class="image01"></div>
+      <div class="image02"></div>
+    </div>
+    <div id="foglayer_03" class="fog">
+      <div class="image01"></div>
+      <div class="image02"></div>
     </div>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-transparent" id="navigation">
@@ -81,30 +89,26 @@
     <!-- Title -->
     <div class="container-fluid scroll">
       <div class="row" id="page-title">
-        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">/woːʔɐ/ or /wôtər/</div>
-        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">การดื่มน้ำสิ่งสำคัญที่มองข้ามไม่ได้</div>
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Particulate Matter</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">ฝุ่นเล็กๆที่อันตรายไม่เล็ก</div>
       </div>
     </div>
 
     <!-- Content -->
     <div class="container pt-4 scroll">
       <div class="row">
-        <div class="col-12 text-header">น้ำกับสิ่งมีชีวิต</div>
+        <div class="col-12 text-content">คืออะไร</div>
+        <div class="col-12 text-center display-4">PM2.5</div>
         <div class="col-12 py-4 text-content">
-          ร่างกายมนุษย์มีน้ำเป็นส่วนประกอบประมาณร้อยละ 70 ในเลือดมีน้ำเป็นองค์ประกอบร้อยละ 92
-          ในสมองมีน้ำเป็นองค์ประกอบร้อยละ 85 ถ้าพิจารณาในแต่ละเซลล์จะมีน้ำเป็นองค์ประกอบร้อยละ 60
-          นอกจากนี้น้ำเป็นส่วนประกอบสำคัญและจำเป็นของเซลล์ทุกชนิด ไม่ว่าจะเป็นเซลพืช เซลล์สัตว์ และเซลล์มนุษย์
-          ทุกเซลล์ล้วนประกอบด้วยน้ำทั้งนั้น ในเซลล์มนุษย์และเซลล์สัตว์มีน้ำประมาณ 2 ใน 3 ของน้ำหนักร่างกาย
-          ในพืชบกมีน้ำประมาณร้อยละ 50–75 ถ้าเป็นพืชน้ำอาจมีน้ำมากกว่าร้อยละ 95 โดยน้ำหนัก
+          PM 2.5 เป็นอนุภาคขนาดเล็กที่มีเส้นผ่านศูนย์กลางเฉลี่ยน้อยกว่า 2.5 ไมโครเมตร แขวนลอยอยู่ในอากาศรวมกับไอน้ำ ควัน
+          และก๊าซต่างๆ ไม่สามารถมองเห็นได้ด้วยตาเปล่าถึงจะเป็นเพียงฝุ่นละอองขนาดจิ๋ว
+          แต่เมื่อมาแผ่อยู่รวมกันจะกินพื้นที่ในอากาศมหาศาล ล่องลอยอยู่ในชั้นบรรยากาศปริมาณสูง
+          เกิดเป็นหมอกควันอย่างที่เราเห็นกัน
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4">
-          <div class="water_all">
-            <img src="assets/water1.png" id="glassWithoutWater" alt="">
-            <img src="assets/water2.png" id="waterInTheGlass" alt="">
-            <img src="assets/water3.png" id="waterTap" alt="">
-          </div>
+        <div class="col-5">
+          <img class="howTo" src="assets/pm1.png" alt="">
         </div>
       </div>
       <div class="separator"></div>
@@ -165,17 +169,32 @@
 
 </html>
 <script>
+  // Animation
   $(function () {
-    $('#footer').css({
+    $('#app').css({
+      "background": "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(12,15,11,1) 100%)",
+      "transition": "background 10s ease 3s",
       "color": "#fff",
+      "transition": "color 10s ease 3s",
+    });
+    $('.text-header').css({
+      "color": "#fff",
+      "transition": "color 10s ease 3s",
+    });
+    $('.text-content').css({
+      "color": "#efefef",
+      "transition": "color 10s ease 3s",
+    });
+    $('.two').css({
+      "color": "#efefef",
+      "transition": "color 10s ease 3s",
     });
   });
-
   // Preloader
   var myVar;
 
   function myFunction() {
-    myVar = setTimeout(showPage, 2000);
+    myVar = setTimeout(showPage, 0);
   }
 
   function showPage() {
@@ -204,10 +223,10 @@
         this.handleStatus.optionBars = !this.handleStatus.optionBars
       },
       previousPage() {
-        window.location.href = 'sodium.html';
+        window.location.href = 'drinkingWater.html';
       },
       nextPage() {
-        window.location.href = 'particulate.html';
+        window.location.href = '#';
       },
       homePage() {
         window.location.href = 'index.html';
