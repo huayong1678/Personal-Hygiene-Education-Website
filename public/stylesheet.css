@@ -85,6 +85,11 @@ body {
   src: url(fonts/Inconsolata/Inconsolata-Regular.ttf);
 }
 
+@font-face {
+  font-family: Trirong;
+  src: url(fonts/Trirong/Trirong-Regular.ttf);
+}
+
 /* VUE */
 #app {
   overflow: hidden;
@@ -281,8 +286,8 @@ body {
 .card-links:link,
 .card-links:active,
 .card-links:visited {
-  text-decoration: none;
   color: #212529;
+  text-decoration: none;
   display: inline-block;
 }
 
@@ -390,4 +395,25 @@ body {
   background-color: rgb(31, 31, 31);
   color: rgb(255, 255, 255);
   transition: 285ms ease;
+}
+
+.depression-header {
+  /* position: relative;
+    top: 50vh; */
+  font-size: 30px;
+  /* text-align: center; */
+  font-family: 'Fredericka the Great', cursive;
+  display: block;
+  color: #474747;
+}
+
+.depression-text {
+  /* position: relative;
+    top: 50vh; */
+  font-size: 20px;
+  /* font-weight: bold; */
+  /* text-align: center; */
+  font-family: 'Trirong', serif;
+  display: block;
+  color: #3b3b3b;
 }

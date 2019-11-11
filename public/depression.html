@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Depression | Personal Hygiene</title>
+
+  <link rel="prefetch" href="stylesheet.css" as="style">
+  <link rel="prefetch" href="assets/logo.svg">
+  <link rel="prefetch" href="fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf">
+  <link rel="prefetch" href="fonts/Inconsolata/Inconsolata-Bold.ttf">
+  <link rel="prefetch" href="fonts/Inconsolata/Inconsolata-Regular.ttf">
+  <link rel="prefetch" href="fonts/Lato/Lato-Regular.ttf">
+  <link rel="prefetch" href="fonts/Lato/Lato-Bold.ttf">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <!-- <div class="rellax" data-rellax-speed="8">
+      <img id="pm2" src="assets/pm2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img id="pm3" src="assets/pm3.png" />
+    </div> -->
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted w-100">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Depression</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">
+          รู้ไหมว่าผู้หญิงเสียงเป็นโรคซึมเศร้ามากกว่าผู้้ชายนะ</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll">
+      <div class="row">
+        <div class="col-12 text-content">ทำความรู้จัก</div>
+        <div class="col-12 text-center display-4">โรคซึมเศร้า</div>
+        <div class="col-12 py-4 text-content">
+          โรคซึมเศร้าส่งผลให้ผู้ป่วยมีอาการทั้งทางด้านร่างกาย จิตใจ และความคิด
+          โดยอาการเหล่านี้จะส่งผลกระทบต่อการดำเนินชีวิตในแต่ละวันอย่างมาก เช่น รับประทานอาหารได้น้อยลง เบื่ออาหาร
+          นอนไม่หลับ สิ้นหวัง รู้สึกว่าตัวเองไม่มีความสุขกับชีวิต วิตกกังวลตลอดเวลา
+          และที่สำคัญคือผู้ป่วยจะไม่สามารถรับมือกับปัญหาต่างๆที่ต้องเผชิญได้ดีพอ
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-3">
+          <img class="howTo" style="filter: saturate(0.6);" src="assets/depression1.png" alt="">
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">สาเหตุของ</div>
+        <div class="col-12 text-center display-4">โรคซึมเศร้า</div>
+        <div class="col-12 py-4 text-content">
+          โรคซึมเศร้ามีสาเหตุและปัจจัยที่หลากหลาย ทั้งด้านจิตใจ สภาพสังคม
+          และความผิดปกติด้านชีววิทยาที่เกิดขึ้นกับร่างกายของผู้ป่วย ไม่ว่าจะเป็นการประสบปัญหาชีวิต ปัญหาครอบครัว การงาน
+          การเงิน หรือการเผชิญความล้มเหลวหรือสูญเสียในชีวิตอย่างรุนแรง
+          ทุกปัญหานั้นล้วนเป็นสาเหตุที่นำไปสู่การเกิดโรคซึมเศร้าได้ทั้งสิ้น
+        </div>
+        <div class="col-6 card text-dark text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>ความผิดปกติของสารเคมีภายในสมอง</b><br>
+              สารเคมีในสมองของผู้ป่วยโรคซึมเศร้าจะเปลี่ยนแปลงไปอย่างเห็นได้ชัด โดยมีสารเคมีที่มีชื่อว่าเซโรโทนิน
+              (Serotonin) และนอร์เอพิเนฟริน (Norepinephrine) ลดน้อยลงจากเดิม
+              ทำให้สมดุลของสารเหล่านี้เปลี่ยนไปและเกิดความบกพร่องในการทำงานร่วมกัน</li>
+            <li class="list-group-item"><b>กรรมพันธ์ุ</b><br> หากคนในครอบครัวของคุณ เช่น พ่อ แม่ พี่ น้อง
+              เคยป่วยด้วยโรคซึมเศร้ามาก่อน คุณก็อาจมีความเสี่ยงในการเป็นโรคนี้ได้เช่นกัน</li>
+            <li class="list-group-item"><b>การเผชิญเรื่องเครียด</b><br> เช่น เจอมรสุมชีวิตโดยไม่ทันได้ตั้งตัว
+              หมดกำลังใจในการรักษาอาการเจ็บป่วยที่เรื้อรังหรือรุนแรงถึงชีวิต ตกงาน มีปัญหาเรื่องการเงินที่หาทางออกไม่ได้
+              มีปัญหาเกี่ยวกับความสัมพันธ์กับคนใกล้ชิด ถูกใช้ความรุนแรงหรือถูกล่วงละเมิดในวัยเด็ก
+              รวมทั้งการพบเจอกับความสูญเสียในชีวิตที่ทำให้เสียใจเป็นอย่างมาก
+              ไม่ว่าจะเป็นการสูญเสียพ่อแม่ในขณะที่ยังอยู่ในช่วงวัยเด็ก สูญเสียคนรัก หรือสูญเสียครอบครัว </li>
+            <li class="list-group-item"><b>ลักษณะนิสัย</b><br> คนที่มีความเชื่อมั่นในตัวเองต่ำหรือสูงมากเกินไป
+              มองโลกในแง่ร้าย
+              หรือชอบตำหนิกล่าวโทษตนเอง มีความเสี่ยงเป็นโรคซึมเศร้าได้มากกว่าคนที่มองโลกในแง่บวกและเห็นคุณค่าในตนเอง
+            </li>
+            <li class="list-group-item"><b>การดื่มแอลกอฮอล์และการใช้สารเสพติด</b><br>
+              การพึ่งเครื่องดื่มแอลกอฮอล์หรือสารเสพติดเพื่อให้ลืมความเสียใจและความเครียดจากเรื่องต่างๆ
+              ไม่ใช่วิธีแก้ปัญหาที่ถูกต้อง แต่กลับทำให้เกิดภาวะซึมเศร้าตามมาได้ด้วย</li>
+            <li class="list-group-item"><b>การเปลี่ยนแปลงของฮอร์โมน</b><br> เช่น ฮอร์โมนจากภาวะตั้งครรภ์
+              หรือภาวะต่อมไทรอยด์ผิดปกติ
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 text-center pt-4 text-danger">
+          <small>***โรคซึมเศร้าเกิดขึ้นได้กับคนทุกเพศทุกวัย แต่พบว่าคนที่มีอายุระหว่าง 18-25
+            ปี<br>มีแนวโน้มเกิดภาวะซึมเศร้ามากกว่าคนที่มีอายุตั้งแต่ 50 ปีขึ้นไป ถึงร้อยละ 60<br>
+            และผู้หญิงจะมีแนวโน้มเกิดภาวะซึมเศร้ามากกว่าผู้ชาย</small>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">โรคซึมเศร้า</div>
+        <div class="col-12 text-center display-4">วิธีป้องกัน</div>
+        <div class="col-12 py-4 text-content">หากสังเกตเห็นว่าตัวคุณเองหรือคนใกล้ตัวกำลังตกอยู่ในสภาวะซึมเศร้า
+          หรือทราบผลการวินิจฉัยจากแพทย์แล้วว่าเป็นโรคซึมเศร้าจริง คุณสามารถดูแลตัวเองหรือผู้ป่วยควบคู่ไปกับการบำบัดรักษา
+          ตามคำแนะนำไปนี้</div>
+        <div class="col-6 mb-4 card text-dark text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">หางานอดิเรกทำ เช่น ทำอาหาร หรือต่อจิกซอว์ ผู้ป่วยอาจไม่รู้สึกสนุกนัก
+              แต่กิจกรรมยามว่างเหล่านี้จะช่วยสร้างสมาธิและทำให้สามารถจดจ่อกับสิ่งต่างๆ ได้มากขึ้น</li>
+            <li class="list-group-item">ตั้งเป้าหมายเล็กๆ ในชีวิตประจำวัน
+              ผู้ที่เป็นโรคซึมเศร้ามักรู้สึกว่าตัวเองไร้ค่าและไม่มีความสามารถ การตั้งเป้าหมายเล็กๆ
+              จะช่วยสร้างกำลังใจให้แก่ผู้ป่วย</li>
+            <li class="list-group-item">ออกกำลังกาย การออกกำลังกายทำให้สารเอ็นดอร์ฟิน (Endorphin)
+              ที่ช่วยให้รู้สึกมีความสุขหลั่งออกมา ทั้งยังช่วยกระตุ้นสมองให้ตื่นตัวมากขึ้นในระยะยาว
+              โดยผู้ป่วยไม่จำเป็นต้องออกกำลังกายหรือเล่นกีฬาหนักๆ แค่เดินออกกำลังสัปดาห์ละ 2-3 ครั้งก็เพียงพอ</li>
+            <li class="list-group-item">รับประทานอาหารที่มีประโยชน์ แม้จะรู้สึกเบื่ออาหาร
+              แต่ผู้ป่วยก็ควรพยายามรับประทานอาหารที่สด สะอาด และรับประทานให้ครบทั้ง 5 หมู่
+              เพื่อให้ร่างกายรู้สึกสดชื่นและมีพลังงาน</li>
+            <li class="list-group-item">นอนพักผ่อนให้เพียงพอ แม้การนอนจะเป็นเรื่องที่ควบคุมได้ยากมากในผู้ป่วยโรคซึมเศร้า
+              แต่การพักผ่อนให้เพียงพอ ประมาณ 6-8 ชั่วโมง จะช่วยให้ลืมความกังวลไปได้ชั่วขณะ
+              และเมื่อตื่นขึ้นมาร่างกายและสมองก็จะมีความพร้อมต่อการทำกิจกรรมในแต่ละวันมากขึ้น</li>
+          </ul>
+        </div>
+        <div class="col-12 text-center text-danger">
+          <small>***หากคุณเคยเป็นโรคซึมเศร้า คุณจะมีความเสี่ยงเป็นโรคนี้ได้อีกครั้งในอนาคต
+            <br>โดยจากสถิติพบว่ามากกว่าครึ่งหนึ่งของผู้ป่วยที่หายจากการเป็นโรคซึมเศร้าในครั้งแรกนั้น<br>กลับมาเป็นโรคนี้ได้อีก
+            และกว่า 80% ของผู้ป่วยที่เคยเป็นโรคซึมเศร้ามาแล้ว 2 ครั้ง ยังกลับมาเป็นต่อได้</small>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-header pt-0">เรามาประเมินภาวะซึมเศร้าด้วยตัวเองกันเถอะ</div>
+      </div>
+      <div class="row card my-4 w-100 px-5 py-5">
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">1.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Little interest or pleasure in doing things</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">2.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Feeling down, depressed, or hopeless</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">3.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Trouble falling or staying asleep, or sleeping too much</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">4.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Feeling tired or having little energy</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">5.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Poor appetite or overeating</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">6.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Feeling bad about yourself or that you are a failure or
+          have let yourself or your family down</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">7.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Trouble concentrating on things, such as reading the
+          newspaper or watching television</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">8.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Moving or speaking so slowly that other people could
+          have noticed. Or the opposite being so figety or
+          restless that you have been moving around a lot more
+          than usual</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">9.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">Thoughts that you would be better off dead, or of
+          hurting yourself</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+      </div>
+      <div class="row py-5"></div>
+      <!-- Footer -->
+      <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6 text-center">
+            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+              right reserved.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Preloader
+  function myFunction() {
+    setTimeout(showPage, 0);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+</script>
+<script>
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'particulate.html';
+      },
+      nextPage() {
+        window.location.href = '#';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

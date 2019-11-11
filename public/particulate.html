@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Particulate Matter | Personal Hygiene</title>
+
+  <link rel="prefetch" href="stylesheet.css" as="style">
+  <link rel="prefetch" href="assets/logo.svg">
+  <link rel="prefetch" href="fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf">
+  <link rel="prefetch" href="fonts/Inconsolata/Inconsolata-Bold.ttf">
+  <link rel="prefetch" href="fonts/Inconsolata/Inconsolata-Regular.ttf">
+  <link rel="prefetch" href="fonts/Lato/Lato-Regular.ttf">
+  <link rel="prefetch" href="fonts/Lato/Lato-Bold.ttf">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="fog.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Fog -->
+    <div id="foglayer_01" class="fog">
+      <div class="image01"></div>
+      <div class="image02"></div>
+    </div>
+    <div id="foglayer_02" class="fog">
+      <div class="image01"></div>
+      <div class="image02"></div>
+    </div>
+    <div id="foglayer_03" class="fog">
+      <div class="image01"></div>
+      <div class="image02"></div>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="pm2" src="assets/pm2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img id="pm3" src="assets/pm3.png" />
+    </div>
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore text-muted w-100">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Particulate Matter</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">ฝุ่นเล็กๆที่อันตรายไม่เล็ก</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll">
+      <div class="row">
+        <div class="col-12 text-content">คืออะไร</div>
+        <div class="col-12 text-center display-4">PM 2.5</div>
+        <div class="col-12 py-4 text-content">
+          PM 2.5 เป็นอนุภาคขนาดเล็กที่มีเส้นผ่านศูนย์กลางเฉลี่ยน้อยกว่า 2.5 ไมโครเมตร แขวนลอยอยู่ในอากาศรวมกับไอน้ำ ควัน
+          และก๊าซต่างๆ ไม่สามารถมองเห็นได้ด้วยตาเปล่าถึงจะเป็นเพียงฝุ่นละอองขนาดจิ๋ว
+          แต่เมื่อมาแผ่อยู่รวมกันจะกินพื้นที่ในอากาศมหาศาล ล่องลอยอยู่ในชั้นบรรยากาศปริมาณสูง
+          เกิดเป็นหมอกควันอย่างที่เราเห็นกัน
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-5">
+          <img class="howTo" src="assets/pm1.png" alt="">
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">ฝุ่น PM 2.5</div>
+        <div class="col-12 text-center display-4">มาจากไหน?</div>
+        <div class="col-12 py-4 text-content">
+          สาเหตุของการเกิดฝุ่นละอองมีหลายปัจจัย เช่น โรงผลิตไฟฟ้า ควันท่อไอเสียจากรถยนต์ การเผาไม้ทำลายป่า เผาขยะ
+          รวมถึงควันบุหรี่ด้วย ซึ่งปกติแล้วกิจกรรมต่างๆ ที่คนเราทำทุกวันก็ส่งผลให้เกิดฝุ่นละอองใหม่ๆ เพิ่มขึ้นอยู่แล้ว
+          แต่แหล่งต้นตอสำคัญของฝุ่น PM 2.5 ในบรรยากาศ คือ การเผาไหม้เชื้อเพลิงธรรมชาติที่ไม่สมบูรณ์
+          และฝุ่นจากการก่อสร้าง
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">ฝุ่น PM 2.5</div>
+        <div class="col-12 text-center display-4">มีผลกระทบต่อร่างกายอย่างไร?</div>
+        <div class="col-12 py-4 text-content">
+          ความน่ากลัวของเจ้าฝุ่นร้ายนี้ คือ ฝุ่น PM 2.5 เป็นเจ้าฝุ่นร้ายที่มองไม่เห็นด้วยตาเปล่า ไม่มีกลิ่น
+          ขนาดเล็กจิ๋วมาก
+          สามารถผ่านเข้าไปในร่างกายเราลึกได้ถึงถุงลมปอด
+          บางส่วนสามารถเล็ดรอดผ่านผนังถุงลมเข้าเส้นเลือดฝอยล่องลอยอยู่ในกระแสเลือด
+          และกระจายตัวแทรกซึมไปทั่วร่างกายของเราได้
+        </div>
+        <div class="col-6 card text-dark text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">กระตุ้นให้คนที่มี <b>โรคระบบทางเดินหายใจเรื้อรัง</b> เกิดอาการกำเริบ<br>เช่น
+              โรคจมูกอักเสบภูมิแพ้ โรคหอบหืด และโรคถุงลมโป่งพอง</li>
+            <li class="list-group-item">กระตุ้นให้คนที่มี <b>โรคระบบหัวใจและหลอดเลือดเรื้อรัง</b> เกิดอาการกำเริบ
+              <br>โดยเฉพาะโรคกล้ามเนื้อหัวใจขาดเลือด</li>
+            <li class="list-group-item">สำหรับผลระยะยาวจะทำให้ <b>การทำงานของปอดถดถอย</b>
+              อาจเกิดโรคถุงลมโป่งพองได้แม้จะไม่สูบบุหรี่ก็ตาม และเพิ่มโอกาสทำให้เกิดมะเร็งปอดได้ด้วย</li>
+          </ul>
+        </div>
+        <div class="col-12 text-center pt-4 text-danger">
+          <small>***ความน่ากลัวของเจ้าฝุ่นร้ายนี้ คือ กระตุ้นให้เกิดสารอนุมูลอิสระ<br>
+            รบกวนสมดุลต่างๆ ของร่างกาย และกระตุ้นยีนที่เกี่ยวข้องกับการหลั่งสารอักเสบ<br>
+            ซึ่งมีอันตรายต่อเนื้อเยื่อในร่างกายของเรามาก แล้วส่งผลกระทบต่างๆ ตามมา</small>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">จากฝุ่น PM 2.5</div>
+        <div class="col-12 text-center display-4">ข้อแนะนำและวิธีป้องกันตนเอง</div>
+        <div class="col-6 my-4 card text-dark text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ลดการใช้ยานพาหนะส่วนตัว หันมาใช้ระบบขนส่งสาธารณะ</li>
+            <li class="list-group-item">หลีกเลี่ยงการเผาไหม้ในที่โล่งแจ้ง เผาพื้นที่เพื่อเตรียมการทำเกษตรกรรม เผาขยะ
+              หรือวัสดุเหลือใช้</li>
+            <li class="list-group-item">ควบคุมกระบวนการก่อสร้างให้มีฝุ่นน้อยที่สุด</li>
+            <li class="list-group-item">ออกกำลังกายในที่ร่ม ฝุ่นน้อยๆ และไม่ควรใส่หน้ากากอนามัยเวลาออกกำลังกาย</li>
+            <li class="list-group-item">รับประทานอาหารเสริม อาหารที่มีวิตามินซี และวิตามินอีสูง เช่น ถั่ว ปลา(มีโอเมก้า
+              3 มาก)</li>
+            <li class="list-group-item">ใส่หน้ากากอนามัยทุกครั้งที่จำเป็นต้องออกข้างนอกบ้าน หรือที่โล่งแจ้ง</li>
+          </ul>
+        </div>
+        <div class="col-12 text-center pt-4 text-danger">
+          <small>***ให้ใส่หน้ากากพิเศษชนิดที่เรียกว่า “เอ็นเก้าห้า (N95)”
+            โดยเฉพาะผู้ป่วยที่เป็นโรคระบบทางเดินหายใจหรือโรคหัวใจเรื้อรัง<br>สำหรับคนทั่วไปอย่างน้อยให้ใส่
+            “หน้ากากอนามัย”
+            โดยต้องใส่ให้ถูกต้อง หากใส่ผิดรอยพับจะกักเก็บฝุ่นละอองในรอยพับ ทำให้หายใจลำบาก</small>
+        </div>
+      </div>
+      <div class="row py-5"></div>
+      <!-- Footer -->
+      <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6 text-center">
+            <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+              right reserved.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
+<script>
+  // Animation
+  $(function () {
+    $('#app').css({
+      "background": "linear-gradient(to bottom, rgba(2,2,2,1) 0%, rgba(12,15,11,1) 100%)",
+      "transition": "background 10s ease 3s",
+      "color": "#fff",
+      "transition": "color 10s ease 3s",
+    });
+    $('.text-header').css({
+      "color": "#fff",
+      "transition": "color 10s ease 3s",
+    });
+    $('.text-content').css({
+      "color": "#efefef",
+      "transition": "color 10s ease 3s",
+    });
+    $('.two').css({
+      "color": "#efefef",
+      "transition": "color 10s ease 3s",
+    });
+  });
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'drinkingWater.html';
+      },
+      nextPage() {
+        window.location.href = 'depression.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>
