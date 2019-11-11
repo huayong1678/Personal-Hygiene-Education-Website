@@ -1,0 +1,412 @@
+#container {
+  height: 105vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  top: -5vh;
+  width: 100vw;
+}
+
+#container div {
+  position: absolute;
+}
+
+.pour {
+  position: absolute;
+  left: calc(50% - 5%);
+  width: 10%;
+  height: 0px;
+  background-color: rgba(255, 203, 0, 1);
+  border-radius: 100px 100px 200px 200px;
+}
+
+.bubble-container {}
+
+#liquid {
+  position: relative;
+  background: linear-gradient(0deg, rgba(237, 175, 50, 1) 52%, rgba(255, 203, 0, 1) 100%);
+  /* border: 10px solid #edaf32; */
+  /* border-radius: 0 0 20px 20px; */
+  bottom: 0;
+  height: 0px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* #liquid:after {
+  background-color: rgba(255, 255, 255, 0.25);
+  bottom: -10px;
+  content: '';
+  height: 200px;
+  left: -40px;
+  position: absolute;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(15deg);
+  width: 110px;
+} */
+
+#liquid .bubble {
+  -webkit-animation-name: bubble;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  transform: scale(1.1);
+}
+
+@-webkit-keyframes bubble {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 80px;
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    bottom: 160px;
+  }
+}
+
+.bubble1 {
+  left: 2%;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 1000ms;
+}
+
+.bubble2 {
+  left: 8%;
+  -webkit-animation-delay: 700ms;
+  -webkit-animation-duration: 1100ms;
+}
+
+
+.bubble3 {
+  left: 12%;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble4 {
+  left: 16%;
+  -webkit-animation-delay: 1100ms;
+  -webkit-animation-duration: 700ms;
+}
+
+.bubble5 {
+  left: 18%px;
+  -webkit-animation-delay: 1300ms;
+  -webkit-animation-duration: 800ms;
+}
+
+.bubble6 {
+  left: 21%;
+  -webkit-animation-delay: 700ms;
+  -webkit-animation-duration: 1200ms;
+}
+
+.bubble7 {
+  left: 23%;
+  -webkit-animation-delay: 300ms;
+  -webkit-animation-duration: 1700ms;
+}
+
+.bubble8 {
+  left: 24%;
+  -webkit-animation-delay: 1900ms;
+  -webkit-animation-duration: 1200ms;
+}
+
+.bubble9 {
+  left: 27%;
+  -webkit-animation-delay: 1850ms;
+  -webkit-animation-duration: 1250ms;
+}
+
+.bubble10 {
+  left: 32%;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 2000ms;
+}
+
+.bubble11 {
+  left: 35%;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-duration: 950ms;
+}
+
+.bubble12 {
+  left: 36%;
+  -webkit-animation-delay: 500ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble13 {
+  left: 40%;
+  -webkit-animation-delay: 200ms;
+  -webkit-animation-duration: 1890ms;
+}
+
+.bubble14 {
+  left: 42%;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 2000ms;
+}
+
+.bubble15 {
+  left: 44%;
+  -webkit-animation-delay: 800ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble16 {
+  left: 45.5%;
+  -webkit-animation-delay: 1900ms;
+  -webkit-animation-duration: 2300ms;
+}
+
+.bubble17 {
+  right: 2%;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 1000ms;
+}
+
+.bubble18 {
+  right: 8%;
+  -webkit-animation-delay: 700ms;
+  -webkit-animation-duration: 1100ms;
+}
+
+
+.bubble19 {
+  right: 12%;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble20 {
+  right: 16%;
+  -webkit-animation-delay: 1100ms;
+  -webkit-animation-duration: 700ms;
+}
+
+.bubble21 {
+  right: 18%px;
+  -webkit-animation-delay: 1300ms;
+  -webkit-animation-duration: 800ms;
+}
+
+.bubble22 {
+  right: 21%;
+  -webkit-animation-delay: 700ms;
+  -webkit-animation-duration: 1200ms;
+}
+
+.bubble23 {
+  right: 23%;
+  -webkit-animation-delay: 300ms;
+  -webkit-animation-duration: 1700ms;
+}
+
+.bubble24 {
+  right: 24%;
+  -webkit-animation-delay: 1900ms;
+  -webkit-animation-duration: 1200ms;
+}
+
+.bubble25 {
+  right: 27%;
+  -webkit-animation-delay: 1850ms;
+  -webkit-animation-duration: 1250ms;
+}
+
+.bubble26 {
+  right: 32%;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 2000ms;
+}
+
+.bubble27 {
+  right: 35%;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-duration: 950ms;
+}
+
+.bubble28 {
+  right: 36%;
+  -webkit-animation-delay: 500ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble29 {
+  right: 40%;
+  -webkit-animation-delay: 200ms;
+  -webkit-animation-duration: 1890ms;
+}
+
+.bubble30 {
+  right: 42%;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 2000ms;
+}
+
+.bubble31 {
+  right: 44%;
+  -webkit-animation-delay: 800ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble32 {
+  right: 45.5%;
+  -webkit-animation-delay: 1900ms;
+  -webkit-animation-duration: 2300ms;
+}
+
+.bubble33 {
+  right: 47%;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-duration: 1000ms;
+}
+
+.bubble34 {
+  right: 49%;
+  -webkit-animation-delay: 1900ms;
+  -webkit-animation-duration: 1700ms;
+}
+
+.bubble35 {
+  right: 50%;
+  -webkit-animation-delay: 500ms;
+  -webkit-animation-duration: 3000ms;
+}
+
+/* Foam */
+
+.beer-foam {
+  position: absolute;
+  bottom: -35px;
+  transform: scale(1.5);
+  z-index: 999;
+  left: -40px;
+}
+
+.beer-foam2 {
+  position: absolute;
+  bottom: -35px;
+  left: 320px;
+}
+
+.beer-foam3 {
+  position: absolute;
+  bottom: -35px;
+  left: 640px;
+}
+
+.beer-foam4 {
+  position: absolute;
+  bottom: -35px;
+  left: 960px;
+}
+
+.beer-foam5 {
+  position: absolute;
+  bottom: -35px;
+  left: 1280px;
+}
+
+.foam-1,
+.foam-2,
+.foam-3,
+.foam-4,
+.foam-5,
+.foam-6,
+.foam-7,
+.foam-8,
+.foam-9,
+.foam-10,
+.foam-11,
+.foam-12,
+.foam-13,
+.foam-14 {
+  position: absolute;
+  z-index: 999;
+  width: 8vh;
+  height: 8vh;
+  border-radius: 100vw;
+  background-color: #fefefe;
+}
+
+.foam-1 {
+  top: -30px;
+  left: -10px;
+}
+
+.foam-2 {
+  top: -35px;
+  left: 30px;
+}
+
+.foam-3 {
+  top: -25px;
+  left: 70px;
+}
+
+.foam-4 {
+  top: -35px;
+  left: 110px;
+}
+
+.foam-5 {
+  top: -30px;
+  left: 150px;
+}
+
+.foam-6 {
+  top: -20px;
+  left: 190px;
+}
+
+.foam-7 {
+  top: -30px;
+  left: 230px;
+}
+
+.foam-8 {
+  top: -30px;
+  left: 270px;
+}
+
+.foam-9 {
+  top: -35px;
+  left: 310px;
+}
+
+.foam-10 {
+  top: -25px;
+  left: 350px;
+}
+
+.foam-11 {
+  top: -35px;
+  left: 390px;
+}
+
+.foam-12 {
+  top: -30px;
+  left: 430px;
+}
+
+.foam-13 {
+  top: -20px;
+  left: 470px;
+}
+
+.foam-14 {
+  top: -30px;
+  left: 510px;
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alcohol | Personal Hygiene</title>
+
+  <link rel="prefetch" href="stylesheet.css" as="style">
+  <link rel="prefetch" href="assets/logo.svg">
+  <link rel="preload" href="beer.css" as="style">
+  <link rel="prefetch" href="fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf">
+  <link rel="prefetch" href="fonts/Inconsolata/Inconsolata-Bold.ttf">
+  <link rel="prefetch" href="fonts/Inconsolata/Inconsolata-Regular.ttf">
+  <link rel="prefetch" href="fonts/Lato/Lato-Regular.ttf">
+  <link rel="prefetch" href="fonts/Lato/Lato-Bold.ttf">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="beer.css">
+
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Beer -->
+    <div id="container">
+      <div class="pour"></div>
+      <div class="beer-foam">
+        <div class="foam-1"></div>
+        <div class="foam-2"></div>
+        <div class="foam-3"></div>
+        <div class="foam-4"></div>
+        <div class="foam-5"></div>
+        <div class="foam-6"></div>
+        <div class="foam-7"></div>
+        <div class="foam-8"></div>
+        <div class="foam-9"></div>
+        <div class="foam-10"></div>
+        <div class="foam-11"></div>
+        <div class="foam-12"></div>
+        <div class="foam-13"></div>
+        <div class="foam-14"></div>
+      </div>
+      <div class="beer-foam beer-foam2">
+        <div class="foam-1"></div>
+        <div class="foam-2"></div>
+        <div class="foam-3"></div>
+        <div class="foam-4"></div>
+        <div class="foam-5"></div>
+        <div class="foam-6"></div>
+        <div class="foam-7"></div>
+        <div class="foam-8"></div>
+        <div class="foam-9"></div>
+        <div class="foam-10"></div>
+        <div class="foam-11"></div>
+        <div class="foam-12"></div>
+        <div class="foam-13"></div>
+        <div class="foam-14"></div>
+      </div>
+      <div class="beer-foam beer-foam3">
+        <div class="foam-1"></div>
+        <div class="foam-2"></div>
+        <div class="foam-3"></div>
+        <div class="foam-4"></div>
+        <div class="foam-5"></div>
+        <div class="foam-6"></div>
+        <div class="foam-7"></div>
+        <div class="foam-8"></div>
+        <div class="foam-9"></div>
+        <div class="foam-10"></div>
+        <div class="foam-11"></div>
+        <div class="foam-12"></div>
+        <div class="foam-13"></div>
+        <div class="foam-14"></div>
+      </div>
+      <div class="beer-foam beer-foam4">
+        <div class="foam-1"></div>
+        <div class="foam-2"></div>
+        <div class="foam-3"></div>
+        <div class="foam-4"></div>
+        <div class="foam-5"></div>
+        <div class="foam-6"></div>
+        <div class="foam-7"></div>
+        <div class="foam-8"></div>
+        <div class="foam-9"></div>
+        <div class="foam-10"></div>
+        <div class="foam-11"></div>
+        <div class="foam-12"></div>
+        <div class="foam-13"></div>
+        <div class="foam-14"></div>
+      </div>
+      <div class="beer-foam beer-foam5">
+        <div class="foam-1"></div>
+        <div class="foam-2"></div>
+        <div class="foam-3"></div>
+        <div class="foam-4"></div>
+        <div class="foam-5"></div>
+        <div class="foam-6"></div>
+        <div class="foam-7"></div>
+        <div class="foam-8"></div>
+        <div class="foam-9"></div>
+        <div class="foam-10"></div>
+        <div class="foam-11"></div>
+        <div class="foam-12"></div>
+        <div class="foam-13"></div>
+        <div class="foam-14"></div>
+      </div>
+
+      <div id="liquid">
+        <div class="bubble bubble1"></div>
+        <div class="bubble bubble2"></div>
+        <div class="bubble bubble3"></div>
+        <div class="bubble bubble4"></div>
+        <div class="bubble bubble5"></div>
+        <div class="bubble bubble6"></div>
+        <div class="bubble bubble7"></div>
+        <div class="bubble bubble8"></div>
+        <div class="bubble bubble9"></div>
+        <div class="bubble bubble10"></div>
+        <div class="bubble bubble11"></div>
+        <div class="bubble bubble12"></div>
+        <div class="bubble bubble13"></div>
+        <div class="bubble bubble14"></div>
+        <div class="bubble bubble15"></div>
+        <div class="bubble bubble16"></div>
+        <div class="bubble bubble17"></div>
+        <div class="bubble bubble18"></div>
+        <div class="bubble bubble19"></div>
+        <div class="bubble bubble20"></div>
+        <div class="bubble bubble21"></div>
+        <div class="bubble bubble22"></div>
+        <div class="bubble bubble23"></div>
+        <div class="bubble bubble24"></div>
+        <div class="bubble bubble25"></div>
+        <div class="bubble bubble26"></div>
+        <div class="bubble bubble27"></div>
+        <div class="bubble bubble28"></div>
+        <div class="bubble bubble29"></div>
+        <div class="bubble bubble30"></div>
+        <div class="bubble bubble31"></div>
+        <div class="bubble bubble32"></div>
+        <div class="bubble bubble33"></div>
+        <div class="bubble bubble34"></div>
+        <div class="bubble bubble35"></div>
+
+      </div>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <!-- <div class="rellax" data-rellax-speed="8">
+      <img id="pm2" src="assets/pm2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img id="pm3" src="assets/pm3.png" />
+    </div> -->
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Alcohols</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">
+          รู้ไหมว่าผู้หญิงเสียงเป็นโรคซึมเศร้ามากกว่าผู้้ชายนะ</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll">
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">ทำความรู้จัก</div>
+        <div class="col-12 text-center display-4">โรคซึมเศร้า</div>
+        <div class="col-12 py-4 text-content">
+          โรคซึมเศร้าส่งผลให้ผู้ป่วยมีอาการทั้งทางด้านร่างกาย จิตใจ และความคิด
+          โดยอาการเหล่านี้จะส่งผลกระทบต่อการดำเนินชีวิตในแต่ละวันอย่างมาก เช่น รับประทานอาหารได้น้อยลง เบื่ออาหาร
+          นอนไม่หลับ สิ้นหวัง รู้สึกว่าตัวเองไม่มีความสุขกับชีวิต วิตกกังวลตลอดเวลา
+          และที่สำคัญคือผู้ป่วยจะไม่สามารถรับมือกับปัญหาต่างๆที่ต้องเผชิญได้ดีพอ
+        </div>
+      </div>
+    </div>
+    <div class="row py-5"></div>
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
+<script src="beer.js"></script>
+<script>
+  $(function () {
+    $('#app').css({
+      "background": "black",
+      "transition": "background 10s ease 3s",
+      "color": "#fff",
+      "transition": "color 10s ease 3s",
+    });
+    $('.text-header').css({
+      "color": "#fff",
+      "transition": "color 10s ease 3s",
+    });
+    $('.text-content').css({
+      "color": "#efefef",
+      "transition": "color 10s ease 3s",
+    });
+    $('.two').css({
+      "color": "#efefef",
+      "transition": "color 10s ease 3s",
+    });
+  });
+
+  // Preloader
+  function myFunction() {
+    setTimeout(showPage, 0);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+</script>
+<script>
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'depression.html';
+      },
+      nextPage() {
+        window.location.href = '#';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

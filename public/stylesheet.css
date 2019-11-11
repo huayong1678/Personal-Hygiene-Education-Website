@@ -73,21 +73,29 @@ body {
 @font-face {
   font-family: Fredericka the Great;
   src: url(fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: Lato;
   src: url(fonts/Lato/Lato-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: Inconsolata;
   src: url(fonts/Inconsolata/Inconsolata-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: Trirong;
   src: url(fonts/Trirong/Trirong-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* VUE */
@@ -254,10 +262,12 @@ body {
   text-align: center;
   height: 7vh;
   top: 92vh;
+  left: 45vw;
 }
 
 .nav-scroll {
   opacity: 0.7;
+  width: 10vw;
 }
 
 .nav-scroll:hover {
