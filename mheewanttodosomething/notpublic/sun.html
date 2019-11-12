@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cancer | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="cigarette.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../../public/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="../../public/bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="../../public/bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="../../public/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="smoke1" src="" />
+    </div>
+    <div class="rellax" data-rellax-speed="5">
+      <img id="smoke3" src="" />
+    </div>
+    <div class="rellax" data-rellax-speed="5">
+      <img id="smoke4" src="" />
+    </div>
+    <div class="rellax" data-rellax-speed="3">
+      <img id="smoke2" src="" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="smoke5" src="" />
+    </div>
+    <div class="rellax" data-rellax-speed="2">
+      <img id="smoke6" src="" />
+    </div>
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Sunbeam</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">WhyTheHellThailandIsSoHotEvenItIsAutummButIt'sColdFor3DaysAndBeginsHotAgainICan'tStandIt</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container pt-4 scroll" id="hand-header">
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row" id="foodHeader">
+          <div class="col-12 text-header">ความร้อนในประเทศนี้มันเหลือเกินจริงๆ</div>
+          <div class="col-12 py-4 text-content">
+              ประเทศไทยเป็นประเทศที่มีสภาพอากาศร้อน โดยเฉพาะในช่วงประมาณกลางเดือนกุมพาพันธ์ไปจนถึงกลางเดือนพฤษภาคม แต่ก็อาจมีอากาศร้อนตลอดทั้งปีได้เช่นกัน
+              ในปี2019 <br> แม้จะเป็นฤดูหนาวแต่แดดก็แรงจนผิวไมห้ได้เลยทีเดียว
+          </div>
+      </div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row py-5"></div>
+      <div class="row" id="foodHeader">
+          <div class="col-12 text-header">อันตรายจากแดด</div>
+          <div class="col"></div>
+        <div class="col-8 py-4">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-center">
+                    ผิวไหม้ แสบ ลอก</li>
+                <li class="list-group-item text-center">
+                    ฝ้า กระ จุดด่างดำ และริ้วรอย</li>
+                <li class="list-group-item text-center">
+                    มะเร็งผิวหนัง</li>
+                <li class="list-group-item text-center">
+                    ต้อลม ต้อเนื้อ</li>
+                <li class="list-group-item text-center">
+                    ฮีทสโตรก</li>
+              </ul>
+        </div>
+        <div class="col"></div>
+        </div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row" id="foodHeader">
+            <div class="col-12 text-center display-4">ฮีทสโตรก</div>
+            <div class="col-12 py-4 text-content">อาการฮีทสโตรก (heat stroke) หรือโรคลมร้อน เป็นภาวะวิกฤตที่ร่างกายไม่สามารถปรับตัวหรือควบคุมระดับความร้อนภายในร่างกาย 
+              หากไม่สามารถระบายความร้อนได้ต่อเนื่อง จะทำให้อุณหภูมิในร่างกายสูงขึ้นเรื่อยๆ ส่งผลให้เกิดอาการปวดศีรษะหน้ามืด 
+              เพ้อชัก ไม่รู้สึกตัว หายใจเร็ว หัวใจเต้นผิดจังหวะ ช็อก หากไม่ได้รับการรักษาอย่างทันท่วงที อาจทำให้เสียชีวิตได้</div>
+          </div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row" id="foodHeader">
+            <div class="col-12 text-center display-4">การป้องกันอันตรายจากแดดสุดโหด</div>
+            <div class="col-2"></div>
+            <div class="col-8 py-4">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        สวมเครื่องแต่งกายให้มิดชิด</li>
+                    <li class="list-group-item">
+                        ทาครีมกันแดดที่ป้องกันทั้งรังสี UVA และ UVB(SPF30++)</li>
+                    <li class="list-group-item">
+                        ระมัดระวังในการทานยา เพราะยาบางตัวทำให้ผิวไวต่อแสง</li>
+            </div>
+            <div class="col-2"></div>
+            <div class="col"></div>
+            <div class="col-8">หากผิวหนังสัมผัสแดดโดยไม่ได้รับการป้องกันรังสี UV อาจทำให้ผิวไหม้แดด และสูญเสียเส้นใยอีลาสติน จนทำให้ผิวหนังหย่อนยาน ช้ำ หรือฉีกขาดได้ง่าย ซึ่งอาจต้องใช้เวลานานในการรักษา</div>
+            <div class="col"></div>
+          </div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row" id="foodHeader">
+          <div class="col-12 text-header">สัญญาณสำคัญขฮีทสโตรก</div>
+          <div class="col"></div>
+        <div class="col-8 py-4">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-center">
+                    ไม่มีเหงื่อออก แม้จะอากาศร้อน</li>
+                <li class="list-group-item text-center">
+                    ตัวร้อนจัดขึ้นเรื่อยๆ</li>
+                <li class="list-group-item text-center">
+                    รู้สึกกระหายน้ำมาก</li>
+                <li class="list-group-item text-center">
+                    วิงเวียน ปวดศีรษะ มึนงง</li>
+                <li class="list-group-item text-center">
+                    คลื่นไส้</li>
+                <li class="list-group-item text-center">
+                    หายใจเร็ว อาเจียน</li>    
+              </ul>
+        </div>
+        <div class="col"></div>
+        </div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+        <div class="row py-5"></div>
+    </div>
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Cigarette
+  $(document).ready(function () {
+    $('.btn-smoke').click(function () {
+      $('.burn').show();
+      $('.tobacco').animate({
+        width: "0cm"
+      }, 8000);
+      $('#smoke2').animate({
+        opacity: "0"
+      }, 8000);
+      $('.burn').animate({
+        left: "0cm"
+      }, 8000, function () {
+        $(this).fadeOut();
+        $('.btn-reset').css("display", "inline-block");
+        $('.btn-smoke').css("display", "none");
+      });
+    });
+
+    $('.btn-reset').click(function () {
+      $(this).fadeOut();
+      $('.tobacco').css("width", "5.5cm");
+      $('.burn').css("left", "208px");
+      $('.btn-reset').css("display", "none");
+      $('.btn-smoke').css("display", "inline-block");
+    });
+  });
+
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'officeSyndrome.html';
+      },
+      nextPage() {
+        window.location.href = 'sleep.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>
