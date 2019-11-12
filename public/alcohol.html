@@ -7,12 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Alcohol | Personal Hygiene</title>
 
+  <link
+    href="https://fonts.googleapis.com/css?family=Pacifico|Prompt|Fredericka+the+Great|Inconsolata|Trirong&display=swap"
+    rel="stylesheet">
+
   <link rel="prefetch" href="stylesheet.css" as="style">
   <link rel="prefetch" href="assets/logo.svg">
   <link rel="preload" href="beer.css" as="style">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="decoration.css">
   <link rel="stylesheet" href="beer.css">
+  <link rel="stylesheet" href="neon.css">
+
 
   <link rel="icon" href="assets/logo.png">
 
@@ -154,9 +160,9 @@
         <div class="bubble bubble33"></div>
         <div class="bubble bubble34"></div>
         <div class="bubble bubble35"></div>
-
       </div>
     </div>
+    <div id="liquid-bottom"></div>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-transparent" id="navigation">
       <button @click="handleClick()" id="buttonBars">
@@ -206,9 +212,10 @@
     <!-- Title -->
     <div class="container-fluid scroll">
       <div class="row" id="page-title">
-        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Alcohols</div>
+        <div id="one" class="col-12 rellax neon" contenteditable spellcheck="false" data-rellax-speed="6">Alcohols</div>
         <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">
-          รู้ไหมว่าผู้หญิงเสียงเป็นโรคซึมเศร้ามากกว่าผู้้ชายนะ</div>
+          ไปๆกันเว้ยเรา สำมะเลเทเมา
+          ทุกวินาทีมีค่าเราออกมาล่าราตรีสีเทา </div>
       </div>
     </div>
 
@@ -216,17 +223,146 @@
     <div class="container scroll">
       <div class="separator"></div>
       <div class="row">
-        <div class="col-12 text-content">ทำความรู้จัก</div>
-        <div class="col-12 text-center display-4">โรคซึมเศร้า</div>
+        <div class="col-12 text-content">ไม่ดีอย่างไร</div>
+        <div class="col-12 text-center display-4">เครื่องดื่มแอลกอฮอล์</div>
         <div class="col-12 py-4 text-content">
-          โรคซึมเศร้าส่งผลให้ผู้ป่วยมีอาการทั้งทางด้านร่างกาย จิตใจ และความคิด
-          โดยอาการเหล่านี้จะส่งผลกระทบต่อการดำเนินชีวิตในแต่ละวันอย่างมาก เช่น รับประทานอาหารได้น้อยลง เบื่ออาหาร
-          นอนไม่หลับ สิ้นหวัง รู้สึกว่าตัวเองไม่มีความสุขกับชีวิต วิตกกังวลตลอดเวลา
-          และที่สำคัญคือผู้ป่วยจะไม่สามารถรับมือกับปัญหาต่างๆที่ต้องเผชิญได้ดีพอ
+          สุราหรือแอลกอฮอล์ เป็นสารเสพติดที่มีทั้งคุณและโทษ เมื่อดื่มแล้วจะทำให้เกิดผลต่อระบบประสาทส่วนกลาง
+          โดยโทษของสุรานั้นอาจมีตั้งแต่ขั้นเบา ไปจนถึงขั้นรุนแรงอย่างเช่น เสียการทรงตัว พูดไม่ชัด และที่รุนแรงคือหมดสติ
+          ดังนั้นสุราจึงถูกควบคุมทั้งการจำหน่าย และการผลิต จากกฏหมายอย่างเคร่งครัด
         </div>
       </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">ต่ออวัยวะต่างๆ</div>
+        <div class="col-12 text-center display-4">โทษของการดื่มสุรา</div>
+        <div class="col-12 py-4 text-content">
+          โทษของการดื่มสุรา ต่ออวัยวะภายในของร่างกาย ด้านสุขภาพ เป็นสาเหตุหลักในการเสียชีวิต
+          ทั้งผลเสียทั้งในระยะสั้นและระยะสะสม หากดื่มสุราติดต่อกันเป็นระยะเวลายาวนาน (ติดเหล้า)
+          จะส่งผลอย่างแน่นอนกับระบบความจำ ระบบประสาท ระบบเลือด ความดัน และที่ส่งผลโดยตรงต่ออวัยวะในร่างกายคือ "ตับ"
+          พิษภัยจากเครื่องดื่มแอลกอฮอล์ ยังส่งผลต่อสมองที่รุนแรงขึ้นหากดื่มตั้งแต่อายุยังน้อย
+        </div>
+      </div>
+      <div class="row w-100 justify-content-center m-0">
+        <div class="col-3"></div>
+        <div class="col-6 card text-center px-0">
+          <ul class="list-group list-group-flush text-dark">
+            <li class="list-group-item list-group-item-secondary text-dark text-content py-3">
+              <strong>โทษต่อสมองและระบบประสาท</strong></li>
+            <li class="list-group-item">
+              <b>ระบบประสาทส่วนปลาย</b> : จะทำให้เกิดมีหลายประสาทอักเสบ มีอาการชาตามปลายมือ, ปลายเท้า
+              เป็นอาการของเหน็บชา,
+              อาการทรงตัวเสียไป</li>
+            <li class="list-group-item">
+              <b>สมอง</b> : เมื่อเริ่มดื่มสุราใหม่ ๆ จะทำให้ระบบควบคุมการทำงาน จะทำให้รู้สึกกระปรี้กระเปร่า, สดชื่น
+              มีการเปลี่ยนแปลทางบุคลิก เมื่อดื่มสุรามากขึ้นจะเกิดอาการมึนเมาง่วงนอนหลับ หมดสติ</li>
+            <li class="list-group-item">
+              <b>การที่ดื่มสุราเรื้อรัง</b> : จะมีการเปลี่ยนแปลงในสมองทำให้ความจำเสื่อม, ความคิดเลอะเลือน
+              เมื่อเป็นระยะนานขึ้นจะทำให้สมองเสื่อมทำให้การทรงตัวเสีย จะมีลักษณะเดินไม่ตรงทาง
+              เมื่อเอ็กซเรย์สมองจะพบว่าขนาดของสมองเล็กลง จะมีการเปลี่ยนแปลงทางบุคลิกภาพ
+              ไม่สนใจต่อสิ่งแวดล้อมบางครั้งจะเศร้าซึม หรือบางครั้งจะมีประสาทหลอน ระแวงว่าจะมีคนมาทำอันตราย</li>
+          </ul>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-6 card text-center mt-4 px-0">
+          <ul class="list-group list-group-flush text-dark">
+            <li class="list-group-item list-group-item-secondary text-dark text-content py-3">
+              <strong>ผลต่อระบบทางเดินอาหารและตับ</strong></li>
+            <li class="list-group-item">
+              <b>กระเพาะอาหาร</b> : พิษของสุราจะทำให้เยื่อบุกระเพาะอาหารถูกทำลาย
+              ซึ่งกรดในกระเพาะก็จะเพิ่มมากขึ้นทำให้เกิดโรคกระเพาะอาหารอักเสบ เป็นแผลในกระเพาะ
+              จะทำให้เกิดมีอาการปวดท้องหรืออาเจียนเป็นเลือดได้</li>
+            <li class="list-group-item">
+              <b>ตับอ่อน</b> : เมื่อดื่มสุรามากๆ แอลกอฮอล์จะไปกระตุ้นตับอ่อนทำให้หลั่งน้ำย่อยออกมามาก
+              ทำให้เกิดมีตับอ่อนอักเสบมีอาการปวดท้องอย่างรุนแรง ไข้สูง ในบางครั้งอาจมีอันตรายถึงแก่ชีวิตได้</li>
+            <li class="list-group-item">
+              <b>ตับ</b> : ตับเป็นอวัยวะที่สำคัญในการทำลายแอลกอฮอล์ เมื่อแอลกอฮอล์เข้าสู่ร่างกายแล้ว
+              จะถูกดูดซึมเข้าลำไส้ แล้วส่งตรงไปยังตับเพื่อลาย
+              เมื่อมีปริมารน้อยร่างกายก็ทนทานได้เมื่อมีปริมารมากขึ้นตับก็จะบวม มีไขมันไปแทรกตามเซลล์ของตับ
+              เมื่อมีอาการนานเข้าจะทำให้เกิดโรคตับแข็ง ซึ่งจะมีอาการมานน้ำอาเจียนเป็นเลือด
+              และอาจจะแปลี่ยนแปลงเป็นมะเร็งของตับได้
+              ดังนั้นโทษของการดื่มสุราอย่างเห็นได้ชัดในคนส่วนใหญ่คือการเป็นโรคตับแข็งนั่นเอง</li>
+          </ul>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-6 card text-center mt-4 px-0">
+          <ul class="list-group list-group-flush text-dark">
+            <li class="list-group-item list-group-item-secondary text-dark text-content py-3">
+              <strong>ระบบหัวใจและหลอดเลือด</strong></li>
+            <li class="list-group-item">
+              <b>ระบบหัวใจ</b> : เมื่อดื่มสุรามาก ๆ จะทำให้การเต้นและการบีบตัวของหัวใจไม่ปกติ
+              หัวใจเต้นเร็วขึ้นและขณะเดียวกันถ้าดื่มสุรามากจะขาดวิตามินบีหนึ่ง ก็จะทำให้กล้ามเนื้อของหัวใจทำงานไม่ดี
+              ปัจจัยเหล่านี้จะทำให้เกิดหัวใจโต ทำงานไม่ได้ตามปกติ จะมีอาการเต้นไม่ปกติได้</li>
+            <li class="list-group-item">
+              <b>ระบบหลอดเลือด</b> : แอลกอฮอล์จะทำให้เส้นเลือดขยายตัวและทำให้ไขมันในเลือดสูงทำให้เส้นเลือดแข็งตัวง่าย
+              ซึ่งจะทำให้เส้นเลือดในสมองแตกได้ง่าย</li>
+          </ul>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-6 card text-center mt-4 px-0">
+          <ul class="list-group list-group-flush text-dark">
+            <li class="list-group-item list-group-item-secondary text-dark text-content py-3">
+              <strong>โทษต่อส่วนอื่นๆของร่างกาย</strong></li>
+            <li class="list-group-item">
+              <b>ระบบเม็ดเลือด</b> : แอลกอฮอล์จะทำให้การทำงานของเม็ดเลือดแดงเสีย จะทำให้มีอาการของเลือดจาง
+              ขาดสารพวกโฟลิก เม็ดเลือดขาวก็จะมีการผลิตน้อยลง ความต้านทานลดต่ำลง
+              การหยุดเลือดในร่างกายไม่ดีเนื่องจากเกร็ดเลือดทำหน้าที่ไม่ดีทำให้มีอาการตกเลือดได้ง่าย</li>
+            <li class="list-group-item">
+              <b>เกิดมะเร็งในอวัยวะต่าง ๆ</b> : การเกิดมะเร็งในอวัยวะต่างๆ
+              เป็นสาเหตุการตายอันดับที่สองของกลุ่มคนที่ติดสุราเรื้อรัง และมีโอกาสเกิดมะเร็งสูงถึง 10 เท่า
+              เมื่อเทียบกับคนปกติ อวัยวะที่พบมะเร็งได้บ่อยคือหลอดอาหาร กระเพาะ ตับ และตับอ่อน</li>
+            <li class="list-group-item">
+              <b>ระบบขับถ่ายและอวัยวะสืบพันธุ์</b> : แน่นอนว่าเมื่อดื่มแอลกอฮอล์น้อยๆ จะมีความต้องการทางเพศสูง
+              แต่เมื่อดื่มเรื้อรังความต้องการทางเพศจะลดลง และอาจจะส่งผลทำให้ลูกอัณฑะเล็กลงได้
+              ส่วนในผู้หญิงตั้งครรภ์ถ้าดื่มสุรา จะทำให้เกิดการแท้งหรือคลอดบุตรเร็ว
+              และบุตรมีโอกาสเกิดมาเป็นเด็กที่มีความผิดปกติได้สูง</li>
+          </ul>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">โทษของการดื่มสุราต่อ</div>
+        <div class="col-12 text-center display-4">สังคม</div>
+        <div class="col-3"></div>
+        <div class="col-6 card text-center mt-4 px-0">
+          <ul class="list-group list-group-flush text-dark">
+            <li class="list-group-item">
+              <b>อุบัติเหตุจากการเมาแล้วขับ</b> เนื่องจากผู้ที่ดื่มสุราหรือเหล้า มักมีความมั่นใจว่าไม่เมา
+              มั่นใจว่ามีสติขับรถได้จริงๆ
+              แต่ในความเป็นจริงนั้น โทษของสุราที่ดื่มเข้าไปจะไปกดประสาทส่วนกลาง ทำให้การรับรู้เรื่องราวต่างๆช้าลง
+              และส่งกระทบผลต่อระบบการตัดสินใจ จึงยังไม่สามารถควบคุมตนเองได้เต็มร้อย
+              จึงทำให้เกิดอุบัติเหตุจากการขับขี่ได้สูงมาก</li>
+            <li class="list-group-item">
+              <b>การทะเลาะวิวาท</b> สุรามีผลกระทบต่อสมองส่วนหน้า เป็นส่วนควบคุมสติ และการตัดสินใจ
+              ดังนั้นคนที่เมาสุราจึงมักจะหาเรื่องทะเลาวิวาทกับผู้อื่นเป็นประจำ
+              ส่งผลให้เกิดความสูญเสียต่อคนรอบข้างด้วยเช่นกัน</li>
+            <li class="list-group-item">
+              <b>ฆาตกรรม</b> มีผลการศึกษาคดีฆาตรกรรมจากการผ่าพิสูจน์ศพ โดยพบว่ามากกว่า 60%
+              ของผู้ที่เสียชีวิต/ก่อนเหตุจากคดีฆาตรกรรม ตรวจพบว่าในร่างกายมีเหล้าผสมด้วยอยู่เสมอ
+              เพราะการดื่มเหล้าจะช่วยให้ศูนย์ควบคุมจิตใจทำงานได้แย่ลง ส่งผลให้ทำในสิ่งที่กล้าได้มากขึ้น</li>
+            <li class="list-group-item">
+              <b>การฆ่าตัวตาย</b> ผลการวิจัยพบว่าในจำนวนคนกว่า 50% ของผู้ที่เคยฆ่าตัวตายนั้น
+              จะต้องดื่มสุราเพื่อเรียกความกล้าก่อนเสมอ เนื่องจากเมื่อสุราออกฤทธิ์ไปยังสมองส่วนกลางแล้ว
+              จะทำให้ผู้ดื่มรู้สึกคลายทุกข์ และมีความกล้าเพิ่มขึ้น</li>
+          </ul>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-2"></div>
+        <div class="col-8 text-center pt-4 text-danger">
+          <small>***การเลิกสุราในคนที่รับประทานมานาน จนเป็นโรคพิษสุราเรื้อรัง การเลิกสุราแบบฉับพลัน
+            ให้หยุดทันทีผู้ป่วยอาจจะมีอาการของคนขาดเหล้าได้ ซึ่งมักจะเกิดภายใน 48-72 ชม.หลังหยุดสุรา
+            บางรายถ้าเป็นน้อยๆ จะมีอาการกระสับกระส่าย มือสั่น เป็นมากจะโวยวาย บางคนสับสน เวลาสถานที่
+            ในกรณีที่เป็นมากอาจมีอาการชักจากการขาดสุราได้ ดังนั้นจึงแนะนำ ให้พาผู้ป่วยไปบำบัดสุรากับแพทย์
+            ซึ่งมียาให้รับประทานเพื่อช่วยบำบัดการติดสุราอย่างปลอดภัย</small>
+        </div>
+        <div class="col-2"></div>
+      </div>
+      <div style="height: 30vh;"></div>
     </div>
-    <div class="row py-5"></div>
+
     <!-- Footer -->
     <div class="container-fluid" id="footer">
       <div class="row">
@@ -239,7 +375,6 @@
         <div class="col"></div>
       </div>
     </div>
-  </div>
   </div>
 </body>
 
@@ -261,7 +396,7 @@
       "color": "#efefef",
       "transition": "color 10s ease 3s",
     });
-    $('.two').css({
+    $('#two').css({
       "color": "#efefef",
       "transition": "color 10s ease 3s",
     });

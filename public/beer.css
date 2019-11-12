@@ -12,6 +12,7 @@
 }
 
 .pour {
+  z-index: 0;
   position: absolute;
   left: calc(50% - 5%);
   width: 10%;
@@ -20,11 +21,9 @@
   border-radius: 100px 100px 200px 200px;
 }
 
-.bubble-container {}
-
 #liquid {
   position: relative;
-  background: linear-gradient(0deg, rgba(237, 175, 50, 1) 52%, rgba(255, 203, 0, 1) 100%);
+  background: linear-gradient(0deg, rgb(237, 175, 50) 70%, rgba(255, 203, 0, 1) 100%);
   /* border: 10px solid #edaf32; */
   /* border-radius: 0 0 20px 20px; */
   bottom: 0;
@@ -33,19 +32,18 @@
   width: 100%;
 }
 
-/* #liquid:after {
-  background-color: rgba(255, 255, 255, 0.25);
-  bottom: -10px;
-  content: '';
-  height: 200px;
-  left: -40px;
+#liquid-bottom {
   position: absolute;
-  transform: rotate(30deg);
-  -webkit-transform: rotate(15deg);
-  width: 110px;
-} */
+  background: linear-gradient(rgba(237, 175, 50, 1) 0%,rgba(237, 175, 50, 0.897) 50%, rgba(237, 175, 50, 0) 100%);
+  /* border: 10px solid #edaf32; */
+  /* border-radius: 0 0 20px 20px; */
+  top: 100vh;
+  height: 200px;
+  overflow: hidden;
+  width: 100%;
+}
 
-#liquid .bubble {
+#liquid .bubble{
   -webkit-animation-name: bubble;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -55,6 +53,7 @@
   height: 20px;
   width: 20px;
   transform: scale(1.1);
+  z-index: 10;
 }
 
 @-webkit-keyframes bubble {
