@@ -173,16 +173,30 @@ body {
 /* Preloader */
 #loader {
   position: absolute;
+  font-family: 'Fredericka the Great';
   z-index: 1;
   width: 100vw;
   height: 100vh;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 
 #loaderImage {
   position: absolute;
-  width: 200px;
-  top: calc(50vh - 100px);
-  left: calc(50vw - 100px);
+  width: 150px;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
   -webkit-animation: spin 2s ease infinite;
   animation: spin 2s ease infinite;
   opacity: 0.8;
@@ -561,4 +575,8 @@ body {
   font-family: 'Trirong', serif;
   display: block;
   color: #3b3b3b;
+}
+
+.list-group {
+  font-size: 1.1rem;
 }
