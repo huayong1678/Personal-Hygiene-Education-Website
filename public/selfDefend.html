@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Self Defend | Personal Hygiene</title>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Pacifico|Prompt|Fredericka+the+Great|Inconsolata|Trirong&display=swap"
+    rel="stylesheet">
+
+  <link rel="prefetch" href="stylesheet.css" as="style">
+  <link rel="prefetch" href="assets/logo.svg">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+
+
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <img src="assets/knife.png" id="knife" alt="">
+    <img src="assets/needle.png" id="needle" alt="">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <!-- <div class="rellax" data-rellax-speed="8">
+      <img id="pm2" src="assets/pm2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img id="pm3" src="assets/pm3.png" />
+    </div> -->
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax" data-rellax-speed="6">Defend Yourself!</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">
+          เตรียมความพร้อมเพื่อรับมือต่อเหตุการณ์ต่างๆที่อาจะเกิดขึ้นได้เสมอ</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll">
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">ทำไมต้อง</div>
+        <div class="col-12 text-center display-4">ป้องกันตัวเอง</div>
+        <div class="col-12 py-4 text-content">
+          ใน​หลาย​ประเทศ อาชญากรรม​เป็น​ภัย​ใกล้​ตัว​ที่​ไม่​เคย​หมด​ไป​จาก​สังคม. ตัว​อย่าง​เช่น
+          ผู้​พิพากษา​ใน​ประเทศ​หนึ่ง​บอก​ว่า “ความ​จริง​ที่​น่า​เศร้า​คือ
+          ทุก​คน​มี​โอกาส​ตก​เป็น​เหยื่อ​ได้​ทั้ง​นั้น” ใน​บาง​แห่ง​อาชญากรรม​อาจ​ไม่​เกิด​ขึ้น​บ่อย​นัก.
+          แต่​ก็​ไม่​ควร​ชะล่า​ใจ เพราะ​คน​ที่​ชะล่า​ใจ​อาจ​ตก​เป็น​เหยื่อ​ได้​ง่าย ๆ
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-center display-4">การป้องกันการล้วงกระเป๋า</div>
+        <div class="col-12 py-4 text-content">
+          ในการเดินทางไปในที่ต่างๆ เราต้องคอยระมัดระวังทรัพย์สินที่พกพาติดตัวไป โดยต้องคำนึงถึง
+          การออกนอกบ้านหรือที่พักอาศัย ไม่ควรนำของมีค่าหรือทรัพย์สินจำนวนมากติดตัวไปด้วย
+          กระเป๋าสตางค์ไม่ควรพกในลักษณะที่กระเป๋าแผ่ออกมานอกกระเป๋ากางเกง ควรพกในตำแหน่งที่เมื่อกระเป๋าหายไป
+          เราสามารถรู้สึกตัวได้ทันที เช่น ที่กระเป๋ากางเกงด้านหน้า เป็นต้น
+          ถ้าจำเป็นต้องนำทรัพย์สินหรือของมีค่าติดตัวไปด้วย ก็ควรแยกเก็บไว้หลายๆ ที่ ในสถานที่ที่คนร้ายมักจะกระทำผิด เช่น
+          ที่ที่มีคนเบียดเสียดหนาแน่นควรใช้ความระมัดระวัง และเมื่อถูกชนหรือถูกเบียดโดยไม่จำเป็น
+          ให้รีบสำรวจทรัพย์สินที่นำติดตัวไปด้วยทันที
+
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-center display-4">การป้องกันการปล้นทรัพย์</div>
+        <div class="col-12 py-4 text-content">
+          ควรมีการติดสัญญาณเตือนภัยไว้หลายๆ แห่ง เพื่อให้ผู้อื่นหรือเพื่อนบ้านใกล้เคียงทราบ
+          เพื่อให้ความช่วยเหลือเมื่อเกิดเหตุร้าย และแจ้งเหตุให้เจ้าหน้าที่ตำรวจทราบได้เร็วที่สุด
+          เครื่องประดับที่มีไว้แต่งตัว หรือไว้เพื่อค้าขาย ถ้าเป็นไปได้ควรจดรายละเอียดตำหนิรูปพรรณ ลักษณะพิเศษ ราคา
+          และถ่ายรูปเก็บไว้
+          ไม่ควรเก็บเงินสดจำนวนมาก หรือทรัพย์สินที่มีค่าไว้ในสถานที่ประกอบการค้า
+          การเปิด-ปิดสถานที่ประกอบการค้า ไม่ควรเปิดแต่เช้าตรู่หรือยังมืดอยู่ และไม่ควรปิดจนค่ำ หรือดึกเกินไป
+          พยายามจดจำตำหนิรูปพรรณคนที่เข้ามาติดต่อ
+          หากเป็นคนร้ายแล้วก่อเหตุขึ้นจะได้แจ้งรายละเอียดให้กับเจ้าหน้าที่ตำรวจทราบ เพื่อเป็นประโยชน์ในการจับกุม
+          เมื่อเกิดเหตุควรช่วยรักษาสถานที่เกิดเหตุ จนกว่าเจ้าหน้าที่ตำรวจจะเดินทางมาถึง
+          อย่าพยายามจับคนร้ายโดยลำพังด้วยตนเอง เมื่อคนร้ายก่อเหตุให้รีบแจ้งเจ้าหน้าที่ตำรวจทราบโดยเร็ว
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-center display-4">การป้องกันการปล้น ชิงหรือวิ่งราวทรัพย์ผู้เบิกเงินหรือนำเงินไปฝากธนาคาร
+        </div>
+        <div class="col-12 py-4 text-content">
+          การเบิกเงินหรือถอนเงินจำนวนมากๆ จากสถาบันการเงินควรขอเจ้าหน้าที่ตำรวจไปคุ้มกัน
+          หรือขอความร่วมมือจากธนาคารนำส่งเงินให้ที่บ้าน
+          การนำเงินสดจำนวนมากๆ ติดตัว ไม่ว่าจะเป็นการนำไปฝากธนาคารหรือถอนจากธนาคารก็ดี
+          ควรระมัดระวังบุคคลแปลกหน้าที่ติดตามหรือเฝ้าดูอยู่
+          การเบิกเงินจากธนาคารเป็นจำนวนมากๆ ควรไปนับเงินในที่ลับตา เช่น
+          ห้องผู้จัดการหรือติดต่อผู้จัดการให้อำนวยความสะดวก
+          หากพบเห็นคนร้ายกระทำผิด หรือกระทำผิดแล้วกำลังหลบหนี
+          ให้พยายามจดจำรายละเอียดเกี่ยวกับตำหนิรูปพรรณของคนร้ายการแต่งกาย รวมทั้งยานพาหนะ
+          อาวุธและเส้นทางหลบหนีของคนร้ายหรือรีบแจ้งให้เจ้าหน้าที่ตำรวจได้ทราบ
+        </div>
+      </div>
+      <div style="height: 30vh;"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="beer.js"></script>
+<script>
+  // Preloader
+  function myFunction() {
+    setTimeout(showPage, 0);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+</script>
+<script>
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'alcohol.html';
+      },
+      nextPage() {
+        window.location.href = '#';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

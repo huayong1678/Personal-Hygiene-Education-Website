@@ -883,3 +883,45 @@
   z-index: -2;
   filter: saturate(0.2);
 }
+
+/* Self Defend */
+#knife {
+  transform: rotate(120deg);
+  position: absolute;
+  width: 25vw;
+  left: -4vw;
+  top: -6vh;
+  z-index: -2;
+  animation: swing 2000ms alternate ease infinite;
+}
+
+#needle {
+  transform: rotate(-120deg) scaleX(-1);
+  position: absolute;
+  width: 35vw;
+  right: -10vw;
+  top: 70vh;
+  z-index: -2;
+  animation: swingMove 2000ms alternate ease infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(120deg) translateX(-100px);
+  }
+  50%{
+    transform: rotate(160deg) translateX(100px);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes swingMove {
+  0% {
+    transform: rotate(-120deg) translateX(-100px);
+  }
+  100%{
+    transform: rotate(-160deg) translateX(100px);
+  }
+}
