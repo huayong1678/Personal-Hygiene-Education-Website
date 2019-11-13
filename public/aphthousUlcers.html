@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aphthous Ulcers | Personal Hygiene</title>
+
+  <link rel="prefetch" href="stylesheet.css" as="style">
+  <link rel="prefetch" href="assets/logo.svg">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/selfdefend.css">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo.svg" alt="">
+  </div>
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <!-- <div class="rellax" data-rellax-speed="8">
+      <img id="pm2" src="assets/pm2.png" />
+    </div> -->
+
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax" data-rellax-speed="6">Aphthous Ulcers</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">
+          "โรคร้อนใน" มักเกิดขึ้นในช่องปากโดยไม่ทันได้ตั้งตัว</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll" id="self-content">
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">คืออะไร</div>
+        <div class="col-12 text-center display-4">แผลร้อนใน (Aphthous Ulcers)</div>
+        <div class="col-12 py-4 text-content">
+          "โรคร้อนใน" หรือที่รู้จักกันในอีกชื่อว่า "แผลร้อนใน" (Aphthous Ulcers) หรือเรียกสั้นๆได้อีกว่า "ร้อนใน" คือ
+          แผลที่มีขนาดเล็กและมีความตื้น สีของแผลจะมีสีเหลือง หรือขาวและล้อมรอบไปด้วยสีแดง
+          แผลร้อนในจะเกิดที่บริเวณเนื้อเยื่ออ่อนภายในช่องปาก หรือเหงือก
+          แต่ผู้ป่วยบางรายก็อาจพบแผลร้อนในได้ในบริเวณด้านในริมฝีปาก กระพุ้งแก้ม ใต้ลิ้น ปลายลิ้น หรือโคนลิ้น
+          ส่งผลให้มีอาการเจ็บเมื่อมีการขยับปาก ไม่ว่าจะเป็นในช่วงรับประทานอาหาร หรือกำลังพูดคุยอยู่ก็ตาม
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-center display-4">สาเหตุของแผลร้อนใน</div>
+        <div class="col-12 py-4 text-content">
+          สำหรับสาเหตุของแผลร้อนในนั้นยังไม่ทราบสาเหตุของการเกิดโรคนี้อย่างแน่ชัด แต่อาจเกิดจากปัจจัยหลายๆ อย่างร่วมกัน
+          รวมทั้งอาจมีความสัมพันธ์กับปฏิกิริยาภูมิต้านทานของร่างกายด้วย แต่โดยเฉลี่ยแล้วพบว่า
+          ผู้ป่วยที่เป็นแผลร้อนในบ่อยประมาณ 30-40% มีประวัติคนในครอบครัวเป็นโรคนี้ด้วย ดังนั้นจึงทำให้เชื่อได้ว่า
+          แผลร้อนในสามารถถ่ายทอดได้ทางพันธุกรรม ผู้ป่วยส่วนใหญ่ก็เกิดอาการขึ้นมาเองได้โดยที่ไม่มีสิ่งใดเป็นตัวกระตุ้น
+          ในขณะที่มีผู้ป่วยเพียงส่วนน้อยเท่านั้นที่เกิดแผลร้อนในจากสิ่งกระตุ้นจนทำให้มีอาการกำเริบขึ้นมา
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">ที่ทำให้เกิดแผลร้อนใน</div>
+        <div class="col-12 text-center display-4">สิ่งกระตุ้น</div>
+        <div class="col-3"></div>
+        <div class="col-6 card text-center mt-4 px-0">
+          <ul class="list-group list-group-flush text-dark">
+            <li class="list-group-item">
+              <b>ความเครียด ความกังวล และความเหนื่อยล้า รวมทั้งการมีอารมณ์โมโหฉุนเฉียว</b> ไม่ว่าจะเกิดจากการทำงาน
+              เรื่องส่วนตัว หรือความเครียดจากการอ่านหนังสือสอบ ล้วนกระตุ้นให้เกิดแผลร้อนในได้ เนื่องจากการศึกษาพบว่า
+              การเกิดแผลร้อนในนั้นมีความสัมพันธ์กับอาชีพของผู้ป่วย รวมทั้งความวิตกกังวลด้วยเช่นกัน</li>
+            <li class="list-group-item">
+              <b>ตับอ่อน</b> : เมื่อดื่มสุรามากๆ แอลกอฮอล์จะไปกระตุ้นตับอ่อนทำให้หลั่งน้ำย่อยออกมามาก
+              ทำให้เกิดมีตับอ่อนอักเสบมีอาการปวดท้องอย่างรุนแรง ไข้สูง ในบางครั้งอาจมีอันตรายถึงแก่ชีวิตได้</li>
+            <li class="list-group-item">
+              <b>ตับ</b> : ตับเป็นอวัยวะที่สำคัญในการทำลายแอลกอฮอล์ เมื่อแอลกอฮอล์เข้าสู่ร่างกายแล้ว
+              จะถูกดูดซึมเข้าลำไส้ แล้วส่งตรงไปยังตับเพื่อลาย
+              เมื่อมีปริมารน้อยร่างกายก็ทนทานได้เมื่อมีปริมารมากขึ้นตับก็จะบวม มีไขมันไปแทรกตามเซลล์ของตับ
+              เมื่อมีอาการนานเข้าจะทำให้เกิดโรคตับแข็ง ซึ่งจะมีอาการมานน้ำอาเจียนเป็นเลือด
+              และอาจจะแปลี่ยนแปลงเป็นมะเร็งของตับได้
+              ดังนั้นโทษของการดื่มสุราอย่างเห็นได้ชัดในคนส่วนใหญ่คือการเป็นโรคตับแข็งนั่นเอง</li>
+          </ul>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div style="height: 25vh;"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="beer.js"></script>
+<script>
+  // Preloader
+  function myFunction() {
+    setTimeout(showPage, 0);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+</script>
+<script>
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'selfDefend.html';
+      },
+      nextPage() {
+        window.location.href = '#';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

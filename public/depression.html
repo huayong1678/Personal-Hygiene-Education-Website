@@ -9,29 +9,23 @@
 
   <link rel="prefetch" href="stylesheet.css" as="style">
   <link rel="prefetch" href="assets/logo.svg">
-  <link rel="prefetch" href="fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf">
-  <link rel="prefetch" href="fonts/Inconsolata/Inconsolata-Bold.ttf">
-  <link rel="prefetch" href="fonts/Inconsolata/Inconsolata-Regular.ttf">
-  <link rel="prefetch" href="fonts/Lato/Lato-Regular.ttf">
-  <link rel="prefetch" href="fonts/Lato/Lato-Bold.ttf">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="decoration.css">
   <link rel="icon" href="assets/logo.png">
-
-  <link href="https://fonts.googleapis.com/css?family=Prompt|Fredericka+the+Great|Inconsolata|Trirong&display=swap"
-    rel="stylesheet">
 
   <!-- Rellax -->
   <script src="rellax.min.js"></script>
 
   <!-- VUE -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="vue.js"></script>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
   <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
   <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
   <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/depression.css">
 </head>
 
 <body onload="myFunction()" style="margin:0;">
@@ -95,7 +89,7 @@
     </div>
 
     <!-- Content -->
-    <div class="container pt-4 scroll">
+    <div class="container pt-4 scroll" id="depression-content">
       <div class="row">
         <div class="col-12 text-content">ทำความรู้จัก</div>
         <div class="col-12 text-center display-4">โรคซึมเศร้า</div>
@@ -184,26 +178,25 @@
         </div>
       </div>
       <div class="separator"></div>
-      <div class="row justify-content-center">
-        <div class="col-12 text-header pt-0">เรามาประเมินภาวะซึมเศร้าด้วยตัวเองกันเถอะ</div>
-      </div>
-      <div class="row card my-4 w-100 px-5 py-5">
+      <div class="row card m-0 w-100 px-5 py-5 depression-card">
+        <div class="col-12 text-content w-100 text-center pt-3">เรามาประเมินภาวะซึมเศร้าด้วยตัวเองกันเถอะ</div>
+        <div class="col-12 depression-title w-100 text-center pb-3">PATIENT HEALTH QUESTIONNAIRE (PHQ-9)</div>
         <h4 class="col p-0 mb-1 mt-3 card-title depression-header">1.</h4>
         <p class="col p-0 mb-1 card-text depression-text">Little interest or pleasure in doing things</p>
         <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input @click="handleAnswer(1,1)" type="radio"> Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
             </label>
           </div>
         </div>
@@ -214,16 +207,16 @@
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input type="radio" checked>Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
             </label>
           </div>
         </div>
@@ -234,16 +227,16 @@
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input type="radio" checked> Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
             </label>
           </div>
         </div>
@@ -254,16 +247,16 @@
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input type="radio" checked> Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
             </label>
           </div>
         </div>
@@ -274,16 +267,16 @@
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input type="radio" checked> Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
             </label>
           </div>
         </div>
@@ -295,16 +288,16 @@
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input type="radio" checked> Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
             </label>
           </div>
         </div>
@@ -316,16 +309,16 @@
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input type="radio" checked> Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
             </label>
           </div>
         </div>
@@ -339,16 +332,16 @@
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input type="radio" checked> Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
             </label>
           </div>
         </div>
@@ -360,16 +353,37 @@
         <div class="col-12 p-0 mt-1">
           <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
             <label class="btn col-3 btn-outline-dark active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Not at all
+              <input type="radio" checked> Not at all
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option2" autocomplete="off">Several days
+              <input type="radio">Several days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option3" autocomplete="off">More than half the days
+              <input type="radio">More than half the days
             </label>
             <label class="btn col-3 btn-outline-dark">
-              <input type="radio" name="options" id="option4" autocomplete="off"> Nearly every day
+              <input type="radio"> Nearly every day
+            </label>
+          </div>
+        </div>
+
+        <h4 class="col p-0 mb-1 mt-3 card-title depression-header">10.</h4>
+        <p class="col p-0 mb-1 card-text depression-text">If you checked off any problems, how difficult have these
+          problems made it for you to do your work, take care of things at home, or get along with other people?</p>
+        <p class="col p-0 mb-1 card-text depression-text">ไม่ค่อยสนใจหรืออยากที่จะทำกิจรรมต่างๆ</p>
+        <div class="col-12 p-0 mt-1">
+          <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+            <label class="btn col-3 btn-outline-dark active">
+              <input type="radio" checked>Not difficult at all
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio">Somewhat difficult
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio">Very difficult
+            </label>
+            <label class="btn col-3 btn-outline-dark">
+              <input type="radio"> Extremely difficult
             </label>
           </div>
         </div>
@@ -419,9 +433,13 @@
     data: {
       handleStatus: {
         optionBars: false
-      }
+      },
+      userSelected: []
     },
     methods: {
+      handleAnswer(question, answer) {
+        console.log(`${question} -> ${answer}`)
+      },
       handleClick() {
         this.handleStatus.optionBars = !this.handleStatus.optionBars
       },

@@ -7,15 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Self Defend | Personal Hygiene</title>
 
-  <link
-    href="https://fonts.googleapis.com/css?family=Pacifico|Prompt|Fredericka+the+Great|Inconsolata|Trirong&display=swap"
-    rel="stylesheet">
-
   <link rel="prefetch" href="stylesheet.css" as="style">
   <link rel="prefetch" href="assets/logo.svg">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="decoration.css">
-
 
   <link rel="icon" href="assets/logo.png">
 
@@ -30,6 +25,8 @@
   <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
   <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
   <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/selfdefend.css">
 </head>
 
 <body onload="myFunction()" style="margin:0;">
@@ -67,7 +64,7 @@
     <!-- Title Decor. -->
     <!-- <div class="rellax" data-rellax-speed="8">
       <img id="pm2" src="assets/pm2.png" />
-    </div>
+    </div> -->
 
 
     <!-- Scroll to See More -->
@@ -92,7 +89,7 @@
     </div>
 
     <!-- Content -->
-    <div class="container scroll">
+    <div class="container scroll" id="self-content">
       <div class="separator"></div>
       <div class="row">
         <div class="col-12 text-content">ทำไมต้อง</div>
@@ -206,7 +203,7 @@
         window.location.href = 'alcohol.html';
       },
       nextPage() {
-        window.location.href = '#';
+        window.location.href = 'aphthousUlcers.html';
       },
       homePage() {
         window.location.href = 'index.html';

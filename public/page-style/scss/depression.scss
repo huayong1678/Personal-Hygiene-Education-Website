@@ -1,0 +1,14 @@
+#depression-content {
+    font-family: 'Prompt';
+
+    .depression-title {
+        font-family: 'Inconsolata';
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .depression-card {
+        background-color: rgb(255, 254, 249);
+        filter: drop-shadow(2px 2px 1px rgba(34, 34, 34, 0.11));
+    }
+}
