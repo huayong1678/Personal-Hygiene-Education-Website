@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Room Hygiene | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="bubbleAnimation.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/cleaning-room.css">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo_loader.png" alt="">
+  </div>
+
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img id="room1" src="assets/room1.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="4">
+      <img id="room2" src="assets/room2.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="6">
+      <img id="room3" src="assets/room3.png" />
+    </div>
+    <div class="rellax" data-rellax-speed="8">
+      <img id="room4" src="assets/room4.png" />
+    </div>
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <!-- <div class="siren7 rellax" data-rellax-speed="10"></div> -->
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Please Clean Your Room</div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">
+          ความสะอาดเป็นเรื่องสำคัญในการใช้ชีวิตในบ้านหลังหนึ่งๆ</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll" id="clean-content">
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">ที่ควรมีถ้าอยากให้บ้านสะอาดอยู่เสมอ</div>
+        <div class="col-12 text-center display-4">5 นิสัย</div>
+        <div class="col-12 text-content">บ่อยครั้งที่เราเหนื่อยจากงานนอกบ้านมาแล้ว ยังต้องมาเหนื่อยกับงานในบ้านอีก
+          การสร้างนิสัยที่ดีอย่างสม่ำเสมอจะทำให้เราเสียเวลาทำงานบ้านน้อยลง
+          โดยให้การจัดการบ้านในแต่ละครั้งมีประสิทธิภาพมากขึ้น วันนี้เรามีวิธีง่ายๆที่จะทำให้บ้านของคุณสะอาดอยู่เสมอ
+          เพียงฝึก 5 ข้อต่อไปนี้ให้เป็นนิสัย และคุณจะรู้สึกว่า การทำงานบ้านนั้นง่ายนิดเดียว</div>
+        <div class="col-8 card text-center mt-3 px-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item head">เก็บเสื้อผ้าที่ใส่แล้วลงตะกร้า</li>
+            <li class="list-group-item">วางตะกร้าผ้าสำหรับใส่เสื้อผ้าที่จะซักไว้ใกล้ๆ
+              บริเวณที่เราเปลี่ยนเสื้อผ้าในทุกเช้าและทุกเย็นแทนที่จะพาดเสื้อผ้าที่ใส่แล้วไว้ตามเก้าอี้ หรือตามพื้นห้อง
+              นอกจากจะทำให้ห้องไม่รกแล้ว ยังช่วยให้เราประหยัดเวลาในการตามเก็บเสื้อผ้าจากทั่วห้องมาซักอีกด้วย</li>
+            <li class="list-group-item head">ถอดรองเท้าและจัดเก็บเข้าตู้/กล่อง</li>
+            <li class="list-group-item">
+              เมื่อกลับถึงบ้านควรถอดรองเท้าแล้วเก็บเข้าตู้หรือกล่องใส่รองเท้าทันทีดีกว่าถอดแล้วปล่อยทิ้งไว้ที่หน้าประตู
+              นอกจากจะทำให้บ้านสะอาด ปราศจากสิ่งสกปรกที่ติดมาจากนอกบ้านแล้ว จะทำให้บ้านดูเป็นระเบียบมากขึ้น
+              และไม่เสียเวลาตอนหยิบมาใส่ก่อนออกจากบ้านในทุกเช้า แถมยังลดเวลาการดูดฝุ่นบริเวณพื้นที่วางรองเท้าอีกด้วย
+            </li>
+            <li class="list-group-item head">ล้างจานชามหลังทานข้าวเสร็จทุกครั้ง</li>
+            <li class="list-group-item">
+              หลังรับประทานอาหารเสร็จไม่ว่ามื้อใดๆ ควรล้างและจัดเก็บทุกครั้ง ซึ่งเราจะใช้เวลาเพียง 5 นาทีในการเก็บล้าง
+              แต่หากเราเก็บสะสมไว้ล้างทีเดียวจะต้องใช้เวลามากถึง 15-30 นาทีเพื่อจัดการกับสิ่งที่เรากองทิ้งไว้
+              อีกทั้งยังเป็นการหมักหมมเศษอาหารที่ก่อให้เกิดเชื้อโรคและเป็นอันตรายต่อสุขภาพ
+              และสิ่งกลิ่นเหม็นไปทั่วห้องอีกด้วย
+            </li>
+            <li class="list-group-item head">เก็บสิ่งของกลับคืนที่เดิมเป็นประจำหลังหยิบออกมาใช้งาน</li>
+            <li class="list-group-item">
+              ไม่ว่าจะเป็นหนังสือ นิตยสาร กล่อง DVD โน้ตบุ๊ค สมุดระบายสี กล่องเครื่องประดับ ขวดโหลเส้นสปาเก๊ตตี้
+              หรือข้าวของเครื่องใช้ใดๆก็ตาม เมื่อนำออกมาใช้งานและเสร็จสิ้นภารกิจแล้ว
+              ควรเก็บกลับคืนที่เดิมเป็นประจำจะได้ไม่ปล่อยรกวางทิ้งไว้ทั้วห้อง ไม่เป็นระเบียบและยังเกะกะสายตา
+              และยังต้องมาเสียเวลาตามเก็บทีหลัง โดยเฉพาะเวลาเร่งด่วนที่มีแขกมาถึงห้อง
+              ไม่เสียหน้าและยังรับแขกได้อย่างสบายใจหายห่วง
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">ในห้องน้ำ</div>
+        <div class="col-12 text-center display-4">บริเวณที่มีเชื้อโรคมากที่สุด 4 จุด</div>
+        <div class="col-12 text-content">คุณทราบหรือไม่ว่าโถชักโครกที่น่าจะอุดมไปด้วยแบคทีเรียและเชื้อโรคอื่นๆ นั้น
+          มีอันตรายน้อยมาก
+          ต่อสุขภาพของคุณเพราะเป็นบริเวณที่มักได้รับการเอาใจใส่ทำความสะอาดอยู่เสมอ ด้วยผลิตภัณฑ์
+          ทำความสะอาด
+          ในทางกลับกัน บริเวณที่พบว่ามีแบคทีเรียแฝงตัวอยู่มากมายคือบริเวณที่ต้องมีการสัมผัสบ่อยครั้ง
+          ในแต่ละวัน (เช่น ฝารองนั่ง ปุ่มกดหรือคันโยกชักโครก ก๊อกน้ำ ฯลฯ)
+
+          เพื่อสุขอนามัยที่ดีในห้องน้ำ คุณควรให้ความสำคัญกับแหล่งรวมเชื้อโรคในห้องน้ำ</div>
+        <div class="col-8 card text-center mt-3 px-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item head">พื้นผิวที่มักถูกสัมผัส</li>
+            <li class="list-group-item">วัสดุ อุปกรณ์ ตลอดจนข้าวของเครื่องใช้บางชนิดในห้องน้ำ เช่น
+              ปุ่มกดหรือคันโยกชักโครก ฝารองนั่ง
+              ก๊อกน้ำ ลูกบิดประตู และถังขยะ อาจมีการปนเปื้อนกับเชื้อโรคระหว่างการใช้งานในแต่ละวัน
+              และหากในบ้านคุณมีเจ้าตัวน้อยที่เห็นการกดชักโครกหรือการเปิดน้ำเล่นเป็นเรื่องบันเทิง
+              คุณยิ่งต้องรักษาความสะอาดของอุปกรณ์ดังกล่าว โดยอาจใช้ผลิตภัณฑ์ฆ่าเชื้อแบคทีเรียที่สามารถ
+              ทำความสะอาดและฆ่าเชื้อโรคได้โดยไม่ทิ้งสารเคมีตกค้าง</li>
+            <li class="list-group-item head">ผ้า/ฟองน้ำ</li>
+            <li class="list-group-item">
+              ผ้าและฟองน้ำที่ใช้ในการทำความสะอาดห้องน้ำอาจเป็นแหล่งสะสมเชื้อโรคเมื่อถูกทิ้งไว้ให้เปียกชื้น
+              คุณจึงควรหมั่นทำความสะอาดและฆ่าเชื้อผ้าและฟองน้ำโดยทำความสะอาดแยกจากกันในน้ำร้อน (อุณหภูมิสูงกว่า 60
+              องศาเซลเซียส) หรือโดยการจุ่มลงน้ำยาฆ่าเชื้อโรคที่เจือจางแล้ว
+            </li>
+            <li class="list-group-item head">ของใช้เพื่ออนามัยส่วนบุคคล</li>
+            <li class="list-group-item">
+              ของใช้ส่วนตัว เช่น แปรงสีฟันหรือแปรงขัดเล็บ อาจมีการปนเปื้อนและเป็นแหล่งสะสมเชื้อโรค
+              จึงควรเก็บอุปกรณ์ดังกล่าวในที่ที่ห่างไกลจากเชื้อโรคและล้างให้สะอาดและเป่าให้แห้งทันทีหลังใช้งาน
+            </li>
+            <li class="list-group-item head">อย่าลืมล้างมือให้สะอาด</li>
+            <li class="list-group-item">
+              มือของคนเราคือหนึ่งในตัวการแพร่กระจายเชื้อโรคที่สำคัญ
+              คุณจึงควรล้างมือด้วยสบู่และน้ำสะอาดทุกครั้งหลังเข้าห้องน้ำ
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style="height: 23vh;"></div>
+    </div>
+
+    <img src="assets/room5.png" id="room5" alt="">
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 0);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'accident.html';
+      },
+      nextPage() {
+        window.location.href = '#';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

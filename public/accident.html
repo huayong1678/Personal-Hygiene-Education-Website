@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Accidents | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="bubbleAnimation.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/accident.css">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo_loader.png" alt="">
+  </div>
+
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <!-- <div class="rellax" data-rellax-speed="8">
+      <img id="bath1" src="assets/bath1.png" />
+    </div> -->
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <!-- <div class="siren7 rellax" data-rellax-speed="10"></div> -->
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">
+          <p>Watch Out! Accident</p>
+        </div>
+        <div id="two" class="col-12 text-muted rellax" data-rellax-speed="4">เหตุที่เกิดขึ้นโดยไม่ได้คาดฝัน
+          รอวันที่จะเกิด</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll" id="accident-content">
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">วิธีป้องกันการเกิด</div>
+        <div class="col-12 text-center display-4">อุบัติเหตุทางรถยนต์</div>
+      </div>
+      <div class="row p-0 mt-3 m-0 column justify-content-center column">
+        <div class="col-12 col-xl-5 px-2 py-3 m-0 mr-3 mr-xl-0 d-flex">
+          <div class="col-12 col-sm-2 m-0 p-0 mx-2">
+            <img alt="Do not use the phone" src="assets/accident1.png" title="Do not use the phone" />
+          </div>
+          <div class="col-12 col-sm-10 m-0 ml-2 p-2 mx-2">
+            <h3>ไม่ใช้โทรศัพท์ขณะขับรถ</h3>
+            <p>หนึ่งสาเหตุสำคัญของอุบัติเหตุบนท้องถนน หากมีความจำเป็นต้องทำการติดต่อ
+              แนะนำให้ใช้หูฟังหรืออุปกรณ์อื่นๆช่วย</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 px-2 py-3 m-0 mr-3 mr-xl-0 d-flex">
+          <div class="col-12 col-sm-2 m-0 p-0 mx-2">
+            <img alt="Do not use the phone" src="assets/accident2.png" title="Do not use the phone" />
+          </div>
+          <div class="col-12 col-sm-10 m-0 ml-2 p-2 mx-2">
+            <h3>คาดเข็มขัดนิรภัย</h3>
+            <p>การใช้เข็มขัดนิรภัยก็ไม่มีการตรวจจับเข้มงวดเช่นกัน
+              แถมแท็กซี่หลายคันไม่มีแม้กระทั่งเข็มขัดนิรภัยในเบาะหลัง ถ้าคุณเดินทางไกลและไม่รีบนัก
+              ก็ควรจะรอคันใหม่ที่มีเข็มขัดนิรภัย ควรคาดเข็มขัดนิรภัยเสมอและใช้ที่นั่งเด็กหากมีเด็กเล็ก</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 px-2 py-3 m-0 mr-3 mr-xl-0 d-flex">
+          <div class="col-12 col-sm-2 m-0 p-0 mx-2">
+            <img alt="Do not use the phone" src="assets/accident3.png" title="Do not use the phone" />
+          </div>
+          <div class="col-12 col-sm-10 m-0 ml-2 p-2 mx-2">
+            <h3>ไม่ขับรถเร็วเกินไป</h3>
+            <p>อย่าเห็นแก่ธุระสำคัญ หรือแม้แต่ความสนุก จนลืมนึกถึงความปลอดภัยของตนเองและเพื่อนร่วมทาง</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 px-2 py-3 m-0 mr-3 mr-xl-0 d-flex">
+          <div class="col-12 col-sm-2 m-0 p-0 mx-2">
+            <img alt="Do not use the phone" src="assets/accident4.png" title="Do not use the phone" />
+          </div>
+          <div class="col-12 col-sm-10 m-0 ml-2 p-2 mx-2">
+            <h3>นำรถเข้าศูนย์</h3>
+            <p>รถยนต์บนท้องถนนในประเทศไทยส่วนมากใช้งานกันมานานแล้ว
+              ควรนำรถเข้าศูนย์เพื่อเช็คระยะและความปลอดภัยก่อนขับระยะทางไกล เช็คลมยางให้ดีก่อนออกเดินทาง</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 px-2 py-3 m-0 mr-3 mr-xl-0 d-flex">
+          <div class="col-12 col-sm-2 m-0 p-0 mx-2">
+            <img alt="Do not use the phone" src="assets/accident5.png" title="Do not use the phone" />
+          </div>
+          <div class="col-12 col-sm-10 m-0 ml-2 p-2 mx-2">
+            <h3>เปิดไฟให้สัญญาณ</h3>
+            <p>การส่งสัญญาณไฟขณะที่เบรก หรือเลี้ยว เพื่อสื่อสารกับผู้ขับขี่คนอื่นๆ
+              เป็นสิ่งที่ควรทำเพื่อความปลอดภัยบนท้องถนน</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 px-2 py-3 m-0 mr-3 mr-xl-0 d-flex">
+          <div class="col-12 col-sm-2 m-0 p-0 mx-2">
+            <img alt="Do not use the phone" src="assets/accident6.png" title="Do not use the phone" />
+          </div>
+          <div class="col-12 col-sm-10 m-0 ml-2 p-2 mx-2">
+            <h3>ขับรถเวลาที่เหมาะสม</h3>
+            <p>ถ้าเป็นไปได้ คุณควรหลีกเลี่ยงการขับขี่ในตอนกลางคืนหรือตอนฝนตก แม้จะไม่ได้เกิดอุบัติเหตุเสมอไป
+              แต่จากสถิติการเกิดอุบัติเหตุในประเทศไทย ก็มักจะเกิดในช่วงเวลานี้ หากจำเป็นต้องออกข้างนอก
+              ก็ควรขับรถอย่างระมัดระวัง</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 px-2 py-3 m-0 mr-3 mr-xl-0 d-flex">
+          <div class="col-12 col-sm-2 m-0 p-0 mx-2">
+            <img alt="Do not use the phone" src="assets/accident7.png" title="Do not use the phone" />
+          </div>
+          <div class="col-12 col-sm-10 m-0 ml-2 p-2 mx-2">
+            <h3>เมาไม่ขับ</h3>
+            <p>เพื่อสวัสดิภาพของคุณเอง ห้ามดื่มแล้วขับรถเด็ดขาด ยังมีอีกหลายวิธีที่ดีกว่าที่คุณสามารถทำได้ เช่น
+              ให้เพื่อนช่วยขับรถ หรือใช้บริการแท็กซี่</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 px-2 py-3 m-0 mr-3 mr-xl-0 d-flex"></div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">การเกิดอุบัติเหตุใน</div>
+        <div class="col-12 text-center display-4">ผู้สูงอายุ</div>
+        <div class="col-12 text-content">หากจะกล่าวถึงผู้สูงอายุ
+          หลายท่านอาจจะยังคงไม่ทราบว่าอายุเท่าใดจึงถือว่าเข้าข่ายเป็นผู้สูงอายุ อันที่จริงแล้ว
+          ผู้สูงอายุก็คือบุคคลที่มีอายุตั้งแต่ 60 - 65 ปีขึ้นไป
+          โดยประเทศที่พัฒนาแล้วส่วนใหญ่สัดส่วนของผู้สูงอายุจะมีมากกว่าประเทศที่กำลังพัฒนาและประเทศไทยก็กำลังก้าวเข้าสู่สังคมผู้สูงอายุคือ
+          มีประชากรอายุ 60 ปีขึ้นไปรวมทั้งเพศชายและหญิงมากกว่า 10%
+          ของประชากรทั้งประเทศและจะเข้าสู่สังคมผู้สูงอายุโดยสมบูรณ์คือ เมื่อมีประชากรอายุ 65 ปี ขึ้นไปมากกว่า 20%
+          ของประเทศซึ่งได้มีการประมาณการไว้ว่าจะอยู่ในช่วงพ.ศ. 2567-2568</div>
+      </div>
+      <div style="height: 25vh;"></div>
+    </div>
+
+    <img src="assets/elder.png" id="elder" alt="">
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'aphthousUlcers.html';
+      },
+      nextPage() {
+        window.location.href = 'cleaningRoom.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

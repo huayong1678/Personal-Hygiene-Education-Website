@@ -1,0 +1,58 @@
+#clean-content * {
+    font-family: 'Prompt';
+
+    .list-group-item {
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+
+    .head {
+        font-weight: bold;
+        background-color: rgb(250, 250, 250);
+    }
+}
+
+#room1 {
+    position: absolute;
+    transform: rotate(35deg);
+    width: 30vw;
+    left: -13%;
+    top: 0%;
+    z-index: -2;
+}
+
+#room2 {
+    position: absolute;
+    transform: rotate(-35deg);
+    width: 30vw;
+    right: -13%;
+    top: 60vh;
+    z-index: -2;
+}
+
+#room3 {
+    position: absolute;
+    transform: rotate(35deg);
+    width: 30vw;
+    left: -13%;
+    top: 200vh;
+    z-index: -2;
+}
+
+#room4 {
+    position: absolute;
+    transform: rotate(-35deg);
+    width: 30vw;
+    right: -13%;
+    top: calc(300vh + 300px);
+    z-index: -2;
+}
+
+#room5 {
+    position: absolute;
+    transform: rotate(23.5deg);
+    width: 45vw;
+    left: -20%;
+    bottom: -1%;
+    z-index: -2;
+}

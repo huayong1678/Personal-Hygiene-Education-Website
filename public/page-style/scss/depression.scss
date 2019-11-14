@@ -11,4 +11,17 @@
         background-color: rgb(255, 254, 249);
         filter: drop-shadow(2px 2px 1px rgba(34, 34, 34, 0.11));
     }
+
+    .diagnosis {
+        font-family: 'Inconsolata';
+        height: auto;
+        min-height: 25vh;
+        small {
+            font-size: 80%;
+        }
+        div {
+            font-size: 120%;
+            font-weight: 600;
+        }
+    }
 }
