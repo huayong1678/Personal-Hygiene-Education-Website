@@ -51,7 +51,73 @@
     </nav>
 
     <!-- Option Bar -->
-    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]">
+      <div class="container-fluid">
+        <h4>Table of contents</h4>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" href="index.html" role="button">Home</a>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse"
+          role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Cleaning</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse">
+              <ul>
+                <li><a class="bars-links text-muted" href="oralHealth.html">Oral Health</a></li>
+                <li><a class="bars-links text-muted" href="handWash.html">Washing Hand</a></li>
+                <li><a class="bars-links text-muted" href="bathing.html">Bathing</a></li>
+                <li><a class="bars-links text-muted" href="cleaningRoom.html">Cleaning Room</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse1"
+          role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Consuming</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse1">
+              <ul>
+                <li><a class="bars-links text-muted" href="food.html">Food</a></li>
+                <li><a class="bars-links text-muted" href="smoking.html">Smoking</a></li>
+                <li><a class="bars-links text-muted" href="caffeine.html">Caffeine</a></li>
+                <li><a class="bars-links text-muted" href="sodium.html">Sodium</a></li>
+                <li><a class="bars-links text-muted" href="drinkingWater.html">Drinking Water</a></li>
+                <li><a class="bars-links text-muted" href="alcohol.html">Drinking Alcohol</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse2"
+          role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Daily-life Disease & Accident</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse2">
+              <ul>
+                <li><a class="bars-links text-muted" href="officeSyndrome.html">Office Syndrome</a></li>
+                <li><a class="bars-links text-muted" href="depression.html">Depression</a></li>
+                <li><a class="bars-links text-muted" href="selfDefend.html">Self Defend</a></li>
+                <li><a class="bars-links text-muted" href="aphthousUlcers.html">Aphthous Ulcers</a></li>
+                <li><a class="bars-links text-muted" href="accident.html">Accident</a></li>
+                <li><a class="bars-links text-muted" href="cancer.html">Cancer</a></li>
+                <li><a class="bars-links text-muted" href="sweet.html">Diabetes Mellitus</a></li>
+                <li><a class="bars-links text-muted" href="headache.html">Migraine</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse3"
+          role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Environment</a>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="contentCollapse3">
+              <ul>
+                <li><a class="bars-links text-muted" href="sleep.html">Sleeping</a></li>
+                <li><a class="bars-links text-muted" href="particulate.html">PM 2.5</a></li>
+                <li><a class="bars-links text-muted" href="sunlight.html">Sunlight</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Title Decor. -->
     <div class="rellax" data-rellax-speed="8">
@@ -162,8 +228,8 @@
 
       <!-- Toasts -->
       <div aria-live="polite" aria-atomic="true" class="row justify-content-center">
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -180,8 +246,8 @@
             ระดับพลังงาน และกระบวนการคิดทั่วไป เป็นต้น
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -198,8 +264,8 @@
             แต่คาเฟอีนอาจไม่เพิ่มสมรรถภาพทางร่างกายในกรณีที่ต้องใช้แรงมากในระยะเวลาสั้น ๆ อย่างการยกของหรือการวิ่งเร็ว
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -215,8 +281,8 @@
             อย่างไรก็ตาม มีความเป็นไปได้ว่าประสิทธิภาพนี้จะลดลงในผู้ที่บริโภคคาเฟอีนในระยะยาว
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -231,8 +297,8 @@
             แพทย์ยังอาจใช้คาเฟอีนกับเด็กทารกที่คลอดก่อนกำหนดที่มีปัญหาด้านการหายใจได้ด้วย
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -249,8 +315,8 @@
             รวมทั้งป้องกันอาการปวดหัวหลังฉีดยาชาเข้าทางช่องเหนือไขสันหลัง เป็นต้น
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -265,8 +331,8 @@
             มีงานวิจัยบางส่วนที่เผยว่า การบริโภคคาเฟอีนอาจเพิ่มความเสี่ยงต่อโรคซึมเศร้าในเด็กได้เช่นกัน
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -281,8 +347,8 @@
             คาเฟอีนอาจมีส่วนช่วยกระตุ้นการหดตัวของถุงน้ำดีและการไหลเวียนของน้ำดี ซึ่งอาจช่วยลดการเกิดนิ่วได้อีกด้วย
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -300,8 +366,8 @@
             2 อยู่แล้วได้
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -317,8 +383,8 @@
             จากการศึกษาไม่พบว่าการบริโภคคาเฟอีนจะทำให้ความเสี่ยงต่อโรคพาร์กินสันลดลงได้ในผู้ที่สูบบุหรี่
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -333,8 +399,8 @@
             และบางงานวิจัยยังบอกด้วยว่าสารคาเฟอีนอาจช่วยลดความเสี่ยงต่อโรคมะเร็งตับได้ประมาณ 40 เปอร์เซ็นต์
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -362,8 +428,8 @@
 
       <!-- Toasts -->
       <div aria-live="polite" aria-atomic="true" class="row justify-content-center">
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -378,8 +444,8 @@
             อาจต้องใช้เวลานานขึ้นกว่าจะนอนหลับ และยังอาจทำให้ระยะเวลาและคุณภาพการนอนลดลงได้อีกด้วย โดยเฉพาะในผู้สูงอายุ
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -395,8 +461,8 @@
             ซึ่งผลกระทบที่เกิดขึ้นอาจแตกต่างกันออกไปในแต่ละบุคคล
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -412,8 +478,8 @@
             แต่ก็อาจทำให้ร่างกายรู้สึกเมื่อยล้ามากกว่าปกติในวันต่อมาได้
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -428,8 +494,8 @@
             หรือมีภาวะติดคาเฟอีนอยู่แล้วหยุดบริโภคทันที อาจทำให้เกิดความผิดปกติขึ้นในร่างกายได้
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -445,8 +511,8 @@
             แต่การดื่มคาเฟอีนในปริมาณมากอาจเกี่ยวข้องกับการเกิดภาวะกล้ามเนื้อสลายได้
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -462,8 +528,8 @@
             การที่ความดันโลหิตเพิ่มสูงขึ้นนั้น อาจเพิ่มความเสี่ยงต่อโรคหัวใจและโรคหลอดเลือดสมองได้เช่นกัน
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -479,8 +545,8 @@
             อาจทำให้ปัสสาวะมากและบ่อยขึ้น
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>
@@ -495,8 +561,8 @@
             หรืออาจทำให้แท้งลูกได้
           </div>
         </div>
-        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false"
-          data-delay="700">
+        <div class="toast col-12 col-md-4 mx-2 my-4" role="alert" aria-live="assertive" aria-atomic="true"
+          data-autohide="false" data-delay="700">
           <div class="toast-header bg-transparent">
             <img src="assets/logo_loader.png" class="rounded logo-size mr-2" alt="...">
             <strong class="mr-auto">Caffeine | Personal Health</strong>

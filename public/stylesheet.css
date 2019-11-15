@@ -325,7 +325,6 @@ body {
 #one {
   /* position: relative;
     top: 50vh; */
-  color: #1f1f1f;
   font-size: 5rem;
   /* font-weight: bold; */
   text-align: center;
@@ -363,7 +362,6 @@ body {
 
 #bars {
   background-color: #fff;
-  opacity: 0.8;
   height: 100vh;
   padding-top: 75px;
   padding-left: 50px;
@@ -371,25 +369,33 @@ body {
 }
 
 .slide {
+  margin: 0;
+  overflow-y: scroll;
   transform: translateX(-40vw);
   transition: 300ms ease;
   width: 25vw;
   position: fixed;
   z-index: 900;
+  top: 0;
   -webkit-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 3vh;
 }
 
 .slided {
+  margin: 0;
+  overflow-y: scroll;
   transform: translateX(0px);
   transition: 300ms ease;
   width: 25vw;
   position: fixed;
+  top: 0;
   z-index: 900;
   -webkit-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 0px 2px -1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 3vh;
 }
 
 .card-hover {
