@@ -588,3 +588,63 @@ body {
 .list-group {
   font-size: 1.1rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .slide {
+    font-size: 120%;
+    width: 100vw;
+    transform: translateX(-100vw);
+    text-align: center
+  }
+
+  .slide>.pl-3 {
+    padding: 0%;
+    color: #1f1f1f;
+  }
+
+  .slided>.pl-3 {
+    padding: 0%;
+    color: #1f1f1f;
+
+  }
+
+  .slide>.col {
+    padding: 0;
+  }
+
+  .slided>.col {
+    padding: 0;
+  }
+
+  .slide>h4 {
+    font-size: 120%;
+  }
+
+  .slide>a {
+    font-size: 120%;
+    font-weight: 600;
+  }
+
+  .slided {
+    font-size: 120%;
+    width: 100vw;
+    text-align: center;
+    transform: translateX(0vw);
+  }
+
+  li {
+    font-weight: 400;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-inline-start: 0px;
+  }
+
+  #bars {
+    text-align: center;
+    height: auto;
+  }
+
+}
