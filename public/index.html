@@ -46,16 +46,16 @@
     </nav>
 
     <!-- Option Bar -->
-    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]">
+    <div class="slide ul-no-bullet" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]">
       <div class="container-fluid">
         <h4>Table of contents</h4>
         <a class="col-12 h6 pl-3 py-1 card-links text-muted" href="#" role="button">Home</a>
-        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse" role="button"
-          aria-expanded="false" aria-controls="multiCollapseExample1">Cleaning</a>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse"
+          role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Cleaning</a>
         <div class="row">
           <div class="col">
             <div class="collapse multi-collapse" id="contentCollapse">
-              <ul>
+              <ul class="ul-hide">
                 <li><a class="bars-links text-muted" href="oralHealth.html">Oral Health</a></li>
                 <li><a class="bars-links text-muted" href="handWash.html">Washing Hand</a></li>
                 <li><a class="bars-links text-muted" href="bathing.html">Bathing</a></li>
@@ -64,12 +64,12 @@
             </div>
           </div>
         </div>
-        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse1" role="button"
-          aria-expanded="false" aria-controls="multiCollapseExample1">Consuming</a>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse1"
+          role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Consuming</a>
         <div class="row">
           <div class="col">
             <div class="collapse multi-collapse" id="contentCollapse1">
-              <ul>
+              <ul class="ul-hide">
                 <li><a class="bars-links text-muted" href="food.html">Food</a></li>
                 <li><a class="bars-links text-muted" href="smoking.html">Smoking</a></li>
                 <li><a class="bars-links text-muted" href="caffeine.html">Caffeine</a></li>
@@ -80,12 +80,12 @@
             </div>
           </div>
         </div>
-        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse2" role="button"
-          aria-expanded="false" aria-controls="multiCollapseExample1">Daily-life Disease & Accident</a>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse2"
+          role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Daily-life Disease & Accident</a>
         <div class="row">
           <div class="col">
             <div class="collapse multi-collapse" id="contentCollapse2">
-              <ul>
+              <ul class="ul-hide">
                 <li><a class="bars-links text-muted" href="officeSyndrome.html">Office Syndrome</a></li>
                 <li><a class="bars-links text-muted" href="depression.html">Depression</a></li>
                 <li><a class="bars-links text-muted" href="selfDefend.html">Self Defend</a></li>
@@ -98,12 +98,12 @@
             </div>
           </div>
         </div>
-        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse3" role="button"
-          aria-expanded="false" aria-controls="multiCollapseExample1">Environment</a>
+        <a class="col-12 h6 pl-3 py-1 card-links text-muted" data-toggle="collapse" href="#contentCollapse3"
+          role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Environment</a>
         <div class="row">
           <div class="col">
             <div class="collapse multi-collapse" id="contentCollapse3">
-              <ul>
+              <ul class="ul-hide">
                 <li><a class="bars-links text-muted" href="sleep.html">Sleeping</a></li>
                 <li><a class="bars-links text-muted" href="particulate.html">PM 2.5</a></li>
                 <li><a class="bars-links text-muted" href="sunlight.html">Sunlight</a></li>
@@ -442,6 +442,70 @@
                 <h6 class="card-subtitle pb-2 text-muted">ปวดหัวจังเป็นไรเนี่ย</h6>
                 <p class="card-text">รู้หรือไม่? ผู้ป่วยโรคไมเกรนกว่า 80% จะมีอาการไวต่อแสง หรือที่เรียกอีกชื่อว่า
                   "ตาไม่สู้แสง" (Photophobia)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="text-center display-4 pb-3">Members</div>
+      <div class="row justiify-content-center">
+        <div class="col-md-4 px-6 py-2 d-flex flex-fill">
+          <a href="#" class="card-links">
+            <div class="card card-hover h-100" style="width: 100%;">
+              <div class="card-body">
+                <img src="assets/pluem.jpg" class="card-img-top rounded pb-3" alt="...">
+                <h5 class="card-title pb-1">ปรเมศวร์ จริยะยรรยง</h5>
+                <h6 class="card-subtitle pb-2 text-muted">61070115</h6>
+                <p class="card-text">Developer | Illustrator | Designer</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 px-6 py-2 d-flex flex-fill">
+          <a href="#" class="card-links">
+            <div class="card card-hover h-100" style="width: 100%;">
+              <div class="card-body">
+                <img src="assets/fluke.png" class="card-img-top rounded pb-3" alt="...">
+                <h5 class="card-title pb-1">ปรมินทร์ สุนทรเสณี</h5>
+                <h6 class="card-subtitle pb-2 text-muted">61070114</h6>
+                <p class="card-text">Editor | Designer</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 px-6 py-2 d-flex flex-fill">
+          <a href="#" class="card-links">
+            <div class="card card-hover h-100" style="width: 100%;">
+              <div class="card-body">
+                <img src="assets/mhee.jpg" class="card-img-top rounded pb-3" alt="...">
+                <h5 class="card-title pb-1">ธนกฤต แซ่ลี้</h5>
+                <h6 class="card-subtitle pb-2 text-muted">61070068</h6>
+                <p class="card-text">Developer | Editor</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 px-6 py-2 d-flex flex-fill">
+          <a href="#" class="card-links">
+            <div class="card card-hover h-100" style="width: 100%;">
+              <div class="card-body">
+                <img src="assets/plug.jpg" class="card-img-top rounded pb-3" alt="...">
+                <h5 class="card-title pb-1">ธัญเทพ อินรุ่ง </h5>
+                  <h6 class="card-subtitle pb-2 text-muted">61070086</h6>
+                  <p class="card-text">Editor | Illustrator</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 px-6 py-2 d-flex flex-fill">
+          <a href="#" class="card-links">
+            <div class="card card-hover h-100" style="width: 100%;">
+              <div class="card-body">
+                <img src="assets/ball.jpg" class="card-img-top rounded pb-3" alt="...">
+                <h5 class="card-title pb-1">ธีรพงษ์ นันทะพันธ์</h5>
+                  <h6 class="card-subtitle pb-2 text-muted">61070090</h6>
+                  <p class="card-text">Editor | Designer</p>
               </div>
             </div>
           </a>
