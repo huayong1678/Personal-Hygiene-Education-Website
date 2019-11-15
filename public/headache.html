@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Migraine | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/headache.css">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo_loader.png" alt="">
+  </div>
+
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <!-- <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button> -->
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <!-- <div class="rellax" data-rellax-speed="8">
+      <img src="assets/sunlight1.png" id="sunlight1" alt="">
+    </div> -->
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center rellax" data-rellax-speed="10">
+      </div>
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <!-- <div class="siren7 rellax" data-rellax-speed="10"></div> -->
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Migraine</div>
+        <div id="two" class="col-12 rellax" data-rellax-speed="4">
+          Feel like my head gonna explode.</div>
+      </div>
+
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll" id="headache-content">
+      <div class="row">
+        <div class="col-12 text-header">1 ในโรคยอดฮิตของวัยทำงาน</div>
+        <div class="col-12 py-4 text-content">
+          "โรคไมเกรน" เป็นเทรนด์โรคทางสมองที่กำลังมาแรงในกลุ่มคนทำงานที่เผชิญกับสิ่งกระตุ้น
+          เช่น ความเครียดสูง การนอนผิดเวลา การเดินทางที่ต้องเผชิญกับสภาวะอากาศแปรปรวน
+          ในทุกสังคมทั่วโลก โดยจะพบผู้ป่วยอยู่ในช่วงอายุระหว่าง 25 – 30 ปี
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-header">อาการของโรคไมเกรน</div>
+        <div class="col-12 py-4 text-content">
+          ผู้ป่วยจะมีอาการปวดศีรษะด้านใดด้านหนึ่ง โดยมีอาการปวดแบบตุบ ๆ ตามจังหวะหัวใจเต้น
+          มักจะมาพร้อมกับอาการคลื่นไส้อาเจียน
+          และผู้ป่วยบางรายอาจไวต่อแสงหรือเสียงดัง<br>ซึ่งอาการปวดศีรษะอาจยาวนาน 4-72 ชั่วโมง
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-header">การลดอาการปวด</div>
+        <div class="col-8 py-4">
+          <ul class="list-group">
+            <li class="list-group-item ml-5">
+              นอนหลับให้เพียงพอประมาณ 6 ถึง 8 ชั่วโมงต่อวัน</li>
+            <li class="list-group-item ml-5">
+              ออกกำลังกายอย่างสม่ำเสมอ</li>
+            <li class="list-group-item ml-5">
+              หากผู้ป่วยมีอาการมากกว่าปวดศีรษะจนผิดสังเกต พบแพทย์จะดีทึ่สุด</li>
+          </ul>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center display-4">การดูแลตนเองของผู้ป่วย</div>
+        <div class="col-8 py-4">
+          <ul class="list-group text-center">
+            <li class="list-group-item">
+              สังเกตและหลีกเลี่ยงสิ่งกระตุ้น ที่ทำให้เกิดอาการปวดศีรษะ</li>
+            <li class="list-group-item">
+              นอนพักผ่อนให้เพียงพอ และตรงตามเวลาทุกวัน</li>
+            <li class="list-group-item">
+              ออกกำลังกายอย่างสม่ำเสมอ ไม่หักโหมจนเกินไปง</li>
+            <li class="list-group-item">
+              งดสูบบุหรี่ เนื่องจากการสูบบุหรี่จะเพิ่มความเสี่ยงจากโรคหลอดเลือดสมองตีบ
+            </li>
+            <li class="list-group-item">
+              งดเครื่องดื่มที่มีคาเฟอีน เช่น กาแฟ, ชา, น้ำอัดลม, เครื่องดื่มชูกำลัง เป็นต้น</li>
+          </ul>
+        </div>
+      </div>
+      <div style="height:10vh;"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'sunlight.html';
+      },
+      nextPage() {
+        window.location.href = '#';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

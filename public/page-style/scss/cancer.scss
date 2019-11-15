@@ -1,0 +1,113 @@
+#cancer-content * {
+  font-family: 'Prompt';
+
+  li {
+    font-weight: 200;
+  }
+}
+
+#one {
+  color: rgb(95, 95, 95);
+}
+
+#two {
+  color: rgb(159, 113, 187);
+  filter: drop-shadow(2px 2px 2px rgba(34, 34, 34, 0.568));
+}
+
+#cancer1 {
+  position: absolute;
+  width: 30vw;
+  max-width: 1000px;
+}
+
+#cancer2 {
+  position: absolute;
+  transform: rotate(125deg);
+  width: 15vw;
+  top: -10vh;
+}
+
+#cancer3 {
+  position: absolute;
+  transform: rotate(-35deg);
+  width: 17.5vw;
+  right: -5vh;
+  top: 60vh;
+}
+
+#cancer4 {
+  position: absolute;
+  transform: rotate(100deg) scaleX(-1);
+  width: 20vw;
+  left: -3vh;
+  top: calc(200vh - 20vw);
+}
+
+#cancer5 {
+  position: absolute;
+  transform: rotate(-25deg) scaleX(-1);
+  width: 25vw;
+  right: -5vh;
+  top: 310vh;
+}
+
+#cancer6 {
+  position: absolute;
+  transform: rotate(25deg) scaleX(-1);
+  width: 30vw;
+  left: calc(-40vh + 10vw);
+  top: 500vh;
+}
+
+.siren7 {
+  width: 200px;
+  height: 60px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: radial-gradient(circle, rgba(57, 50, 237, 0.6460959383753502) 55%, rgba(54, 63, 251, 1) 100%);
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+
+  -webkit-animation-name: strobe7;
+  -webkit-animation-duration: .2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transition-timing-function: linear;
+}
+
+.siren8 {
+  width: 200px;
+  height: 60px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: radial-gradient(circle, rgba(237, 50, 50, 0.6460959383753502) 55%, rgba(251, 54, 54, 1) 100%);
+  filter: drop-shadow(1px 1px 1px rgba(34, 34, 34, 0.11));
+
+  -webkit-animation-name: strobe7b;
+  -webkit-animation-delay: .1s;
+  -webkit-animation-duration: .2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transition-timing-function: linear;
+}
+
+/*learned I cant animate from inset shadow to non inset shadow*/
+@-webkit-keyframes strobe7 {
+  from {
+    box-shadow: 0px 0px 100px 10px #000;
+  }
+
+  to {
+    box-shadow: 0px 0px 100px 10px #55f;
+    background-color: #55f;
+  }
+}
+
+@-webkit-keyframes strobe7b {
+  from {
+    box-shadow: 0px 0px 100px 10px #000;
+  }
+
+  to {
+    box-shadow: 0px 0px 100px 10px #f55;
+    background-color: #f55;
+  }
+}

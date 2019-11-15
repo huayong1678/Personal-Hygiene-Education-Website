@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sunlight | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/sunlight.css">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo_loader.png" alt="">
+  </div>
+
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Banner -->
+    <h1 class="banner" id="banner1">
+      <span class="flag"></span>
+      <span class="flag">P</span>
+      <span class="flag">E</span>
+      <span class="flag">R</span>
+      <span class="flag">S</span>
+      <span class="flag">O</span>
+      <span class="flag">N</span>
+      <span class="flag">A</span>
+      <span class="flag">L</span>
+      <span class="flag"></span>
+      <span class="string">
+        <svg width="800" height="230" viewBox="0 0 800 230">
+          <path fill="none" d="M0,0 C100,100 700,200 800,100" />
+        </svg>
+      </span>
+    </h1>
+
+    <h1 class="banner" id="banner2">
+      <span class="flag"></span>
+      <span class="flag"></span>
+      <span class="flag">H</span>
+      <span class="flag">E</span>
+      <span class="flag">A</span>
+      <span class="flag">L</span>
+      <span class="flag">T</span>
+      <span class="flag">H</span>
+      <span class="flag"></span>
+      <span class="flag"></span>
+      <span class="string">
+        <svg width="800" height="230" viewBox="0 0 800 230">
+          <path fill="none" d="M0,0 C100,100 700,200 800,100" />
+        </svg>
+      </span>
+    </h1>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img src="assets/sunlight1.png" id="sunlight1" alt="">
+    </div>
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center rellax" data-rellax-speed="10">
+      </div>
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <!-- <div class="siren7 rellax" data-rellax-speed="10"></div> -->
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Sunlight</div>
+        <div id="two" class="col-12 rellax" data-rellax-speed="4">
+          Thailand's winter only lasts log 3 days.</div>
+      </div>
+
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll" id="sun-content">
+      <div class="row">
+        <div class="col-12 text-header">ความร้อนในประเทศนี้มันเหลือเกินจริงๆ</div>
+        <div class="col-12 py-4 text-content">
+          ประเทศไทยเป็นประเทศที่มีสภาพอากาศร้อน โดยเฉพาะในช่วงประมาณกลางเดือนกุมพาพันธ์ไปจนถึงกลางเดือนพฤษภาคม
+          แต่ก็อาจมีอากาศร้อนตลอดทั้งปีได้เช่นกัน ในปี 2019 แม้จะเป็นฤดูหนาวแต่แดดก็แรงจนผิวไหม้ได้เลยทีเดียว
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-header">อันตรายจากแดด</div>
+        <div class="col-8 py-4">
+          <ul class="list-group">
+            <li class="list-group-item text-center">
+              ผิวไหม้ แสบ ลอก</li>
+            <li class="list-group-item text-center">
+              ฝ้า กระ จุดด่างดำ และริ้วรอย</li>
+            <li class="list-group-item text-center">
+              มะเร็งผิวหนัง</li>
+            <li class="list-group-item text-center">
+              ต้อลม ต้อเนื้อ</li>
+            <li class="list-group-item text-center">
+              ฮีทสโตรก</li>
+          </ul>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-center display-4">ฮีทสโตรก</div>
+        <div class="col-12 py-4 text-content">อาการฮีทสโตรก (heat stroke) หรือโรคลมร้อน
+          เป็นภาวะวิกฤตที่ร่างกายไม่สามารถปรับตัวหรือควบคุมระดับความร้อนภายในร่างกาย
+          หากไม่สามารถระบายความร้อนได้ต่อเนื่อง จะทำให้อุณหภูมิในร่างกายสูงขึ้นเรื่อยๆ ส่งผลให้เกิดอาการปวดศีรษะหน้ามืด
+          เพ้อชัก ไม่รู้สึกตัว หายใจเร็ว หัวใจเต้นผิดจังหวะ ช็อก หากไม่ได้รับการรักษาอย่างทันท่วงที อาจทำให้เสียชีวิตได้
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center display-4">การป้องกันอันตรายจากแดดสุดโหด</div>
+        <div class="col-8 py-4">
+          <ul class="list-group text-center">
+            <li class="list-group-item">
+              สวมเครื่องแต่งกายให้มิดชิด</li>
+            <li class="list-group-item">
+              ทาครีมกันแดดที่ป้องกันทั้งรังสี UVA และ UVB(SPF30++)</li>
+            <li class="list-group-item">
+              ระมัดระวังในการทานยา เพราะยาบางตัวทำให้ผิวไวต่อแสง</li>
+        </div>
+        <div class="col-8 mt-1">
+          <small class="text-danger">***หากผิวหนังสัมผัสแดดโดยไม่ได้รับการป้องกันรังสี UV อาจทำให้ผิวไหม้แดด
+            และสูญเสียเส้นใยอีลาสติน
+            จนทำให้ผิวหนังหย่อนยาน ช้ำ หรือฉีกขาดได้ง่าย ซึ่งอาจต้องใช้เวลานานในการรักษา</small>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-content">ของฮีทสโตรก</div>
+        <div class="col-12 text-center display-4">สัญญาณสำคัญ</div>
+        <div class="col-8 py-4">
+          <ul class="list-group">
+            <li class="list-group-item text-center">
+              ไม่มีเหงื่อออก แม้จะอากาศร้อน</li>
+            <li class="list-group-item text-center">
+              ตัวร้อนจัดขึ้นเรื่อยๆ</li>
+            <li class="list-group-item text-center">
+              รู้สึกกระหายน้ำมาก</li>
+            <li class="list-group-item text-center">
+              วิงเวียน ปวดศีรษะ มึนงง</li>
+            <li class="list-group-item text-center">
+              คลื่นไส้</li>
+            <li class="list-group-item text-center">
+              หายใจเร็ว อาเจียน</li>
+          </ul>
+        </div>
+      </div>
+      <div style="height:10vh;"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  const strands = Array.from(document.querySelectorAll('.banner'));
+  const duration = 5450;
+  const supportsOffsetPath =
+    window.CSS &&
+    CSS.supports &&
+    CSS.supports('offset-path', "path('M0,0 L1,1')");
+  const rxRandomNegative = -20;
+  const rxRandomNegativeBase = -30;
+  const rxRandomPositive = 40;
+  const rxRandomPositiveBase = 30;
+
+
+  if (document.documentElement.animate) {
+    strands.forEach(animateStrands);
+  }
+
+
+  function animateStrands(strand) {
+    let flags = Array.from(strand.querySelectorAll('.flag'));
+    let strandPathDuration = Math.random() * (2 * duration) + duration;
+    let fromPath = "path('M0,0 C100,100 700,200 800,100')";
+    let toPath =
+      `path('M0,0 C${Math.random() * 20 + 80},${Math.random() * 20 + 80} ${Math.random() * -50 + 700},${Math.random() * 100} 800,100')`;
+
+    flags.forEach((flag, i) => {
+      flag.style.offsetDistance = `${80 + i * 740 / flags.length}px`;
+      animateWindRotate(flag);
+      animateWindCurve(flag, fromPath, toPath, strandPathDuration);
+    });
+
+    if (supportsOffsetPath) {
+      animateStringInWind(strand, fromPath, toPath, strandPathDuration);
+    }
+  }
+
+  function animateWindRotate(flag) {
+    flag.animate(getRandomizedFlagFrames(), {
+      duration: duration,
+      iterations: Infinity,
+      direction: 'alternate',
+      delay: 1000 * Math.random() - 1000
+    });
+  }
+
+  function animateWindCurve(flag, fromPath, toPath, strandPathDuration) {
+    flag.animate([{
+        offsetPath: fromPath
+      },
+      {
+        offsetPath: toPath
+      }
+    ], {
+      duration: strandPathDuration,
+      iterations: Infinity,
+      easing: 'ease-in-out',
+      direction: 'alternate'
+    });
+  }
+
+  function animateStringInWind(strand, fromPath, toPath, strandPathDuration) {
+    let stringy = strand.querySelector('.string path');
+    if (stringy) {
+      stringy.animate([{
+          d: fromPath
+        },
+        {
+          d: toPath
+        }
+      ], {
+        duration: strandPathDuration,
+        iterations: Infinity,
+        easing: 'ease-in-out',
+        direction: 'alternate'
+      });
+    }
+  }
+
+  function getRandomizedFlagFrames() {
+    let easing1 = `cubic-bezier(${Math.random() * .1 + .3},0,${Math.random() * .1 + .3},${Math.random() * .15 + .95})`;
+    let easing2 = `cubic-bezier(${Math.random() * .1 + .3},0,${Math.random() * .1 + .3},${Math.random() * .15 + .95})`
+    return [{
+      transform: 'rotateX(0deg)',
+      filter: 'grayscale(5%)'
+    }, {
+      transform: `rotateX(${Math.random() * rxRandomNegative + rxRandomNegativeBase}deg)`,
+      filter: 'grayscale(25%)', //shadows for when rotating away from you
+      easing: easing1
+    }, {
+      transform: `rotateX(${Math.random() * rxRandomPositive + rxRandomPositiveBase}deg)`,
+      filter: 'grayscale(0%)',
+      easing: easing1
+    }, {
+      transform: `rotateX(${Math.random() * rxRandomNegative + rxRandomNegativeBase}deg)`,
+      filter: 'grayscale(25%)',
+      easing: easing2
+    }, {
+      transform: `rotateX(${Math.random() * rxRandomPositive + rxRandomPositiveBase}deg)`,
+      filter: 'grayscale(0%)',
+      easing: easing2
+    }]
+  }
+</script>
+<script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'sweet.html';
+      },
+      nextPage() {
+        window.location.href = 'headache.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

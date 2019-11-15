@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cancer | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="stylesheet" href="bubbleAnimation.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/cancer.css">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo_loader.png" alt="">
+  </div>
+
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <div class="rellax" data-rellax-speed="8">
+      <img src="assets/cancer2.png" id="cancer2" alt="">
+      <img src="assets/cancer2.png" id="cancer3" alt="">
+      <img src="assets/cancer2.png" id="cancer4" alt="">
+      <img src="assets/cancer3.png" id="cancer5" alt="">
+      <img src="assets/cancer4.png" id="cancer6" alt="">
+
+
+
+    </div>
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center rellax" data-rellax-speed="10">
+        <!-- <img id="cancer1" src="assets/cancer1.png" /> -->
+      </div>
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <!-- <div class="siren7 rellax" data-rellax-speed="10"></div> -->
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Care yourself or Be CANCER</div>
+        <div id="two" class="col-12 rellax" data-rellax-speed="4">
+          - 4 กุมภาพันธ์ วันมะเร็งโลก -</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll" id="cancer-content">
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-content">มะเร็ง ชื่อของสิ่งที่นำพาความเศร้าโศกแก่มวลมนุษย์ เกิดขึ้นได้กับทุกเพศทุกวัย
+        </div>
+        <div class="col-12 text-center display-4">หนึ่งในสิ่งไม่อยากให้เกิดกับตัวคุณมากที่สุด</div>
+      </div>
+      <div class="separator"></div>
+      <div class="row">
+        <div class="col-12 text-center display-4">What is มะเร็ง</div>
+        <div class="col-12 py-4 text-content">
+          โรคมะเร็งคือ โรคซึ่งเกิดมีเซลล์ผิดปกติในร่างกาย และเซลล์เหล่านี้มีการเจริญเติบโตรวดเร็วเกินปกติ
+          ร่างกายควบคุมไม่ได้
+          ดังนั้นเซลล์เหล่านี้จึงเจริญลุกลามและแพร่กระจายได้ทั่วร่างกายส่งผลให้เซลล์ปกติของเนื้อเยื่อ/อวัยวะต่างๆ
+          เหล่านั้นล้มเหลวไม่สามารถทำงานได้ตามปกติ
+          เป็นสาเหตุให้เสียชีวิตในที่สุด ได้แก่ ปอด ตับ สมอง ไต กระดูก และไขกระดูก
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center display-4">อาการของโรคมะเร็ง</div>
+        <div class="col-8 card text-center px-0 mt-5">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              มีก้อนเนื้อโตเร็ว หรือ มีแผลเรื้อรัง ไม่หายภายใน 1 – 2 สัปดาห์</li>
+            <li class="list-group-item">
+              มีต่อมน้ำเหลืองโต คลำได้ มักจะแข็ง ไม่เจ็บ และโตขึ้นเรื่อยๆ</li>
+            <li class="list-group-item">
+              ไฝ ปาน หูด ที่โตเร็วผิดปกติ หรือ เป็นแผลแตก</li>
+            <li class="list-group-item">
+              หายใจ หรือ มีกลิ่นปากรุนแรงจากที่ไม่เคยเป็นมาก่อน
+            </li>
+            <li class="list-group-item">
+              เลือดกำเดาออกเรื้อรัง มักออกเพียงข้างเดียว (อาจออกทั้งสองข้างได้)</li>
+            <li class="list-group-item">
+              ไอเรื้อรัง หรือ ไอเป็นเลือด</li>
+            <li class="list-group-item">
+              มีเสมหะ น้ำลาย หรือ เสลดปนเลือดบ่อย</li>
+          </ul>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center mb-5">
+        <div class="siren7 m-0 p-0"></div>
+        <div class="siren8 m-0 p-0"></div>
+      </div>
+      <div class="row justify-content-center p-0 m-0">
+        <div class="col-12 text-center display-4">ระยะของมะเร็ง</div>
+        <div class="col-10 text-center mt-5 justify-content-center">
+          <ul class="list-group list-group-horizontal mt-2">
+            <li class="list-group-item col-2 col-lg-3 list-group-item-primary">ระยะที่ 1</li>
+            <li class="list-group-item col">ก้อนเนื้อมะเร็งมีขนาดเล็ก ยังไม่ลุกลาม</li>
+          </ul>
+          <ul class="list-group list-group-horizontal mt-2">
+            <li class="list-group-item col-2 col-lg-3 list-group-item-primary">ระยะที่ 2</li>
+            <li class="list-group-item col">ก้อนมะเร็งขนาดใหญ่ขึ้น เริ่มลุกลามภายในเนื้อเยื่อ/อวัยวะ</li>
+          </ul>
+          <ul class="list-group list-group-horizontal mt-2">
+            <li class="list-group-item col-2 col-lg-3 list-group-item-danger">ระยะที่ 3</li>
+            <li class="list-group-item col">ก้อนมะเร็งขนาดใหญ่ขึ้น
+              และลุกลามเข้าต่อมน้ำเหลืองที่อยู่ใกล้อวัยวะที่เป็นมะเร็ง
+            </li>
+          </ul>
+          <ul class="list-group list-group-horizontal mt-2">
+            <li class="list-group-item col-2 col-lg-3 list-group-item-danger">ระยะที่ 4</li>
+            <li class="list-group-item col">ก้อนมะเร็งขนาดโตมาก จนแพร่กระจายไปยังอวัยวะต่างๆ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row justify-content-center p-0 m-0">
+        <div class="col-12 text-center display-4">สัญญาณเสี่ยงมะเร็งมะเร็งมะเร็ง</div>
+        <div class="col-9 py-4">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              1. มีเลือดหรือสิ่งผิดปกติออกจากร่างกาย เช่น มีตกขาวมากเกินไป</li>
+            <li class="list-group-item">
+              2. มีก้อนหรือตุ่ม เกิดขึ้นที่ใดที่หนึ่งของร่างกายและก้อนนั้นโตเร็วผิดปกติ</li>
+            <li class="list-group-item">
+              3. มีแผลเรื้อรัง</li>
+            <li class="list-group-item">
+              4. มีการถ่ายอุจจาระ ปัสสาวะ ผิดปกติหรือเปลี่ยนไปจากเดิม
+            </li>
+            <li class="list-group-item">
+              5. เสียงแหบ ไอเรื้อรัง</li>
+            <li class="list-group-item">
+              6. กลืนอาหารลำบาก เบื่ออาหาร น้ำหนักลด</li>
+            <li class="list-group-item">
+              7. มีการเปลี่ยนแปลงของหูด ไฝ ปาน เช่น โตผิดปกติ ควรรีบมาพบแพทย์</li>
+          </ul>
+        </div>
+      </div>
+      <div style="height: 15vh;"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'cleaningRoom.html';
+      },
+      nextPage() {
+        window.location.href = 'sweet.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>

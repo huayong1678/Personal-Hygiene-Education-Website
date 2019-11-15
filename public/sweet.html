@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Diabetes Mellitus | Personal Hygiene</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="decoration.css">
+  <link rel="icon" href="assets/logo.png">
+
+  <!-- Rellax -->
+  <script src="rellax.min.js"></script>
+
+  <!-- VUE -->
+  <script src="vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="page-style/dist/sweet.css">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader" style="width:100vw; height: 100vh;">
+    <img id="loaderImage" src="assets/logo_loader.png" alt="">
+  </div>
+
+  <div id="app" style="display:none;" class="animate-bottom">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-transparent" id="navigation">
+      <button @click="handleClick()" id="buttonBars">
+        <img src="fontawesome-free-5.11.2-web/svgs/solid/bars.svg" class="optionBars-Dark"
+          :class="['bars-slide', {'optionBars-Light': handleStatus.optionBars}]" alt="">
+      </button>
+      <div class="btn-group" role="group">
+        <button @click="previousPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-left.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="homePage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/home.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+        <button @click="nextPage()" id="backward">
+          <img src="fontawesome-free-5.11.2-web/svgs/solid/arrow-alt-circle-right.svg" alt="" class="backward-light"
+            :class="['bars-slide', {'backward-dark': handleStatus.optionBars}]">
+        </button>
+      </div>
+    </nav>
+
+    <!-- Option Bar -->
+    <div class="slide" id="bars" :class="['bars-slide', {'slided': handleStatus.optionBars}]"></div>
+
+    <!-- Title Decor. -->
+    <!-- <div class="rellax" data-rellax-speed="8">
+      <img src="assets/cancer2.png" id="cancer2" alt="">
+    </div> -->
+
+    <!-- Scroll to See More -->
+    <div class="container-fluid">
+      <div class="row justify-content-center rellax" data-rellax-speed="10">
+      </div>
+      <div class="row">
+        <div class="col-2 rellax" data-rellax-speed="5">
+          <div class="nav-scroll seeMore">
+            <p class="m-0 p-0">See More.</p>
+            <img src="fontawesome-free-5.11.2-web/svgs/solid/angle-down.svg" alt="" id="angleDown">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="container-fluid scroll">
+      <!-- <div class="siren7 rellax" data-rellax-speed="10"></div> -->
+      <div class="row" id="page-title">
+        <div id="one" class="col-12 rellax shake" data-rellax-speed="6">Sweet enough for you?</div>
+        <div id="two" class="col-12 rellax" data-rellax-speed="4">
+          But it's too late</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container scroll" id="sweet-content">
+
+      <div class="row">
+        <div class="col-12 text-header">The เบาหวาน</div>
+        <div class="col-12 py-4 text-content">
+          เป็นกลุ่มโรคเกี่ยวกับการเผาผลาญอาหารซึ่งเป็นภาวะที่ร่างกายมีระดับน้ำตาลในเลือดสูงเป็นเวลานาน
+          เนื่องจากขาดฮอร์โมนอินซูลิน หรือประสิทธิภาพของอินซูลินลดลง ซึ่งมีผลต่อการทำงานของระบบต่างๆในร่างกาย
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="row">
+        <div class="col-12 text-header">The อินซูลิน</div>
+        <div class="col-12 py-4 text-content">
+          อินซูลินเป็นฮอร์โมนสำคัญตัวหนึ่งของร่างกาย เพราะร่างกายคนเรานั้นรับประมานอาหารเข้าไปทุกวัน มีการเปลี่ยนแป้ง ,
+          โปรตีนให้เป็นน้ำตาล
+          หากไม่มีอินซูลิน ก็จะส่งผลให้ร่างกายไม่สามารถนำน้ำตาลไปใช้เป็นพลังงานให้ส่วนต่างๆ ของร่างกายได้
+          และยังทำให้มีระดับน้ำตาลในเลือดสูงเช่นกัน อีกทั้งยังทำให้เกิดโรคเบาหวานได้
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 text-center display-4">The 4 of The เบาหวาน</div>
+        <div class="col"></div>
+        <div class="col-10">
+          <ul class="list-group list-group-horizontal-sm justify-content-center mt-2 mx-auto">
+            <li class="list-group-item list-group-item-light"><a class="text-dark" data-toggle="collapse" href="#bao1"
+                role="button" aria-expanded="false">ประเภทที่ 1</a></li>
+            <li class="list-group-item list-group-item-light"><a class="text-dark" data-toggle="collapse" href="#bao2"
+                role="button" aria-expanded="false">ประเภทที่ 2</a></li>
+            <li class="list-group-item list-group-item-light"><a class="text-dark" data-toggle="collapse" href="#bao3"
+                role="button" aria-expanded="false">ประเภทที่ 3</a></li>
+            <li class="list-group-item list-group-item-light"><a class="text-dark" data-toggle="collapse" href="#bao4"
+                role="button" aria-expanded="false">ประเภทที่ 4</a></li>
+          </ul>
+        </div>
+        <div class="col"></div>
+        <div class="collapse col-12 border rounded-pill p-4 px-5 my-2 mt-3" id="bao1">
+          <mark>เบาหวานประเภทที่ 1</mark> พบได้น้อย ประมาณร้อยละ 5 ของผู้ป่วยเบาหวานไทย
+          ประเภทนี้เกิดจากตับอ่อนไม่สามารถสร้างอินซูลินได้
+          จึงต้องฉีดอินซูลินอย่างสม่ำเสมอ เพื่อป้องกันไม่ให้เกิดภาวะขาดอินซูลิน และไม่ให้ระดับน้ำตาลในเลือดสูงจนเกิดไป
+          เพราะอาจหมดสติ และเสียชีวิตได้อย่างเฉียบพลัน มักพบในเด็กและวัยรุ่น
+        </div>
+        <div class="collapse col-12 border rounded-pill p-4 px-5 my-2" id="bao2">
+          <mark>เบาหวานประเภทที่ 2</mark> พบได้มาก ประมาณร้อยละ 95 ของผู้ป่วยเบาหวานไทย และส่วนใหญ่จะเป็นในกลุ่มคนอายุ
+          45 ปีขึ้นไป
+          เกิดจากตับอ่อนไม่สามารถสร้างอินซูลินไปใช้ได้อย่างเพียงพอ และร่างกายเกิดภาวะดื้ออินซูลิน
+          ประเภทนี้มักไม่อาการอย่างเฉียบพลัน
+          แต่หากขาดการควบคุม ก็สามารถนำไปสู่ภาวะแทรกซ้อนเรื้อรังที่เป็นอันตรายอย่างเฉียบพลันได้
+        </div>
+        <div class="collapse col-12 border rounded-pill p-4 px-5 my-2" id="bao3">
+          <mark>เบาหวานประเภทที่ 3</mark> เป็นเบาหวานระหว่างตั้งครรภ์ (เบาหวานวินิจฉัยระหว่างไตรมาสที่ 2 หรือ 3
+          ของการตั้งครรภ์
+          โดยที่ไม่ได้เป็นเบาหวานก่อนหน้า)
+        </div>
+        <div class="collapse col-12 border rounded-pill p-4 px-5 my-2" id="bao4">
+          <mark>เบาหวานประเภทที่ 4</mark> เป็นเบาหวานชนิดที่เกิดจากสาเหตุอื่นๆ เช่น ความผิดปกติของสารพันธุกรรม monogenic
+          diabetes
+          syndrome
+          หรือ Maturity onset diabetes of <br> the young [MODY], จากยา , โรคของทางตับอ่อน เช่น cystic fibrosis
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="col-12 text-center display-4">ผู้เสี่ยง<br>โรคเบาหวาน</div>
+          <div class="col-12 card text-center px-0 mt-5">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                อายุมากกว่า 45 ปีขึ้นไป</li>
+              <li class="list-group-item">
+                มีประวัติคนในครอบครัวเป็นโรคเบาหวาน</li>
+              <li class="list-group-item">
+                เป็นผู้มีน้ำหนักเกิน BMI25++</li>
+              <li class="list-group-item">
+                ความดันโลหิตสูง
+              </li>
+              <li class="list-group-item">
+                ดื่มสุรา/สูบบุหรี่</li>
+              <li class="list-group-item">
+                ตรวจน้ำตาลแล้วพบว่าระดับน้ำตาลสะสมมากกว่าหรือเท่ากับ 5.7%</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="col-12 text-center display-4">อาการ<br>ของเบาหวาน</div>
+          <div class="col-12 card text-center px-0 mt-5">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                ปัสสาวะบ่อยทั้งกลางวันและกลางคืน</li>
+              <li class="list-group-item">
+                กระหายน้ำ</li>
+              <li class="list-group-item">
+                อ่อนเพลีย และน้ำหนักลด</li>
+              <li class="list-group-item">
+                หิวบ่อย รับประทานเก่งขึ้น
+              </li>
+              <li class="list-group-item">
+                คันตามตัว ติดเชื้อได้ง่าย เป็นเชื้อรา ตกขาวบ่อย</li>
+              <li class="list-group-item">
+                ตาพร่า เห็นภาพไม่ชัด เห็นภาพซ้อน</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="row">
+        <div class="col-12 text-center display-4">เป็นมะเร็งแล้ว จะเป็นอะไรต่อน้า</div>
+        <div class="col-12 pt-3 text-content"><strong><mark>ตา</mark></strong> อาจเป็นต้อกระจกก่อนวัย จอตาเสื่อม
+          ทำให้ตามัวลงเรื่อยๆ
+          และอาจทำให้ตาบอดในที่สุด</div>
+        <div class="col-12 pt-3 text-content"><strong><mark>เท้า</mark></strong> ทำให้มีอาการชาปลายมือปลายเท้า
+          เกิดแผลได้ง่ายและ
+          อาจก่อให้เกิดความพิการ</div>
+        <div class="col-12 pt-3 text-content"><strong><mark>ไต</mark></strong> มักจะเสื่อม จนเกิดภาวะไตเสื่อมเรื้อรัง,
+          โปรตีน
+          (ไข่ขาวรั่วในปัสสาวะ)
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 text-center display-4">ป่วยแล้วทำไงดี</div>
+        <div class="col-8 py-4">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item px-2 py-3">
+              <mark>เลือกรับประทาน</mark>อาหารจำพวกแป้งจากธัญพืชที่ไม่ขัดสี ในปริมาณที่พอเหมาะ</li>
+            <li class="list-group-item px-2 py-3">
+              พยายาม<mark>งดอาหารรสจัด</mark> ไม่ว่าจะเป็นหวาน มัน หรือเค็ม</li>
+            <li class="list-group-item px-2 py-3">
+              รับประทานผัก และผลไม้ที่ไม่หวานจัดเพื่อ<mark>เพิ่มกากใยอาหาร</mark></li>
+            <li class="list-group-item px-2 py-3">
+              ควบคุมน้ำหนัก
+            </li>
+            <li class="list-group-item px-2 py-3">
+              งดสูบ<mark>บุหรี่</mark> และงดดื่ม<mark>สุรา</mark></li>
+            <li class="list-group-item px-2 py-3">
+              ติดตามผลการ<mark>รักษา</mark>อย่างสม่ำเสมอ</li>
+            <li class="list-group-item px-2 py-3">
+              <mark>รับประทานยา</mark>เพื่อควบคุมความดันโลหิต หรือเบาหวานตามคำแนะนำของแพทย์อย่างสม่ำเสมอ</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="height:5vh;"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <p id="footer-text" class="pb-0 mb-0">© 2019, Faculty of Information Technology @KMITL. All
+            right reserved.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  // Preloader
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+
+  // Tooltip Bootstrap
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // rellax
+  var rellax = new Rellax('.rellax');
+
+  // VUE
+  var app = new Vue({
+    el: '#app',
+    data: {
+      handleStatus: {
+        optionBars: false
+      }
+    },
+    methods: {
+      handleClick() {
+        this.handleStatus.optionBars = !this.handleStatus.optionBars
+      },
+      previousPage() {
+        window.location.href = 'cancer.html';
+      },
+      nextPage() {
+        window.location.href = 'sunlight.html';
+      },
+      homePage() {
+        window.location.href = 'index.html';
+      }
+    }
+  });
+</script>
